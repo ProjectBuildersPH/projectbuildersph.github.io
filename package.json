@@ -4,7 +4,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://talkwithricii.github.io/ProjectBuildersPH",
+  "homepage": "https://projectbuildersph.github.io",
   "dependencies": {
     "@monaco-editor/react": "^4.7.0",
     "@testing-library/dom": "^10.4.1",
@@ -25,7 +25,6 @@
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build"
 },
-,
   "eslintConfig": {
     "extends": [
       "react-app",
