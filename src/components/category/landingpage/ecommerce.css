@@ -1,0 +1,779 @@
+/* ========================================
+   ECOMMERCE PAGE
+======================================== */
+
+.ecommerce-page {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 80px 30px 100px;
+
+  box-sizing: border-box;
+
+  background: #f5f7f4;
+
+  color: #111;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.ecommerce-hero {
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.ecommerce-label {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: #4f7f58;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 2.5px;
+}
+
+
+/* ========================================
+   HERO TITLE
+======================================== */
+
+.ecommerce-hero h1 {
+  margin: 0;
+
+  font-size: clamp(40px, 6vw, 70px);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+
+  font-weight: 900;
+
+  color: #111;
+}
+
+
+.ecommerce-hero h1 span {
+  color: #4f7f58;
+}
+
+
+/* ========================================
+   HERO DESCRIPTION
+======================================== */
+
+.ecommerce-hero p {
+  max-width: 700px;
+
+  margin: 25px auto 0;
+
+  color: #687168;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   SUMMARY
+======================================== */
+
+.ecommerce-summary {
+  max-width: 800px;
+
+  margin: 55px auto 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 45px;
+
+  padding: 25px;
+
+  background: #fff;
+
+  border: 1px solid #e0e6e0;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 10px 35px
+    rgba(0, 0, 0, 0.05);
+}
+
+
+/* ========================================
+   SUMMARY ITEM
+======================================== */
+
+.summary-item {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  min-width: 130px;
+}
+
+
+.summary-item strong {
+  color: #4f7f58;
+
+  font-size: 30px;
+
+  font-weight: 900;
+}
+
+
+.summary-item span {
+  margin-top: 4px;
+
+  color: #687168;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+/* ========================================
+   SUMMARY DIVIDER
+======================================== */
+
+.summary-divider {
+  width: 1px;
+
+  height: 45px;
+
+  background: #dfe5df;
+}
+
+
+/* ========================================
+   PROJECT SECTION
+======================================== */
+
+.ecommerce-project-section {
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   SECTION HEADER
+======================================== */
+
+.ecommerce-section-header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 35px;
+}
+
+
+.ecommerce-section-header > div > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #4f7f58;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+.ecommerce-section-header h2 {
+  margin: 0;
+
+  font-size: clamp(28px, 4vw, 40px);
+
+  letter-spacing: -1.5px;
+
+  font-weight: 800;
+}
+
+
+.ecommerce-section-header h2 strong {
+  color: #4f7f58;
+}
+
+
+.ecommerce-section-header p {
+  max-width: 350px;
+
+  margin: 0;
+
+  color: #687168;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   PROJECT GRID
+======================================== */
+
+.ecommerce-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+
+/* ========================================
+   PROJECT CARD
+======================================== */
+
+.ecommerce-card {
+  position: relative;
+
+  padding: 28px;
+
+  min-height: 390px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  background: #fff;
+
+  border: 1px solid #e0e6e0;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 8px 30px
+    rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* ========================================
+   AVAILABLE CARD
+======================================== */
+
+.ecommerce-card.available {
+  cursor: pointer;
+}
+
+
+.ecommerce-card.available:hover {
+  transform: translateY(-8px);
+
+  border-color: #4f7f58;
+
+  box-shadow:
+    0 18px 45px
+    rgba(0, 0, 0, 0.10);
+}
+
+
+/* ========================================
+   COMING SOON CARD
+======================================== */
+
+.ecommerce-card.coming-soon {
+  cursor: default;
+
+  opacity: 0.78;
+}
+
+
+/* ========================================
+   CARD TOP
+======================================== */
+
+.ecommerce-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+
+/* ========================================
+   PROJECT ICON
+======================================== */
+
+.ecommerce-icon {
+  width: 58px;
+
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #edf4ee;
+
+  border-radius: 12px;
+
+  font-size: 28px;
+}
+
+
+/* ========================================
+   STATUS
+======================================== */
+
+.project-status {
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+/* ========================================
+   AVAILABLE STATUS
+======================================== */
+
+.status-available {
+  background: #e6f2e8;
+
+  color: #4f7f58;
+}
+
+
+/* ========================================
+   COMING STATUS
+======================================== */
+
+.status-coming {
+  background: #f0f1f0;
+
+  color: #777;
+}
+
+
+/* ========================================
+   PROJECT TITLE
+======================================== */
+
+.ecommerce-card h3 {
+  margin: 0 0 12px;
+
+  color: #111;
+
+  font-size: 23px;
+
+  font-weight: 800;
+}
+
+
+/* ========================================
+   PROJECT DESCRIPTION
+======================================== */
+
+.ecommerce-card > p {
+  margin: 0;
+
+  color: #687168;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   TECHNOLOGY SECTION
+======================================== */
+
+.technology-section {
+  margin-top: auto;
+
+  padding-top: 25px;
+}
+
+
+/* ========================================
+   TECHNOLOGY TITLE
+======================================== */
+
+.technology-title {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #8a928b;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* ========================================
+   TECHNOLOGY LIST
+======================================== */
+
+.technology-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+
+/* ========================================
+   TECHNOLOGY
+======================================== */
+
+.technology {
+  padding: 6px 9px;
+
+  background: #f2f5f2;
+
+  color: #4f7f58;
+
+  border-radius: 5px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+/* ========================================
+   PROJECT ACTION
+======================================== */
+
+.project-action {
+  margin-top: 22px;
+
+  padding-top: 17px;
+
+  border-top: 1px solid #edf0ed;
+
+  color: #4f7f58;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+
+.ecommerce-card.coming-soon .project-action {
+  color: #999;
+}
+
+
+/* ========================================
+   BOTTOM MESSAGE
+======================================== */
+
+.ecommerce-bottom {
+  max-width: 700px;
+
+  margin: 100px auto 0;
+
+  padding-top: 55px;
+
+  border-top: 1px solid #dfe5df;
+
+  text-align: center;
+}
+
+
+.ecommerce-bottom > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #4f7f58;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+.ecommerce-bottom h2 {
+  margin: 0;
+
+  font-size: clamp(28px, 4vw, 42px);
+
+  letter-spacing: -1.5px;
+
+  font-weight: 800;
+}
+
+
+.ecommerce-bottom h2 strong {
+  color: #4f7f58;
+}
+
+
+.ecommerce-bottom p {
+  max-width: 600px;
+
+  margin: 15px auto 0;
+
+  color: #687168;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 950px) {
+
+  .ecommerce-page {
+    padding:
+      65px
+      25px
+      80px;
+  }
+
+
+  .ecommerce-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .ecommerce-section-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+  .ecommerce-page {
+    padding:
+      55px
+      18px
+      70px;
+  }
+
+
+  .ecommerce-hero h1 {
+    font-size: 42px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .ecommerce-hero p {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+
+  /* SUMMARY */
+
+  .ecommerce-summary {
+    margin:
+      40px auto
+      55px;
+
+    padding: 20px 10px;
+
+    gap: 10px;
+  }
+
+
+  .summary-item {
+    min-width: 85px;
+  }
+
+
+  .summary-item strong {
+    font-size: 23px;
+  }
+
+
+  .summary-item span {
+    font-size: 9px;
+  }
+
+
+  .summary-divider {
+    height: 35px;
+  }
+
+
+  /* GRID */
+
+  .ecommerce-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 16px;
+  }
+
+
+  .ecommerce-card {
+    min-height: 350px;
+
+    padding: 24px;
+  }
+
+
+  .ecommerce-section-header h2 {
+    font-size: 30px;
+  }
+
+
+  .ecommerce-section-header p {
+    font-size: 12px;
+  }
+
+
+  .ecommerce-bottom {
+    margin-top: 70px;
+
+    padding-top: 40px;
+  }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 420px) {
+
+  .ecommerce-page {
+    padding:
+      45px
+      14px
+      60px;
+  }
+
+
+  .ecommerce-hero h1 {
+    font-size: 35px;
+  }
+
+
+  .ecommerce-hero p {
+    font-size: 12px;
+  }
+
+
+  .ecommerce-summary {
+    padding: 18px 5px;
+  }
+
+
+  .summary-item {
+    min-width: 70px;
+  }
+
+
+  .summary-item strong {
+    font-size: 20px;
+  }
+
+
+  .summary-item span {
+    font-size: 8px;
+  }
+
+
+  .ecommerce-card {
+    padding: 22px;
+
+    min-height: 330px;
+  }
+
+
+  .ecommerce-card h3 {
+    font-size: 21px;
+  }
+
+
+  .ecommerce-card > p {
+    font-size: 12px;
+  }
+
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ecommerce-card {
+    transition: none;
+  }
+
+}

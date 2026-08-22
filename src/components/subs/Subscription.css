@@ -1,0 +1,569 @@
+/* ========================================
+   SUBSCRIPTION PAGE
+======================================== */
+
+.subscription-page {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 110px 30px 70px;
+
+  box-sizing: border-box;
+
+  background: #f5f7f4;
+
+  color: #111;
+}
+
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.subscription-container {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   LEARNING OPTIONS SECTION
+======================================== */
+
+.access-section {
+  width: 100%;
+
+  padding-top: 20px;
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.access-heading {
+  max-width: 700px;
+
+  margin: 0 auto 40px;
+
+  text-align: center;
+}
+
+
+.access-heading span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #4f7f58;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+.access-heading h2 {
+  margin: 0;
+
+  color: #111;
+
+  font-size: clamp(30px, 4vw, 44px);
+
+  line-height: 1.1;
+
+  letter-spacing: -1.5px;
+
+  font-weight: 800;
+}
+
+
+.access-heading p {
+  max-width: 650px;
+
+  margin: 15px auto 0;
+
+  color: #687168;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   LEARNING OPTIONS GRID
+======================================== */
+
+.access-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+  width: 100%;
+}
+
+
+/* ========================================
+   ACCESS CARD
+======================================== */
+
+.access-card {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 24px 22px;
+
+  box-sizing: border-box;
+
+  background: #fff;
+
+  border: 1px solid #dce3dc;
+
+  border-radius: 12px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.access-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #75a67b;
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ========================================
+   FEATURED CARD
+======================================== */
+
+.access-card.featured {
+  border: 2px solid #6da876;
+}
+
+
+/* ========================================
+   CARD TOP
+======================================== */
+
+.access-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+
+/* ========================================
+   CARD NUMBER
+======================================== */
+
+.access-number {
+  color: #4f7f58;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+/* ========================================
+   CARD BADGE
+======================================== */
+
+.access-badge {
+  padding: 5px 8px;
+
+  border-radius: 5px;
+
+  background: #edf3ee;
+
+  color: #4f7f58;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+/* ========================================
+   CARD TITLE
+======================================== */
+
+.access-card h3 {
+  margin: 0 0 9px;
+
+  color: #111;
+
+  font-size: 22px;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* ========================================
+   CARD DESCRIPTION
+======================================== */
+
+.access-card > p {
+  min-height: 66px;
+
+  margin: 0 0 17px;
+
+  color: #687168;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   PRICE
+======================================== */
+
+.access-price {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 5px;
+
+  margin-bottom: 18px;
+}
+
+
+.access-price strong {
+  color: #111;
+
+  font-size: 30px;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+}
+
+
+.access-price span {
+  color: #858d85;
+
+  font-size: 11px;
+}
+
+
+/* ========================================
+   FEATURE LIST
+======================================== */
+
+.access-card ul {
+  flex: 1;
+
+  margin: 0 0 22px;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.access-card li {
+  position: relative;
+
+  margin-bottom: 8px;
+
+  padding-left: 19px;
+
+  color: #515951;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+.access-card li::before {
+  content: "✓";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  color: #4f7f58;
+
+  font-weight: 900;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.access-button {
+  display: block;
+
+  width: 100%;
+
+  padding: 11px 15px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #111;
+
+  color: #fff;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.access-button:hover {
+  background: #4f7f58;
+
+  transform: translateY(-1px);
+}
+
+
+/* ========================================
+   FEATURED BUTTON
+======================================== */
+
+.access-card.featured .access-button {
+  background: #4f7f58;
+}
+
+
+.access-card.featured .access-button:hover {
+  background: #111;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .subscription-page {
+    padding: 100px 25px 60px;
+  }
+
+
+  .subscription-container {
+    max-width: 750px;
+  }
+
+
+  .access-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+  }
+
+
+  .access-card:last-child {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    max-width: 360px;
+
+    margin: 0 auto;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+  .subscription-page {
+    padding: 90px 18px 50px;
+  }
+
+
+  .access-section {
+    padding-top: 10px;
+  }
+
+
+  .access-heading {
+    margin-bottom: 30px;
+  }
+
+
+  .access-heading h2 {
+    font-size: 32px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .access-heading p {
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+
+  .access-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    max-width: 420px;
+
+    margin: 0 auto;
+  }
+
+
+  .access-card:last-child {
+    grid-column: auto;
+
+    max-width: none;
+
+    margin: 0;
+  }
+
+
+  .access-card {
+    padding: 22px 20px;
+  }
+
+
+  .access-card h3 {
+    font-size: 21px;
+  }
+
+
+  .access-card > p {
+    min-height: auto;
+
+    font-size: 13px;
+  }
+
+
+  .access-price strong {
+    font-size: 28px;
+  }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 420px) {
+
+  .subscription-page {
+    padding: 80px 14px 45px;
+  }
+
+
+  .access-heading h2 {
+    font-size: 29px;
+  }
+
+
+  .access-heading span {
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .access-heading p {
+    font-size: 12px;
+  }
+
+
+  .access-card {
+    padding: 20px 18px;
+
+    border-radius: 10px;
+  }
+
+
+  .access-card-top {
+    margin-bottom: 15px;
+  }
+
+
+  .access-card h3 {
+    font-size: 20px;
+  }
+
+
+  .access-card > p {
+    font-size: 12px;
+
+    line-height: 1.55;
+  }
+
+
+  .access-price {
+    margin-bottom: 16px;
+  }
+
+
+  .access-price strong {
+    font-size: 27px;
+  }
+
+
+  .access-card li {
+    font-size: 11px;
+
+    margin-bottom: 7px;
+  }
+
+
+  .access-button {
+    padding: 10px;
+
+    font-size: 11px;
+  }
+
+}

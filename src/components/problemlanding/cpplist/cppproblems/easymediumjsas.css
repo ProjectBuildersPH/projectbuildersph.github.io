@@ -1,0 +1,773 @@
+/* =========================================
+   PAGE
+========================================= */
+
+.jsas-page {
+  min-height: 100vh;
+  background: #f7f9fc;
+  color: #172033;
+  font-family: inherit;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.jsas-container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.jsas-back-container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+.jsas-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 16px;
+
+  background: #ffffff;
+  color: #344054;
+
+  border: 1px solid #dce3ed;
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: all 0.2s ease;
+}
+
+.jsas-back-button:hover {
+  background: #eef4ff;
+  border-color: #2563eb;
+  color: #2563eb;
+  transform: translateX(-3px);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.jsas-hero {
+  padding: 80px 0;
+
+  background: linear-gradient(
+    135deg,
+    #eef4ff 0%,
+    #ffffff 55%,
+    #f4f7fb 100%
+  );
+
+  border-bottom: 1px solid #e5eaf2;
+}
+
+.jsas-label {
+  display: inline-block;
+
+  padding: 8px 14px;
+
+  border-radius: 30px;
+
+  background: #e8f0ff;
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+.jsas-hero h1 {
+  max-width: 850px;
+
+  margin: 22px 0 18px;
+
+  font-size: clamp(38px, 5vw, 64px);
+
+  line-height: 1.08;
+
+  letter-spacing: -2px;
+}
+
+.jsas-hero > .jsas-container > p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #667085;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+}
+
+.jsas-hero code {
+  padding: 3px 7px;
+
+  background: #e8f0ff;
+
+  color: #2563eb;
+
+  border-radius: 5px;
+
+  font-family: "Courier New", monospace;
+}
+
+
+/* =========================================
+   META
+========================================= */
+
+.jsas-meta {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 30px;
+}
+
+.jsas-meta span {
+  padding: 9px 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7ef;
+
+  border-radius: 8px;
+
+  color: #475467;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.jsas-content {
+  padding: 65px 0 100px;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.jsas-card {
+  margin-bottom: 28px;
+
+  padding: 38px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4e9f1;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 30px rgba(20, 35, 60, 0.04);
+}
+
+.jsas-section-label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #2563eb;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.jsas-card h2 {
+  margin: 0 0 18px;
+
+  font-size: 30px;
+
+  letter-spacing: -0.7px;
+}
+
+.jsas-card p {
+  color: #5f6b7a;
+
+  line-height: 1.8;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   HIGHLIGHT
+========================================= */
+
+.jsas-highlight {
+  display: inline-block;
+
+  margin: 8px 0 18px;
+
+  padding: 15px 24px;
+
+  border-radius: 10px;
+
+  background: #eef4ff;
+
+  color: #2563eb;
+
+  font-size: 20px;
+}
+
+
+/* =========================================
+   PASSENGER CARDS
+========================================= */
+
+.jsas-passenger-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+
+  margin-top: 25px;
+}
+
+.jsas-passenger {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 20px;
+
+  border: 1px solid #e4e9f1;
+
+  border-radius: 12px;
+
+  background: #fafbfd;
+}
+
+.jsas-passenger-number {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+.jsas-passenger h3 {
+  margin: 0 0 5px;
+
+  font-size: 16px;
+}
+
+.jsas-passenger p {
+  margin: 0;
+}
+
+
+/* =========================================
+   CODE BOX
+========================================= */
+
+.jsas-code-box {
+  margin: 20px 0;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  background: #172033;
+
+  color: #ffffff;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   EXAMPLE BOX
+========================================= */
+
+.jsas-example-box {
+  margin-top: 20px;
+
+  padding: 22px;
+
+  border-left: 4px solid #2563eb;
+
+  border-radius: 8px;
+
+  background: #f7f9fc;
+}
+
+.jsas-example-box h3 {
+  margin: 0 0 10px;
+
+  font-size: 17px;
+}
+
+.jsas-example-box p {
+  margin: 5px 0;
+}
+
+.jsas-mini-code {
+  margin-top: 15px;
+
+  padding: 15px;
+
+  background: #172033;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  font-family: "Courier New", monospace;
+
+  line-height: 1.8;
+}
+
+.jsas-note {
+  font-size: 13px !important;
+}
+
+
+/* =========================================
+   WARNING
+========================================= */
+
+.jsas-warning-card {
+  border-color: #dce5f5;
+}
+
+.jsas-calculation {
+  margin: 25px 0;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  background: #f2f5fa;
+
+  text-align: center;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 22px;
+
+  font-weight: 700;
+}
+
+.jsas-error-box {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  margin-top: 22px;
+
+  padding: 18px 20px;
+
+  border-radius: 10px;
+
+  background: #fff4f4;
+
+  border: 1px solid #ffd8d8;
+}
+
+.jsas-error-box strong {
+  color: #dc2626;
+}
+
+.jsas-error-box span {
+  color: #7f1d1d;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   LOGIC FLOW
+========================================= */
+
+.jsas-flow {
+  max-width: 650px;
+
+  margin: 30px auto 0;
+}
+
+.jsas-flow-step {
+  display: grid;
+
+  grid-template-columns: 45px 1fr;
+
+  align-items: center;
+
+  column-gap: 15px;
+
+  padding: 18px 20px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e3e8ef;
+
+  border-radius: 12px;
+}
+
+.jsas-flow-step span {
+  grid-row: span 2;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+.jsas-flow-step strong {
+  font-size: 15px;
+}
+
+.jsas-flow-step small {
+  margin-top: 4px;
+
+  color: #7a8493;
+}
+
+.jsas-flow-arrow {
+  padding: 8px 0;
+
+  color: #2563eb;
+
+  text-align: center;
+
+  font-size: 22px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   TERMINAL
+========================================= */
+
+.jsas-terminal {
+  margin-top: 25px;
+
+  padding: 28px;
+
+  overflow-x: auto;
+
+  border-radius: 12px;
+
+  background: #121a29;
+
+  color: #dbe5f5;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+.terminal-error {
+  color: #ff7777;
+
+  font-weight: 700;
+}
+
+.terminal-warning {
+  color: #ffd166;
+}
+
+.terminal-success {
+  color: #72e6a8;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   CHALLENGE
+========================================= */
+
+.jsas-challenge {
+  background: linear-gradient(
+    135deg,
+    #f8fbff,
+    #ffffff
+  );
+}
+
+.jsas-rules {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.jsas-rules div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px;
+
+  border: 1px solid #e5eaf2;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+}
+
+.jsas-rules span {
+  color: #16a34a;
+
+  font-weight: 900;
+}
+
+.jsas-rules p {
+  margin: 0;
+}
+
+
+/* =========================================
+   CODE
+========================================= */
+
+.jsas-card code,
+.jsas-hint-card code {
+  padding: 3px 6px;
+
+  border-radius: 5px;
+
+  background: #eef2f7;
+
+  color: #2563eb;
+
+  font-family: "Courier New", monospace;
+}
+
+
+/* =========================================
+   RESTRICTIONS
+========================================= */
+
+.jsas-restrictions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.jsas-restrictions span {
+  padding: 10px 14px;
+
+  border-radius: 8px;
+
+  background: #fff4f4;
+
+  border: 1px solid #ffdede;
+
+  color: #b42318;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.jsas-restriction-note {
+  margin-top: 25px;
+}
+
+
+/* =========================================
+   HINT
+========================================= */
+
+.jsas-hint-card {
+  display: flex;
+
+  gap: 25px;
+
+  padding: 35px;
+
+  margin-bottom: 30px;
+
+  border-radius: 18px;
+
+  background: #eef4ff;
+
+  border: 1px solid #d8e5ff;
+}
+
+.jsas-hint-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  font-size: 25px;
+}
+
+.jsas-hint-card h2 {
+  margin-bottom: 12px;
+}
+
+.jsas-hint-question {
+  margin: 20px 0;
+
+  padding: 18px;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #2563eb;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   BOTTOM BACK BUTTON
+========================================= */
+
+.jsas-bottom-back {
+  display: flex;
+
+  justify-content: center;
+
+  padding: 20px 0 10px;
+}
+
+.jsas-back-button-bottom {
+  padding: 13px 22px;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .jsas-back-container {
+    padding-top: 18px;
+  }
+
+  .jsas-hero {
+    padding: 60px 0;
+  }
+
+  .jsas-hero h1 {
+    font-size: 38px;
+
+    letter-spacing: -1px;
+  }
+
+  .jsas-card {
+    padding: 25px;
+  }
+
+  .jsas-passenger-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .jsas-rules {
+    grid-template-columns: 1fr;
+  }
+
+  .jsas-hint-card {
+    flex-direction: column;
+
+    padding: 25px;
+  }
+
+  .jsas-meta {
+    flex-direction: column;
+  }
+
+  .jsas-meta span {
+    width: fit-content;
+  }
+
+  .jsas-flow-step {
+    grid-template-columns: 40px 1fr;
+  }
+
+}

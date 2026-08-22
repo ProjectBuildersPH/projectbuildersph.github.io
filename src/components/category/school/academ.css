@@ -1,0 +1,1824 @@
+/* ========================================
+   ACADEM / SCHOOL PROJECTS
+======================================== */
+
+.academ-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #f5f7f4;
+  color: #111;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.academ-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 110px 25px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071b10 0%,
+      #123b24 52%,
+      #4f7f58 100%
+    );
+
+  color: #fff;
+
+  overflow: hidden;
+}
+
+
+.academ-hero-background {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+}
+
+
+.academ-grid {
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.08;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.25) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.25) 1px,
+      transparent 1px
+    );
+
+  background-size: 55px 55px;
+}
+
+
+.academ-glow {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+
+  opacity: 0.16;
+}
+
+
+.academ-glow-one {
+  top: -180px;
+  right: -120px;
+
+  background: #a9d6af;
+}
+
+
+.academ-glow-two {
+  bottom: -220px;
+  left: -150px;
+
+  background: #4f7f58;
+}
+
+
+.academ-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 950px;
+
+  text-align: center;
+
+  animation:
+    academHeroIn
+    0.8s
+    ease
+    forwards;
+}
+
+
+@keyframes academHeroIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* ========================================
+   HERO LABEL
+======================================== */
+
+.academ-label-wrapper {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 22px;
+
+  padding: 8px 13px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.15);
+
+  border-radius: 30px;
+
+  background:
+    rgba(255,255,255,0.06);
+}
+
+
+.academ-label-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #a9d6af;
+
+  box-shadow:
+    0 0 12px
+    rgba(169,214,175,0.8);
+}
+
+
+.academ-label {
+  color: #c8ddcb;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 2.5px;
+}
+
+
+/* ========================================
+   HERO TITLE
+======================================== */
+
+.academ-hero h1 {
+  margin: 0;
+
+  font-size:
+    clamp(52px, 8vw, 88px);
+
+  line-height: 0.98;
+
+  letter-spacing: -4px;
+
+  font-weight: 900;
+}
+
+
+.academ-hero h1 span {
+  color: #a9d6af;
+}
+
+
+.academ-hero-description {
+  max-width: 720px;
+
+  margin: 30px auto 0;
+
+  color: #dce9df;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   HERO TECHNOLOGIES
+======================================== */
+
+.academ-tech {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 30px;
+}
+
+
+.academ-tech span {
+  padding: 7px 12px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.16);
+
+  border-radius: 5px;
+
+  background:
+    rgba(255,255,255,0.07);
+
+  color: #d8e8da;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* ========================================
+   HERO BUTTONS
+======================================== */
+
+.academ-hero-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 38px;
+}
+
+
+.academ-primary-button,
+.academ-secondary-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  min-height: 50px;
+
+  padding: 0 25px;
+
+  border-radius: 7px;
+
+  box-sizing: border-box;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.academ-primary-button {
+  background: #fff;
+
+  color: #173d25;
+}
+
+
+.academ-primary-button span {
+  font-size: 16px;
+}
+
+
+.academ-secondary-button {
+  border:
+    1px solid
+    rgba(255,255,255,0.3);
+
+  background:
+    rgba(255,255,255,0.07);
+
+  color: #fff;
+}
+
+
+.academ-primary-button:hover,
+.academ-secondary-button:hover {
+  transform: translateY(-3px);
+}
+
+
+.academ-primary-button:hover {
+  box-shadow:
+    0 12px 30px
+    rgba(0,0,0,0.2);
+}
+
+
+.academ-secondary-button:hover {
+  background:
+    rgba(255,255,255,0.15);
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.academ-container {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding: 0 25px;
+
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   INTRODUCTION
+======================================== */
+
+.academ-introduction {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.4fr)
+    minmax(340px, 0.8fr);
+
+  gap: 70px;
+
+  align-items: center;
+
+  padding: 110px 0;
+}
+
+
+.section-label {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: #4f7f58;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+.academ-intro-content h2 {
+  margin: 0;
+
+  font-size:
+    clamp(34px, 5vw, 50px);
+
+  line-height: 1.08;
+
+  letter-spacing: -1.8px;
+}
+
+
+.academ-intro-content h2 strong {
+  display: block;
+
+  color: #4f7f58;
+}
+
+
+.academ-intro-content > p {
+  max-width: 650px;
+
+  margin: 20px 0 0;
+
+  color: #687168;
+
+  font-size: 14px;
+
+  line-height: 1.85;
+}
+
+
+/* ========================================
+   INTRO HIGHLIGHT
+======================================== */
+
+.academ-intro-highlight {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  max-width: 560px;
+
+  margin-top: 30px;
+
+  padding: 18px;
+
+  border:
+    1px solid
+    #dce3dc;
+
+  border-radius: 10px;
+
+  background: #fff;
+}
+
+
+.highlight-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #edf5ee;
+
+  color: #4f7f58;
+
+  font-size: 14px;
+
+  font-weight: 900;
+}
+
+
+.academ-intro-highlight strong {
+  display: block;
+
+  color: #18221a;
+
+  font-size: 13px;
+}
+
+
+.academ-intro-highlight p {
+  margin: 5px 0 0;
+
+  color: #768078;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   INFO PANEL
+======================================== */
+
+.academ-info-panel {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+
+.info-item {
+  min-height: 115px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 22px;
+
+  box-sizing: border-box;
+
+  background: #fff;
+
+  border:
+    1px solid
+    #dce3dc;
+
+  border-radius: 10px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.info-item:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 30px
+    rgba(30,50,35,0.08);
+}
+
+
+.info-item span {
+  margin-bottom: 8px;
+
+  color: #899289;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+
+.info-item strong {
+  color: #18221a;
+
+  font-size: 16px;
+
+  font-weight: 900;
+}
+
+
+/* ========================================
+   SECTION HEADING
+======================================== */
+
+.section-heading {
+  max-width: 700px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #111;
+
+  font-size:
+    clamp(32px, 5vw, 48px);
+
+  line-height: 1.08;
+
+  letter-spacing: -1.7px;
+}
+
+
+.section-heading h2 strong {
+  color: #4f7f58;
+}
+
+
+.section-heading p {
+  max-width: 620px;
+
+  margin: 17px auto 0;
+
+  color: #687168;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* ========================================
+   PROJECTS
+======================================== */
+
+.academ-projects {
+  padding: 20px 0 110px;
+}
+
+
+.academ-project-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* ========================================
+   PROJECT CARD
+======================================== */
+
+.academ-project-card {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 465px;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background: #fff;
+
+  border:
+    1px solid
+    #dce3dc;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.academ-project-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: #4f7f58;
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.academ-project-card:hover {
+  transform: translateY(-7px);
+
+  border-color: #a8bea9;
+
+  box-shadow:
+    0 22px 55px
+    rgba(30,50,35,0.12);
+}
+
+
+.academ-project-card:hover::before {
+  transform: scaleX(1);
+}
+
+
+.project-coming {
+  cursor: default;
+
+  opacity: 0.82;
+}
+
+
+.project-coming:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px
+    rgba(30,50,35,0.07);
+}
+
+
+.project-coming::before {
+  background: #b6beb7;
+}
+
+
+/* ========================================
+   PROJECT CARD TOP
+======================================== */
+
+.project-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+
+.project-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #edf5ee;
+
+  font-size: 30px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.academ-project-card:hover .project-icon {
+  transform:
+    scale(1.05)
+    rotate(-3deg);
+}
+
+
+.project-status {
+  padding: 7px 11px;
+
+  border-radius: 20px;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+.status-available {
+  background: #e8f5ea;
+
+  color: #3f7448;
+}
+
+
+.status-coming {
+  background: #f1f3f1;
+
+  color: #7b837c;
+}
+
+
+/* ========================================
+   PROJECT NUMBER
+======================================== */
+
+.project-number {
+  position: absolute;
+
+  top: 24px;
+  right: 27px;
+
+  color: #edf0ed;
+
+  font-size: 55px;
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   PROJECT CONTENT
+======================================== */
+
+.project-card-content {
+  flex: 1;
+}
+
+
+.project-type {
+  color: #899289;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+.project-card-content h3 {
+  margin: 9px 0 13px;
+
+  color: #111;
+
+  font-size: 28px;
+
+  letter-spacing: -0.8px;
+}
+
+
+.project-card-content p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #687168;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   TECHNOLOGY TAGS
+======================================== */
+
+.project-technologies {
+  margin-top: 28px;
+}
+
+
+.tech-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #899289;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+
+.tech-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+
+.tech-list span {
+  padding: 6px 10px;
+
+  background: #f3f6f3;
+
+  border:
+    1px solid
+    #e0e6e0;
+
+  border-radius: 5px;
+
+  color: #405345;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+/* ========================================
+   PROJECT FOOTER
+======================================== */
+
+.project-card-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 28px;
+
+  padding-top: 20px;
+
+  border-top:
+    1px solid
+    #e8ece8;
+
+  color: #4f7f58;
+
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+
+.project-card-footer strong {
+  font-size: 20px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.academ-project-card:hover
+.project-card-footer strong {
+  transform: translateX(5px);
+}
+
+
+/* ========================================
+   TECHNOLOGIES
+======================================== */
+
+.academ-technologies {
+  padding: 110px 0;
+
+  border-top:
+    1px solid
+    #e1e6e1;
+}
+
+
+.academ-technology-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+.academ-technology-card {
+  padding: 30px;
+
+  background: #fff;
+
+  border:
+    1px solid
+    #dce3dc;
+
+  border-radius: 11px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.academ-technology-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #b8cbb9;
+
+  box-shadow:
+    0 18px 40px
+    rgba(0,0,0,0.07);
+}
+
+
+.technology-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 9px;
+
+  background: #edf5ee;
+
+  color: #4f7f58;
+
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+
+.academ-technology-card h3 {
+  margin: 0 0 10px;
+
+  color: #18221a;
+
+  font-size: 18px;
+}
+
+
+.academ-technology-card p {
+  margin: 0;
+
+  color: #687168;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+
+/* ========================================
+   DEVELOPMENT
+======================================== */
+
+.academ-development {
+  position: relative;
+
+  margin: 0 0 110px;
+
+  padding: 100px 35px;
+
+  box-sizing: border-box;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #102c1b,
+      #173f27
+    );
+
+  color: #fff;
+
+  overflow: hidden;
+}
+
+
+.academ-development::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -130px;
+  bottom: -160px;
+
+  border-radius: 50%;
+
+  background: #4f7f58;
+
+  opacity: 0.15;
+
+  filter: blur(50px);
+}
+
+
+.academ-development-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+}
+
+
+.academ-development .section-label {
+  color: #a9d6af;
+}
+
+
+.academ-development h2 {
+  margin: 0;
+
+  font-size:
+    clamp(34px, 5vw, 50px);
+
+  line-height: 1.08;
+
+  letter-spacing: -1.7px;
+}
+
+
+.academ-development h2 strong {
+  color: #a9d6af;
+}
+
+
+.academ-development-content > p {
+  max-width: 700px;
+
+  margin: 20px 0 55px;
+
+  color: #c6d6ca;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   DEVELOPMENT FLOW
+======================================== */
+
+.development-flow {
+  display: flex;
+
+  align-items: stretch;
+
+  gap: 10px;
+}
+
+
+.development-step {
+  flex: 1;
+
+  display: flex;
+
+  gap: 15px;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.1);
+
+  border-radius: 9px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.development-step:hover {
+  transform: translateY(-4px);
+
+  background:
+    rgba(255,255,255,0.1);
+}
+
+
+.development-step > span {
+  color: #8fc694;
+
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+
+.development-step h3 {
+  margin: 0 0 6px;
+
+  color: #fff;
+
+  font-size: 15px;
+}
+
+
+.development-step p {
+  margin: 0;
+
+  color: #b8c8bc;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+.development-arrow {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #8fc694;
+
+  font-size: 20px;
+
+  font-weight: 900;
+}
+
+
+/* ========================================
+   LEARNING
+======================================== */
+
+.academ-learning {
+  padding: 0 0 110px;
+}
+
+
+.learning-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+
+.learning-card {
+  padding: 28px;
+
+  background: #fff;
+
+  border:
+    1px solid
+    #dce3dc;
+
+  border-radius: 11px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.learning-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(30,50,35,0.08);
+}
+
+
+.learning-card > span {
+  display: block;
+
+  margin-bottom: 22px;
+
+  color: #4f7f58;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+.learning-card h3 {
+  margin: 0 0 10px;
+
+  color: #18221a;
+
+  font-size: 17px;
+}
+
+
+.learning-card p {
+  margin: 0;
+
+  color: #687168;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   SUMMARY
+======================================== */
+
+.academ-summary {
+  padding: 110px 0 130px;
+
+  text-align: center;
+
+  border-top:
+    1px solid
+    #e1e6e1;
+}
+
+
+.summary-content {
+  max-width: 780px;
+
+  margin: 0 auto;
+}
+
+
+.summary-content h2 {
+  margin: 0;
+
+  font-size:
+    clamp(36px, 5vw, 54px);
+
+  line-height: 1.08;
+
+  letter-spacing: -2px;
+}
+
+
+.summary-content h2 strong {
+  display: block;
+
+  color: #4f7f58;
+}
+
+
+.summary-content p {
+  max-width: 680px;
+
+  margin: 20px auto 0;
+
+  color: #687168;
+
+  font-size: 14px;
+
+  line-height: 1.85;
+}
+
+
+/* ========================================
+   SUMMARY TECHNOLOGIES
+======================================== */
+
+.summary-tech {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 30px;
+}
+
+
+.summary-tech span {
+  padding: 7px 12px;
+
+  border:
+    1px solid
+    #dce3dc;
+
+  border-radius: 5px;
+
+  background: #fff;
+
+  color: #405345;
+
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+
+/* ========================================
+   BACK BUTTON
+======================================== */
+
+.back-projects-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-top: 35px;
+
+  min-height: 50px;
+
+  padding: 0 25px;
+
+  border: 0;
+
+  border-radius: 7px;
+
+  background: #4f7f58;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.back-projects-button:hover {
+  transform: translateY(-3px);
+
+  background: #3e6746;
+
+  box-shadow:
+    0 10px 25px
+    rgba(79,127,88,0.2);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+  .academ-introduction {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .academ-project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .academ-technology-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .learning-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .development-flow {
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 12px;
+  }
+
+
+  .development-arrow {
+    display: none;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+  .academ-hero {
+    min-height: auto;
+
+    padding: 90px 18px;
+  }
+
+
+  .academ-hero h1 {
+    font-size: 50px;
+
+    letter-spacing: -2.5px;
+  }
+
+
+  .academ-hero-description {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+
+  .academ-hero-buttons {
+    flex-direction: column;
+
+    width: 100%;
+
+    max-width: 310px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .academ-primary-button,
+  .academ-secondary-button {
+    width: 100%;
+  }
+
+
+  .academ-container {
+    padding: 0 18px;
+  }
+
+
+  .academ-introduction {
+    padding: 75px 0;
+  }
+
+
+  .academ-intro-content h2 {
+    font-size: 35px;
+  }
+
+
+  .academ-intro-content > p {
+    font-size: 13px;
+  }
+
+
+  .academ-info-panel {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+
+  .info-item {
+    min-height: 95px;
+
+    padding: 16px;
+  }
+
+
+  .info-item strong {
+    font-size: 13px;
+  }
+
+
+  .academ-projects {
+    padding-bottom: 80px;
+  }
+
+
+  .academ-project-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .academ-project-card {
+    min-height: auto;
+
+    padding: 23px;
+  }
+
+
+  .project-card-content h3 {
+    font-size: 24px;
+  }
+
+
+  .project-card-content p {
+    font-size: 12px;
+  }
+
+
+  .academ-technologies {
+    padding: 80px 0;
+  }
+
+
+  .academ-technology-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .academ-development {
+    margin-bottom: 80px;
+
+    padding: 75px 22px;
+
+    border-radius: 10px;
+  }
+
+
+  .academ-development-content > p {
+    font-size: 13px;
+  }
+
+
+  .development-flow {
+    grid-template-columns: 1fr;
+  }
+
+
+  .academ-learning {
+    padding-bottom: 80px;
+  }
+
+
+  .learning-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .academ-summary {
+    padding: 80px 0 100px;
+  }
+
+
+  .summary-content h2 {
+    font-size: 37px;
+  }
+
+
+  .summary-content p {
+    font-size: 12px;
+  }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 420px) {
+
+  .academ-hero {
+    padding: 75px 14px;
+  }
+
+
+  .academ-hero h1 {
+    font-size: 42px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .academ-label {
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .academ-tech {
+    gap: 5px;
+  }
+
+
+  .academ-tech span {
+    padding: 6px 9px;
+
+    font-size: 9px;
+  }
+
+
+  .academ-container {
+    padding: 0 14px;
+  }
+
+
+  .academ-info-panel {
+    gap: 7px;
+  }
+
+
+  .info-item {
+    min-height: 90px;
+
+    padding: 13px;
+  }
+
+
+  .info-item span {
+    font-size: 7px;
+  }
+
+
+  .info-item strong {
+    font-size: 11px;
+  }
+
+
+  .academ-project-card {
+    padding: 19px;
+  }
+
+
+  .project-icon {
+    width: 55px;
+    height: 55px;
+
+    font-size: 25px;
+  }
+
+
+  .project-status {
+    font-size: 8px;
+  }
+
+
+  .project-number {
+    font-size: 45px;
+
+    right: 20px;
+  }
+
+
+  .project-card-content h3 {
+    font-size: 22px;
+  }
+
+
+  .tech-list span {
+    padding: 5px 8px;
+
+    font-size: 9px;
+  }
+
+
+  .academ-development {
+    padding: 65px 18px;
+
+    border-radius: 8px;
+  }
+
+
+  .summary-content h2 {
+    font-size: 32px;
+  }
+
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .academ-hero-content,
+  .academ-project-card,
+  .academ-primary-button,
+  .academ-secondary-button,
+  .academ-technology-card,
+  .learning-card,
+  .back-projects-button {
+
+    animation: none;
+
+    transition: none;
+  }
+
+}

@@ -1,0 +1,593 @@
+/* ================================
+   SMART PARKING SPACE CHECKER
+   ProjectBuildersPH Theme
+================================ */
+
+.spsc-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 80px;
+}
+
+.spsc-container {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* ================================
+   BACK BUTTON
+================================ */
+
+.spsc-back-btn {
+  margin-top: 30px;
+  border: none;
+  background: transparent;
+  color: #555;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 0;
+  transition: 0.2s ease;
+}
+
+.spsc-back-btn:hover {
+  color: #8edb35;
+  transform: translateX(-3px);
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.spsc-header {
+  margin-top: 10px;
+  padding: 30px 0 35px;
+}
+
+.spsc-problem-number {
+  display: inline-block;
+  background: #8edb35;
+  color: #000;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 7px 13px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.spsc-header h1 {
+  margin: 0;
+  font-size: clamp(34px, 5vw, 54px);
+  font-weight: 900;
+  line-height: 1.05;
+  color: #050505;
+}
+
+.spsc-subtitle {
+  color: #666;
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 15px 0 20px;
+  max-width: 650px;
+}
+
+.spsc-tags {
+  display: flex;
+  gap: 10px;
+}
+
+.spsc-tag {
+  padding: 7px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.spsc-tag.difficulty {
+  background: #8edb35;
+  color: #000;
+}
+
+.spsc-tag.language {
+  background: #000;
+  color: #fff;
+}
+
+/* ================================
+   CONTENT
+================================ */
+
+.spsc-content {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.spsc-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.spsc-card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.spsc-card-title span {
+  font-size: 25px;
+}
+
+.spsc-card-title h2 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.spsc-card p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.spsc-card h3 {
+  font-size: 18px;
+  margin-top: 25px;
+}
+
+/* ================================
+   LIST
+================================ */
+
+.spsc-list {
+  padding-left: 22px;
+  line-height: 2;
+  color: #444;
+}
+
+.spsc-list li::marker {
+  color: #8edb35;
+}
+
+/* ================================
+   OUTPUT BOXES
+================================ */
+
+.spsc-output {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 17px;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+
+.spsc-output.available {
+  background: #f0f9e8;
+  border: 1px solid #cce9ae;
+}
+
+.spsc-output.full {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+}
+
+.output-icon {
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #8edb35;
+  border-radius: 50%;
+  font-weight: 900;
+}
+
+.spsc-output.full .output-icon {
+  background: #000;
+  color: #fff;
+}
+
+.spsc-output strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.spsc-output code {
+  color: #555;
+  font-family: Consolas, monospace;
+}
+
+/* ================================
+   PARKING CARD
+================================ */
+
+.spsc-parking-card {
+  background: #000;
+  color: #fff;
+  border-radius: 18px;
+  padding: 25px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.parking-icon {
+  width: 55px;
+  height: 55px;
+  background: #8edb35;
+  color: #000;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.spsc-parking-card div:not(.parking-icon):not(.parking-divider) {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.spsc-parking-card span {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.spsc-parking-card strong {
+  font-size: 20px;
+}
+
+.parking-divider {
+  width: 1px;
+  height: 45px;
+  background: #444;
+  margin: 0 20px;
+}
+
+/* ================================
+   EXAMPLES
+================================ */
+
+.spsc-example {
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 18px;
+}
+
+.example-header {
+  background: #f1f1f1;
+  padding: 11px 15px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.example-content {
+  padding: 18px;
+}
+
+.example-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.example-row span {
+  color: #777;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.example-row code {
+  background: #111;
+  color: #fff;
+  padding: 13px;
+  border-radius: 8px;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+}
+
+.example-result {
+  margin-top: 15px;
+  padding: 13px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.example-result.success {
+  background: #eff9e8;
+  color: #3e7512;
+}
+
+.example-result.full-result {
+  background: #eeeeee;
+  color: #111;
+}
+
+.example-result.invalid {
+  background: #fff0f0;
+  color: #a12626;
+}
+
+.example-available {
+  margin-top: 10px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* ================================
+   CHALLENGE
+================================ */
+
+.spsc-challenge {
+  background: #8edb35;
+  border-radius: 18px;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.challenge-icon {
+  font-size: 35px;
+}
+
+.spsc-challenge h2 {
+  margin: 0 0 8px;
+  font-size: 26px;
+}
+
+.spsc-challenge p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+/* ================================
+   HINTS
+================================ */
+
+.hint-description {
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.hint-box {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.hint-button {
+  width: 100%;
+  border: none;
+  background: #fff;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 800;
+  transition: 0.2s ease;
+}
+
+.hint-button:hover {
+  background: #f5fbeF;
+}
+
+.hint-content {
+  background: #f8f8f8;
+  border-top: 1px solid #ddd;
+  padding: 5px 20px 15px;
+}
+
+.hint-content p {
+  margin-bottom: 10px;
+}
+
+/* ================================
+   EXPECTED LOGIC
+================================ */
+
+.logic-box {
+  background: #101010;
+  border-radius: 12px;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.logic-line {
+  display: flex;
+  align-items: center;
+  min-height: 35px;
+  font-family: Consolas, monospace;
+}
+
+.logic-line code {
+  color: #fff;
+  font-size: 14px;
+}
+
+.logic-line.condition code {
+  color: #8edb35;
+}
+
+.logic-number {
+  width: 30px;
+  color: #555;
+  user-select: none;
+}
+
+/* ================================
+   REQUIREMENTS
+================================ */
+
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.requirement {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.requirement.required {
+  background: #f1f9e9;
+}
+
+.requirement.not-allowed {
+  background: #f3f3f3;
+}
+
+.requirement > span {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.requirement.required > span {
+  background: #8edb35;
+}
+
+.requirement.not-allowed > span {
+  background: #000;
+  color: #fff;
+}
+
+.requirement strong,
+.requirement small {
+  display: block;
+}
+
+.requirement small {
+  color: #777;
+  margin-top: 4px;
+}
+
+/* ================================
+   FINAL SECTION
+================================ */
+
+.spsc-final {
+  background: #000;
+  color: #fff;
+  border-radius: 18px;
+  padding: 45px 30px;
+  text-align: center;
+}
+
+.final-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.spsc-final h2 {
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+.spsc-final p {
+  color: #bbb;
+  line-height: 1.7;
+  max-width: 550px;
+  margin: 0 auto 20px;
+}
+
+.final-reminder {
+  display: inline-block;
+  background: #8edb35;
+  color: #000;
+  padding: 10px 18px;
+  border-radius: 8px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 700px) {
+
+  .spsc-container {
+    width: min(100% - 25px, 1100px);
+  }
+
+  .spsc-card {
+    padding: 22px;
+  }
+
+  .spsc-header h1 {
+    font-size: 36px;
+  }
+
+  .spsc-parking-card {
+    flex-wrap: wrap;
+  }
+
+  .parking-divider {
+    display: none;
+  }
+
+  .requirements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spsc-output {
+    align-items: flex-start;
+  }
+
+  .spsc-challenge {
+    padding: 22px;
+  }
+
+  .logic-box {
+    padding: 15px;
+  }
+
+  .logic-line code {
+    font-size: 12px;
+  }
+}
+
+.spsc-back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  border: none;
+  background: #8edb35;
+  border-radius: 10px;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 13px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+.spsc-back-btn:hover {
+  color: white;
+  background: black;
+  transform: translateX(-3px);
+}

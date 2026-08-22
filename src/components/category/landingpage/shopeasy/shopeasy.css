@@ -1,0 +1,1067 @@
+/* ========================================
+   SHOPEASY PAGE
+======================================== */
+
+.shopeasy-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f7fa;
+  color: #111827;
+  overflow: hidden;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.shopeasy-hero {
+  width: 100%;
+  padding: 120px 30px 110px;
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071a3d 0%,
+      #0b315f 50%,
+      #167b7d 100%
+    );
+
+  color: white;
+}
+
+
+.shopeasy-hero-content {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+.shopeasy-label,
+.section-label {
+  display: inline-block;
+
+  color: #35b9f2;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 15px;
+}
+
+
+.shopeasy-hero h1 {
+  margin: 0;
+
+  font-size: clamp(55px, 8vw, 100px);
+
+  line-height: 0.95;
+
+  letter-spacing: -4px;
+
+  font-weight: 900;
+}
+
+
+.shopeasy-hero h1 span {
+  color: #35b9f2;
+}
+
+
+.shopeasy-hero-description {
+  max-width: 650px;
+
+  margin: 30px 0;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 18px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   TECHNOLOGY TAGS
+======================================== */
+
+.shopeasy-tech {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 30px;
+}
+
+
+.shopeasy-tech span {
+  padding: 9px 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* ========================================
+   HERO BUTTONS
+======================================== */
+
+.shopeasy-hero-buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+}
+
+
+.shopeasy-primary-button,
+.shopeasy-secondary-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 150px;
+
+  padding: 14px 25px;
+
+  border-radius: 7px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.shopeasy-primary-button {
+  background: #35b9f2;
+  color: white;
+}
+
+
+.shopeasy-secondary-button {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  color: white;
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+
+.shopeasy-primary-button:hover,
+.shopeasy-secondary-button:hover {
+  transform: translateY(-3px);
+}
+
+
+.shopeasy-primary-button:hover {
+  background: #1da8e4;
+}
+
+
+.shopeasy-secondary-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.shopeasy-container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 90px 30px;
+
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   INTRODUCTION
+======================================== */
+
+.shopeasy-introduction {
+  display: grid;
+
+  grid-template-columns:
+    1.4fr
+    0.8fr;
+
+  gap: 80px;
+
+  align-items: center;
+
+  margin-bottom: 120px;
+}
+
+
+.shopeasy-intro-content h2,
+.section-heading h2,
+.summary-content h2 {
+  margin: 0;
+
+  font-size: clamp(32px, 4vw, 48px);
+
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+
+  font-weight: 800;
+}
+
+
+.shopeasy-intro-content h2 strong,
+.section-heading h2 strong,
+.summary-content h2 strong {
+  color: #159bd1;
+}
+
+
+.shopeasy-intro-content p,
+.summary-content p {
+  max-width: 700px;
+
+  margin: 20px 0 0;
+
+  color: #657080;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   PROJECT INFO
+======================================== */
+
+.shopeasy-project-info {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+}
+
+
+.info-box {
+  padding: 25px 20px;
+
+  background: white;
+
+  border: 1px solid #e5e9ef;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+
+.info-box span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #8a94a3;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+
+.info-box strong {
+  font-size: 14px;
+}
+
+
+/* ========================================
+   SECTION HEADING
+======================================== */
+
+.section-heading {
+  max-width: 700px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+
+.section-heading p {
+  margin: 18px auto 0;
+
+  max-width: 600px;
+
+  color: #697586;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   FEATURES
+======================================== */
+
+.shopeasy-features {
+  margin-bottom: 120px;
+}
+
+
+.feature-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+.feature-card {
+  position: relative;
+
+  min-height: 220px;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background: white;
+
+  border: 1px solid #e5e9ef;
+
+  border-radius: 12px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.feature-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+.feature-number {
+  margin-bottom: 30px;
+
+  color: #35b9f2;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+.feature-card h3 {
+  margin: 0 0 12px;
+
+  font-size: 20px;
+}
+
+
+.feature-card p {
+  margin: 0;
+
+  color: #687384;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   PREVIEW
+======================================== */
+
+.shopeasy-preview {
+  margin-bottom: 120px;
+}
+
+
+.shopeasy-gallery {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 35px;
+}
+
+
+/* ========================================
+   SCREENSHOT CARD
+======================================== */
+
+.screenshot-card {
+  overflow: hidden;
+
+  background: white;
+
+  border: 1px solid #e3e8ee;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.05);
+}
+
+
+.screenshot-image-button {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+
+  padding: 0;
+
+  border: none;
+
+  background: #eef2f6;
+
+  cursor: pointer;
+
+  overflow: hidden;
+}
+
+
+.screenshot-image-button img {
+  display: block;
+
+  width: 100%;
+
+  height: 310px;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.screenshot-image-button:hover img {
+  transform: scale(1.03);
+}
+
+
+/* ========================================
+   IMAGE OVERLAY
+======================================== */
+
+.image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(7, 26, 61, 0.65);
+
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease;
+}
+
+
+.image-overlay span {
+  padding: 10px 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  border-radius: 50px;
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+.screenshot-image-button:hover .image-overlay {
+  opacity: 1;
+}
+
+
+/* ========================================
+   SCREENSHOT CONTENT
+======================================== */
+
+.screenshot-content {
+  padding: 25px 28px 30px;
+}
+
+
+.screenshot-content > span {
+  color: #35b9f2;
+
+  font-size: 11px;
+
+  font-weight: 900;
+}
+
+
+.screenshot-content h3 {
+  margin: 10px 0;
+
+  font-size: 21px;
+}
+
+
+.screenshot-content p {
+  margin: 0;
+
+  color: #697586;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   TECHNOLOGIES
+======================================== */
+
+.shopeasy-technologies {
+  margin-bottom: 120px;
+}
+
+
+.technology-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+.technology-card {
+  padding: 35px 30px;
+
+  text-align: center;
+
+  background: white;
+
+  border: 1px solid #e3e8ee;
+
+  border-radius: 12px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.technology-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.technology-icon {
+  width: 70px;
+
+  height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 0 auto 20px;
+
+  border-radius: 12px;
+
+  background: #eaf8fe;
+
+  color: #159bd1;
+
+  font-size: 15px;
+
+  font-weight: 900;
+}
+
+
+.technology-card h3 {
+  margin: 0 0 12px;
+
+  font-size: 20px;
+}
+
+
+.technology-card p {
+  margin: 0;
+
+  color: #697586;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   SUMMARY
+======================================== */
+
+.shopeasy-summary {
+  padding: 80px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071a3d,
+      #0d4865
+    );
+
+  color: white;
+}
+
+
+.summary-content {
+  max-width: 750px;
+}
+
+
+.summary-content .section-label {
+  color: #35b9f2;
+}
+
+
+.summary-content h2 {
+  color: white;
+}
+
+
+.summary-content p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+.back-projects-button {
+  display: inline-flex;
+
+  border: none;
+
+  cursor: pointer;
+
+  margin-top: 30px;
+
+  padding: 13px 22px;
+
+  border-radius: 7px;
+
+  background: #35b9f2;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.back-projects-button:hover {
+  transform: translateY(-3px);
+
+  background: #1da8e4;
+}
+
+
+/* ========================================
+   MODAL
+======================================== */
+
+.shopeasy-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.88);
+
+  animation:
+    shopeasyModalFade
+    0.25s
+    ease;
+}
+
+
+@keyframes shopeasyModalFade {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+.shopeasy-modal-content {
+  position: relative;
+
+  max-width: 1200px;
+
+  max-height: 90vh;
+
+  padding: 10px;
+
+  background: white;
+
+  border-radius: 12px;
+
+  box-sizing: border-box;
+
+  animation:
+    shopeasyModalScale
+    0.3s
+    ease;
+}
+
+
+@keyframes shopeasyModalScale {
+
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+.shopeasy-modal-content img {
+  display: block;
+
+  max-width: 100%;
+
+  max-height: 85vh;
+
+  width: auto;
+
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 6px;
+}
+
+
+/* ========================================
+   MODAL CLOSE
+======================================== */
+
+.shopeasy-modal-close {
+  position: absolute;
+
+  top: -15px;
+
+  right: -15px;
+
+  width: 38px;
+
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #111827;
+
+  color: white;
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.shopeasy-modal-close:hover {
+  transform: scale(1.08);
+
+  background: #159bd1;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .shopeasy-introduction {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+
+  .feature-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .technology-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+  .shopeasy-hero {
+    padding:
+      80px
+      20px
+      75px;
+  }
+
+
+  .shopeasy-hero h1 {
+    font-size: 60px;
+
+    letter-spacing: -3px;
+  }
+
+
+  .shopeasy-hero-description {
+    font-size: 15px;
+  }
+
+
+  .shopeasy-container {
+    padding:
+      65px
+      18px;
+  }
+
+
+  .shopeasy-introduction,
+  .shopeasy-features,
+  .shopeasy-preview,
+  .shopeasy-technologies {
+    margin-bottom: 80px;
+  }
+
+
+  .shopeasy-project-info {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .shopeasy-gallery {
+    grid-template-columns: 1fr;
+  }
+
+
+  .technology-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .screenshot-image-button img {
+    height: 220px;
+  }
+
+
+  .shopeasy-summary {
+    padding: 40px 25px;
+  }
+
+
+  .shopeasy-summary h2 {
+    font-size: 32px;
+  }
+
+
+  .shopeasy-modal {
+    padding: 15px;
+  }
+
+
+  .shopeasy-modal-content {
+    max-width: 96vw;
+
+    padding: 6px;
+  }
+
+
+  .shopeasy-modal-content img {
+    max-height: 80vh;
+  }
+
+
+  .shopeasy-modal-close {
+    top: -10px;
+
+    right: -8px;
+
+    width: 32px;
+
+    height: 32px;
+
+    font-size: 20px;
+  }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 420px) {
+
+  .shopeasy-hero {
+    padding:
+      65px
+      16px
+      60px;
+  }
+
+
+  .shopeasy-hero h1 {
+    font-size: 50px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .shopeasy-hero-buttons {
+    flex-direction: column;
+  }
+
+
+  .shopeasy-primary-button,
+  .shopeasy-secondary-button {
+    width: 100%;
+  }
+
+
+  .shopeasy-project-info {
+    grid-template-columns: 1fr;
+  }
+
+
+  .screenshot-image-button img {
+    height: 190px;
+  }
+
+
+  .section-heading h2,
+  .shopeasy-intro-content h2 {
+    font-size: 32px;
+  }
+
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .shopeasy-page *,
+  .shopeasy-page *::before,
+  .shopeasy-page *::after {
+
+    animation: none !important;
+
+    transition: none !important;
+  }
+
+}

@@ -1,0 +1,718 @@
+/* ========================================
+   PROJECTBUILDERSPH
+   VIDEO TESTIMONIALS
+======================================== */
+
+.testimonials-section {
+  position: relative;
+
+  width: 100%;
+
+  padding: 90px 30px;
+
+  background: #f3f5ec;
+
+  color: #111111;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   BACKGROUND DECORATION
+======================================== */
+
+.testimonials-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: -300px;
+  right: -200px;
+
+  border-radius: 50%;
+
+  background: #79c936;
+
+  opacity: 0.08;
+
+  pointer-events: none;
+}
+
+
+.testimonials-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  bottom: -220px;
+  left: -150px;
+
+  border-radius: 50%;
+
+  background: #79c936;
+
+  opacity: 0.06;
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.testimonials-header {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 1250px;
+
+  margin: 0 auto 45px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.testimonials-label {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #79c936;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.testimonials-header h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: clamp(
+    48px,
+    6vw,
+    78px
+  );
+
+  line-height: 0.9;
+
+  letter-spacing: -4px;
+
+  font-weight: 900;
+}
+
+
+.testimonials-header h2 span {
+  color: #79c936;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.testimonials-header p {
+  max-width: 520px;
+
+  margin: 20px 0 0;
+
+  color: #666666;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   CONTROLS
+======================================== */
+
+.testimonial-controls {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.testimonial-counter {
+  margin-right: 10px;
+
+  color: #777777;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+.testimonial-controls button {
+  width: 44px;
+  height: 44px;
+
+  border: 2px solid #111111;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #111111;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+
+.testimonial-controls button:hover {
+  background: #79c936;
+
+  border-color: #79c936;
+
+  color: #111111;
+
+  transform: translateY(-3px);
+}
+
+
+/* ========================================
+   VIDEO SHOWCASE
+======================================== */
+
+.testimonial-showcase {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 1400px;
+
+  min-height: 500px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+}
+
+
+/* ========================================
+   SIDE VIDEOS
+======================================== */
+
+.testimonial-side {
+  position: relative;
+
+  width: 230px;
+
+  height: 350px;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  background: #111111;
+
+  cursor: pointer;
+
+  opacity: 0.35;
+
+  transform: scale(0.88);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+.testimonial-side:hover {
+  opacity: 0.7;
+
+  transform: scale(0.93);
+}
+
+
+.testimonial-side video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* ========================================
+   SIDE VIDEO OVERLAY
+======================================== */
+
+.side-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  align-items: flex-start;
+
+  text-align: left;
+
+  background:
+    linear-gradient(
+      transparent 35%,
+      rgba(17, 17, 17, 0.9)
+    );
+}
+
+
+.side-overlay span {
+  margin-bottom: 5px;
+
+  color: #79c936;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+.side-overlay strong {
+  color: #ffffff;
+
+  font-size: 12px;
+
+  line-height: 1.3;
+}
+
+
+/* ========================================
+   CENTER VIDEO
+======================================== */
+
+.testimonial-center {
+  position: relative;
+
+  width: 400px;
+
+  flex-shrink: 0;
+
+  z-index: 5;
+}
+
+
+/* ========================================
+   VIDEO
+======================================== */
+
+.testimonial-video {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 11 / 12;
+
+  overflow: hidden;
+
+  border-radius: 26px;
+
+  background: #111111;
+
+  border: 4px solid #79c936;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.18);
+
+  transition: transform 0.3s ease;
+}
+
+
+.testimonial-video:hover {
+  transform: translateY(-5px);
+}
+
+
+.testimonial-video video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* ========================================
+   GREEN TOP ACCENT
+======================================== */
+
+.testimonial-video::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 3;
+
+  top: 0;
+  left: 20%;
+
+  width: 60%;
+
+  height: 5px;
+
+  background: #79c936;
+
+  border-radius: 0 0 10px 10px;
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   VIDEO INFORMATION
+======================================== */
+
+.testimonial-info {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 16px;
+
+  padding: 0 5px;
+}
+
+
+/* ========================================
+   PERSON
+======================================== */
+
+.testimonial-person {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.testimonial-avatar {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #111111;
+
+  color: #79c936;
+
+  font-size: 10px;
+
+  font-weight: 900;
+}
+
+
+.testimonial-person div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.testimonial-person strong {
+  color: #111111;
+
+  font-size: 12px;
+}
+
+
+.testimonial-person span {
+  color: #777777;
+
+  font-size: 10px;
+}
+
+
+/* ========================================
+   TESTIMONIAL TITLE
+======================================== */
+
+.testimonial-title {
+  text-align: right;
+}
+
+
+.testimonial-title span {
+  color: #79c936;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+.testimonial-title h3 {
+  max-width: 190px;
+
+  margin: 4px 0 0;
+
+  color: #111111;
+
+  font-size: 12px;
+
+  line-height: 1.3;
+}
+
+
+/* ========================================
+   BOTTOM MESSAGE
+======================================== */
+
+.testimonials-bottom {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 700px;
+
+  margin: 45px auto 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+}
+
+
+.testimonials-bottom p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 11px;
+
+  text-align: center;
+}
+
+
+.bottom-line {
+  width: 45px;
+
+  height: 2px;
+
+  background: #79c936;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1050px) {
+
+  .testimonials-section {
+    padding: 75px 25px;
+  }
+
+
+  .testimonials-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+
+  .testimonial-showcase {
+    min-height: auto;
+  }
+
+
+  .testimonial-side {
+    width: 170px;
+
+    height: 280px;
+  }
+
+
+  .testimonial-center {
+    width: 330px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+  .testimonials-section {
+    padding: 65px 18px;
+  }
+
+
+  .testimonials-header h2 {
+    font-size: 48px;
+
+    letter-spacing: -3px;
+  }
+
+
+  .testimonials-header p {
+    font-size: 13px;
+  }
+
+
+  .testimonial-controls {
+    width: 100%;
+
+    justify-content: flex-start;
+  }
+
+
+  .testimonial-showcase {
+    display: block;
+
+    min-height: auto;
+  }
+
+
+  /* Hide side videos */
+
+  .testimonial-side {
+    display: none;
+  }
+
+
+  /* Center video */
+
+  .testimonial-center {
+    width: min(
+      100%,
+      330px
+    );
+
+    margin: 0 auto;
+  }
+
+
+  .testimonial-video {
+    border-radius: 22px;
+  }
+
+
+  .testimonial-info {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .testimonial-title {
+    text-align: left;
+  }
+
+
+  .testimonial-title h3 {
+    max-width: 100%;
+  }
+
+}
+
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 400px) {
+
+  .testimonials-header h2 {
+    font-size: 42px;
+  }
+
+
+  .testimonial-center {
+    width: 100%;
+  }
+
+
+  .testimonial-video {
+    border-radius: 18px;
+  }
+
+}

@@ -1,0 +1,478 @@
+/* =========================================================
+   PROJECT BUILDERS PH - NAVBAR
+   Brand Colors
+   Green  : #9ACF4A
+   Dark   : #111111
+   Ivory  : #F4F1E8
+   Gray   : #D9D5C9
+========================================================= */
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  z-index: 1000;
+
+  background: rgba(244, 241, 232, 0.96);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.04);
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   NAVBAR CONTAINER
+========================================================= */
+
+.navbar-container {
+  width: 90%;
+  max-width: 1250px;
+
+  height: 82px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: translateY(-1px);
+}
+
+.navbar-logo img {
+  width: 155px;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   NAVIGATION MENU
+========================================================= */
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+
+  gap: 32px;
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.navbar-menu a {
+  position: relative;
+
+  color: #111111;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* =========================================================
+   NAVIGATION HOVER
+========================================================= */
+
+.navbar-menu a:not(.navbar-contact)::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -9px;
+
+  width: 0;
+  height: 3px;
+
+  border-radius: 10px;
+
+  background: #9ACF4A;
+
+  transform: translateX(-50%);
+
+  transition:
+    width 0.3s ease;
+}
+
+.navbar-menu a:not(.navbar-contact):hover {
+  color: #7FB83D;
+
+  transform: translateY(-1px);
+}
+
+.navbar-menu a:not(.navbar-contact):hover::after {
+  width: 70%;
+}
+
+
+/* =========================================================
+   CONTACT BUTTON
+========================================================= */
+
+.navbar-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 105px;
+
+  padding: 11px 20px;
+
+  background: #9ACF4A;
+
+  color: #111111 !important;
+
+  border: 2px solid #9ACF4A;
+
+  border-radius: 8px;
+
+  font-size: 14px !important;
+  font-weight: 700 !important;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 5px 15px rgba(154, 207, 74, 0.18);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar-contact:hover {
+  background: #111111;
+
+  border-color: #111111;
+
+  color: #FFFFFF !important;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.navbar-toggle {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 8px;
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  border-radius: 8px;
+
+  transition:
+    background 0.3s ease;
+}
+
+.navbar-toggle:hover {
+  background: rgba(154, 207, 74, 0.15);
+}
+
+
+/* =========================================================
+   HAMBURGER LINES
+========================================================= */
+
+.navbar-toggle span {
+  display: block;
+
+  width: 25px;
+  height: 3px;
+
+  background: #111111;
+
+  border-radius: 10px;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* =========================================================
+   HAMBURGER ACTIVE → X
+========================================================= */
+
+.navbar-toggle.active span:nth-child(1) {
+  transform:
+    translateY(8px)
+    rotate(45deg);
+}
+
+.navbar-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active span:nth-child(3) {
+  transform:
+    translateY(-8px)
+    rotate(-45deg);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .navbar-container {
+    width: 92%;
+  }
+
+  .navbar-menu {
+    gap: 22px;
+  }
+
+  .navbar-menu a {
+    font-size: 14px;
+  }
+
+  .navbar-logo img {
+    width: 140px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .navbar-container {
+    width: 90%;
+    height: 72px;
+  }
+
+
+  /* -----------------------------------------
+     Logo
+  ----------------------------------------- */
+
+  .navbar-logo img {
+    width: 130px;
+  }
+
+
+  /* -----------------------------------------
+     Hamburger
+  ----------------------------------------- */
+
+  .navbar-toggle {
+    display: flex;
+
+    position: relative;
+
+    z-index: 1001;
+  }
+
+
+  /* -----------------------------------------
+     Mobile Menu
+  ----------------------------------------- */
+
+  .navbar-menu {
+    position: absolute;
+
+    top: 72px;
+    left: 0;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 28px 5% 32px;
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 6px;
+
+    background: rgba(244, 241, 232, 0.98);
+
+    border-bottom:
+      1px solid rgba(17, 17, 17, 0.08);
+
+    box-shadow:
+      0 10px 25px rgba(0, 0, 0, 0.08);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-15px);
+
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      transform 0.3s ease;
+  }
+
+
+  /* -----------------------------------------
+     Open Menu
+  ----------------------------------------- */
+
+  .navbar-menu.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+  }
+
+
+  /* -----------------------------------------
+     Mobile Links
+  ----------------------------------------- */
+
+  .navbar-menu a {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 15px;
+
+    font-size: 16px;
+
+    border-radius: 7px;
+
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
+  }
+
+  .navbar-menu a:hover {
+    background: rgba(154, 207, 74, 0.15);
+
+    transform: none;
+  }
+
+
+  /* Remove desktop underline on mobile */
+
+  .navbar-menu a:not(.navbar-contact)::after {
+    display: none;
+  }
+
+
+  /* -----------------------------------------
+     Mobile Contact Button
+  ----------------------------------------- */
+
+  .navbar-contact {
+    margin-top: 12px;
+
+    width: 100%;
+
+    padding: 13px 20px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .navbar-container {
+    width: 92%;
+  }
+
+  .navbar-logo img {
+    width: 115px;
+  }
+
+  .navbar-menu {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.navbar-menu a:focus-visible,
+.navbar-toggle:focus-visible {
+  outline: 3px solid rgba(154, 207, 74, 0.6);
+
+  outline-offset: 3px;
+}

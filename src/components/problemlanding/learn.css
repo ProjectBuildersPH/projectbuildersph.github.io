@@ -1,0 +1,388 @@
+/* =========================================
+   PROJECTBUILDERS PH
+   LEARN LANDING PAGE
+========================================= */
+
+.learn-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.learn-container {
+  width: min(1150px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.learn-hero {
+  background: #000;
+  color: #fff;
+  padding: 90px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.learn-hero::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: #8edb35;
+  border-radius: 50%;
+  right: -180px;
+  top: -220px;
+  opacity: 0.12;
+}
+
+.learn-badge {
+  display: inline-block;
+  background: #8edb35;
+  color: #000;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  padding: 8px 15px;
+  border-radius: 30px;
+  margin-bottom: 22px;
+}
+
+.learn-hero h1 {
+  margin: 0;
+  max-width: 800px;
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 0.98;
+  font-weight: 900;
+  letter-spacing: -3px;
+}
+
+.learn-hero h1 span {
+  color: #8edb35;
+}
+
+.learn-hero p {
+  max-width: 650px;
+  color: #bdbdbd;
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 25px 0 0;
+}
+
+/* =========================================
+   LANGUAGE SECTION
+========================================= */
+
+.learn-section {
+  padding: 75px 0;
+}
+
+.learn-section-heading {
+  margin-bottom: 35px;
+}
+
+.section-label {
+  color: #6aa823;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.learn-section-heading h2 {
+  margin: 8px 0 10px;
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.learn-section-heading p {
+  color: #666;
+  max-width: 650px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =========================================
+   LANGUAGE GRID
+========================================= */
+
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+/* =========================================
+   LANGUAGE CARD
+========================================= */
+
+.language-card {
+  background: #fff;
+  min-height: 340px;
+  border: 1px solid #e3e3e3;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.language-card::before {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  background: #8edb35;
+  border-radius: 50%;
+  right: -55px;
+  top: -55px;
+  opacity: 0;
+  transition: 0.25s ease;
+}
+
+.language-card:hover {
+  transform: translateY(-8px);
+  border-color: #8edb35;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+}
+
+.language-card:hover::before {
+  opacity: 0.18;
+}
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.language-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.language-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 16px;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 900;
+  transition: 0.25s ease;
+}
+
+.language-card:hover .language-icon {
+  background: #8edb35;
+  color: #000;
+}
+
+.arrow {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: 0.25s ease;
+}
+
+.language-card:hover .arrow {
+  background: #000;
+  color: #fff;
+  transform: rotate(-45deg);
+}
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.language-card-content {
+  flex: 1;
+  padding-top: 30px;
+}
+
+.language-card-content h3 {
+  font-size: 28px;
+  margin: 0 0 10px;
+  font-weight: 900;
+}
+
+.language-card-content p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* =========================================
+   CARD FOOTER
+========================================= */
+
+.language-card-footer {
+  border-top: 1px solid #e8e8e8;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.language-card-footer span {
+  font-size: 11px;
+  font-weight: 800;
+  color: #777;
+}
+
+.language-card-footer span:first-child {
+  color: #6aa823;
+}
+
+/* =========================================
+   LEARNING PATH
+========================================= */
+
+.learn-path-section {
+  padding: 0 0 75px;
+}
+
+.learning-path {
+  background: #8edb35;
+  border-radius: 22px;
+  padding: 38px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.path-icon {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  background: #000;
+  color: #fff;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.path-content h2 {
+  margin: 7px 0 8px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.path-content p {
+  margin: 0;
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.learn-bottom {
+  background: #000;
+  color: #fff;
+  padding: 70px 0;
+}
+
+.learn-bottom-content {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.learn-bottom-content h2 {
+  margin: 0 0 15px;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.learn-bottom-content p {
+  color: #aaa;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .language-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .learn-container {
+    width: min(100% - 25px, 1150px);
+  }
+
+  .learn-hero {
+    padding: 65px 0 75px;
+  }
+
+  .learn-hero h1 {
+    font-size: 45px;
+    letter-spacing: -2px;
+  }
+
+  .learn-hero p {
+    font-size: 16px;
+  }
+
+  .learn-section {
+    padding: 55px 0;
+  }
+
+  .learn-section-heading h2 {
+    font-size: 29px;
+  }
+
+  .language-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .language-card {
+    min-height: 300px;
+  }
+
+  .learning-path {
+    padding: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .path-content h2 {
+    font-size: 25px;
+  }
+
+  .learn-bottom {
+    padding: 55px 0;
+  }
+
+}

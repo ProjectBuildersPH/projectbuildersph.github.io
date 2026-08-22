@@ -1,0 +1,546 @@
+/* =====================================================
+   CAREER / JOURNEY SECTION
+===================================================== */
+
+.career-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 110px 20px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111111;
+}
+
+.career-container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.career-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 90px;
+}
+
+.career-eyebrow {
+  display: inline-block;
+
+  padding: 8px 18px;
+
+  background: #f1f9e7;
+  border: 1px solid #8ed629;
+  border-radius: 50px;
+
+  color: #111111;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.career-header h1 {
+  margin: 20px 0 15px;
+
+  font-size: 55px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.career-header h1 span {
+  color: #8ed629;
+}
+
+.career-header p {
+  margin: 0;
+
+  color: #666666;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.career-timeline {
+  position: relative;
+}
+
+
+/* Vertical timeline line */
+
+.career-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  left: 35px;
+  top: 0;
+  bottom: 0;
+
+  width: 3px;
+
+  background: #111111;
+}
+
+
+/* =====================================================
+   CAREER ITEM
+===================================================== */
+
+.career-item {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 70px 1fr;
+
+  gap: 30px;
+
+  margin-bottom: 65px;
+}
+
+.career-item:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =====================================================
+   TIMELINE DOT
+===================================================== */
+
+.career-line {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+
+.career-dot {
+  position: relative;
+  z-index: 5;
+
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #111111;
+  border: 5px solid #ffffff;
+
+  outline: 3px solid #8ed629;
+
+  color: #8ed629;
+
+  font-size: 14px;
+  font-weight: 900;
+}
+
+
+/* Current timeline dot */
+
+.career-current .career-dot {
+  background: #8ed629;
+  color: #111111;
+
+  outline-color: #111111;
+
+  box-shadow:
+    0 0 0 8px rgba(142, 214, 41, 0.15),
+    0 0 25px rgba(142, 214, 41, 0.35);
+}
+
+
+/* =====================================================
+   CAREER CARD
+===================================================== */
+
+.career-card {
+  background: #111111;
+
+  border-radius: 24px;
+
+  padding: 35px;
+
+  border: 1px solid #252525;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s ease;
+}
+
+.career-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #8ed629;
+
+  box-shadow:
+    0 20px 45px rgba(142, 214, 41, 0.15);
+}
+
+
+/* =====================================================
+   CARD TOP
+===================================================== */
+
+.career-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.career-year {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.career-year strong {
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.career-year span {
+  color: #8ed629;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =====================================================
+   YOU ARE HERE
+===================================================== */
+
+.you-are-here {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 7px 12px;
+
+  border-radius: 50px;
+
+  background: rgba(142, 214, 41, 0.12);
+  border: 1px solid rgba(142, 214, 41, 0.4);
+
+  color: #8ed629;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #8ed629;
+
+  box-shadow:
+    0 0 0 4px rgba(142, 214, 41, 0.15);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.career-content {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 35px;
+
+  align-items: center;
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.career-step {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #8ed629;
+
+  font-size: 12px;
+  font-weight: 900;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+}
+
+.career-text h2 {
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-size: 31px;
+  line-height: 1.2;
+
+  font-weight: 900;
+}
+
+.career-text p {
+  margin: 0;
+
+  color: #aaaaaa;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.career-gallery {
+  position: relative;
+
+  width: 100%;
+
+  height: 290px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #202020;
+}
+
+.career-gallery img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+.career-gallery:hover img {
+  transform: scale(1.04);
+}
+
+
+/* =====================================================
+   GALLERY ARROWS
+===================================================== */
+
+.gallery-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  color: #ffffff;
+
+  font-size: 30px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 5;
+
+  transition: 0.2s ease;
+}
+
+.gallery-arrow:hover {
+  background: #8ed629;
+
+  color: #111111;
+}
+
+.gallery-left {
+  left: 12px;
+}
+
+.gallery-right {
+  right: 12px;
+}
+
+
+/* =====================================================
+   GALLERY DOTS
+===================================================== */
+
+.gallery-dots {
+  position: absolute;
+
+  left: 50%;
+  bottom: 15px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 7px;
+
+  padding: 7px 10px;
+
+  border-radius: 50px;
+
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.gallery-dot {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #777777;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.gallery-dot.active {
+  width: 20px;
+
+  border-radius: 10px;
+
+  background: #8ed629;
+}
+
+
+/* =====================================================
+   CURRENT PROJECT
+===================================================== */
+
+.career-current .career-card {
+  border-color: #8ed629;
+
+  background:
+    linear-gradient(
+      145deg,
+      #151515 0%,
+      #0d0d0d 100%
+    );
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 850px) {
+
+  .career-header h1 {
+    font-size: 43px;
+  }
+
+  .career-content {
+    grid-template-columns: 1fr;
+  }
+
+  .career-gallery {
+    height: 300px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .career-section {
+    padding: 80px 15px;
+  }
+
+  .career-header {
+    margin-bottom: 60px;
+  }
+
+  .career-header h1 {
+    font-size: 36px;
+  }
+
+  .career-header p {
+    font-size: 15px;
+  }
+
+  .career-timeline::before {
+    left: 25px;
+  }
+
+  .career-item {
+    grid-template-columns: 50px 1fr;
+    gap: 18px;
+    margin-bottom: 40px;
+  }
+
+  .career-dot {
+    width: 50px;
+    height: 50px;
+
+    font-size: 11px;
+
+    border-width: 3px;
+  }
+
+  .career-card {
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .career-card-top {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .career-text h2 {
+    font-size: 25px;
+  }
+
+  .career-gallery {
+    height: 220px;
+  }
+
+}

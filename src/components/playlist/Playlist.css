@@ -1,0 +1,522 @@
+/* ========================================
+   PLAYLIST SECTION
+======================================== */
+
+.playlist-section {
+  width: 100%;
+  padding: 70px 20px;
+  background: #f7f8f4;
+}
+
+.playlist-wrapper {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.playlist-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 28px;
+}
+
+.playlist-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #79c936;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+.playlist-header h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 42px;
+  line-height: 1;
+
+  letter-spacing: -2px;
+
+  font-weight: 900;
+}
+
+.playlist-header h2 span {
+  color: #79c936;
+}
+
+.playlist-header p {
+  max-width: 500px;
+
+  margin: 12px 0 0;
+
+  color: #707070;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* ========================================
+   YOUTUBE BUTTON
+======================================== */
+
+.playlist-channel {
+  flex-shrink: 0;
+
+  padding: 11px 18px;
+
+  border-radius: 25px;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.playlist-channel:hover {
+  background: #79c936;
+
+  color: #111111;
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   SCROLL CONTAINER
+======================================== */
+
+.playlist-list {
+  height: 570px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding-right: 8px;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #e9ece6;
+}
+
+
+/* ========================================
+   CUSTOM SCROLLBAR
+======================================== */
+
+.playlist-list::-webkit-scrollbar {
+  width: 7px;
+}
+
+.playlist-list::-webkit-scrollbar-track {
+  background: #edf1eb;
+
+  border-radius: 20px;
+}
+
+.playlist-list::-webkit-scrollbar-thumb {
+  background: #79c936;
+
+  border-radius: 20px;
+}
+
+.playlist-list::-webkit-scrollbar-thumb:hover {
+  background: #62a923;
+}
+
+
+/* ========================================
+   PLAYLIST ROW
+======================================== */
+
+.playlist-row {
+  display: grid;
+
+  grid-template-columns:
+    35px
+    145px
+    1fr
+    70px;
+
+  align-items: center;
+
+  gap: 18px;
+
+  min-height: 91px;
+
+  padding: 12px 18px;
+
+  border-bottom: 1px solid #eeeeee;
+
+  text-decoration: none;
+
+  transition: background 0.2s ease;
+}
+
+.playlist-row:last-child {
+  border-bottom: none;
+}
+
+.playlist-row:hover {
+  background: #f5faef;
+}
+
+
+/* ========================================
+   NUMBER
+======================================== */
+
+.playlist-number {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eaf7df;
+
+  color: #459016;
+
+  font-size: 12px;
+  font-weight: 900;
+}
+
+
+/* ========================================
+   THUMBNAIL
+======================================== */
+
+.playlist-thumb {
+  position: relative;
+
+  width: 145px;
+  height: 78px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #111111;
+}
+
+.playlist-thumb img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.3s ease;
+}
+
+.playlist-row:hover .playlist-thumb img {
+  transform: scale(1.04);
+}
+
+
+/* ========================================
+   PLAY BUTTON
+======================================== */
+
+.playlist-play {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(17, 17, 17, 0.85);
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  opacity: 0;
+
+  transition: 0.25s ease;
+}
+
+.playlist-row:hover .playlist-play {
+  opacity: 1;
+}
+
+
+/* ========================================
+   INFORMATION
+======================================== */
+
+.playlist-info {
+  min-width: 0;
+}
+
+.playlist-meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 5px;
+
+  color: #21843b;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.8px;
+}
+
+.playlist-meta span {
+  color: #9ca59d;
+}
+
+.playlist-info h3 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 17px;
+
+  line-height: 1.2;
+
+  font-weight: 900;
+}
+
+.playlist-info p {
+  margin: 5px 0 0;
+
+  color: #737b75;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* ========================================
+   STATS
+======================================== */
+
+.playlist-stats {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+}
+
+.playlist-video-count {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 3px;
+
+  color: #111111;
+
+  font-size: 11px;
+
+  font-weight: 900;
+}
+
+.video-icon {
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eaf7df;
+
+  color: #159447;
+
+  font-size: 9px;
+}
+
+.youtube-icon {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #111111;
+
+  color: #79c936;
+
+  font-size: 9px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 850px) {
+
+  .playlist-wrapper {
+    max-width: 750px;
+  }
+
+  .playlist-header {
+    align-items: flex-start;
+  }
+
+  .playlist-row {
+    grid-template-columns:
+      30px
+      125px
+      1fr
+      55px;
+
+    gap: 13px;
+
+    padding: 10px 14px;
+  }
+
+  .playlist-thumb {
+    width: 125px;
+    height: 70px;
+  }
+
+  .playlist-info h3 {
+    font-size: 15px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .playlist-section {
+    padding: 50px 15px;
+  }
+
+  .playlist-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    margin-bottom: 20px;
+  }
+
+  .playlist-header h2 {
+    font-size: 34px;
+  }
+
+  .playlist-channel {
+    font-size: 11px;
+  }
+
+  .playlist-list {
+    height: 500px;
+
+    padding-right: 3px;
+  }
+
+  .playlist-row {
+    grid-template-columns:
+      25px
+      105px
+      1fr;
+
+    gap: 10px;
+
+    min-height: 82px;
+
+    padding: 9px 10px;
+  }
+
+  .playlist-number {
+    width: 25px;
+    height: 25px;
+
+    font-size: 10px;
+  }
+
+  .playlist-thumb {
+    width: 105px;
+    height: 62px;
+
+    border-radius: 8px;
+  }
+
+  .playlist-info h3 {
+    font-size: 13px;
+  }
+
+  .playlist-info p {
+    display: none;
+  }
+
+  .playlist-meta {
+    font-size: 8px;
+  }
+
+  .playlist-stats {
+    display: none;
+  }
+
+}

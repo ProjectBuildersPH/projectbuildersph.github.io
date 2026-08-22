@@ -1,0 +1,464 @@
+/* ========================================
+   PROJECTBUILDERSPH
+   PROJECT CATEGORIES
+======================================== */
+
+.category-section {
+  width: 100%;
+
+  padding: 90px 30px;
+
+  background: #f7f8f4;
+
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.category-header,
+.category-grid {
+  width: 100%;
+
+  max-width: 1100px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.category-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 45px;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.category-label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #79c936;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.category-header h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: clamp(
+    42px,
+    5vw,
+    62px
+  );
+
+  line-height: 0.95;
+
+  letter-spacing: -3px;
+
+  font-weight: 900;
+}
+
+
+.category-header h2 span {
+  color: #79c936;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.category-header p {
+  max-width: 500px;
+
+  margin: 18px 0 0;
+
+  color: #777777;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   ALL BUTTON
+======================================== */
+
+.category-all {
+  min-width: 70px;
+
+  padding: 11px 22px;
+
+  border: 0;
+
+  border-radius: 30px;
+
+  background: #eaf8dc;
+
+  color: #4e9418;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+
+.category-all:hover {
+  background: #79c936;
+
+  color: #111111;
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   CATEGORY GRID
+======================================== */
+
+.category-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  column-gap: 70px;
+
+  row-gap: 10px;
+}
+
+
+/* ========================================
+   CATEGORY CARD
+======================================== */
+
+.category-card {
+  width: 100%;
+
+  min-height: 72px;
+
+  padding: 8px 8px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  border: 0;
+
+  border-radius: 16px;
+
+  background: transparent;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.category-card:hover {
+  background: #ffffff;
+
+  transform: translateX(5px);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ========================================
+   ICON
+======================================== */
+
+.category-icon {
+  width: 42px;
+
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 11px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: -0.5px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+
+/* ========================================
+   GREEN VARIATIONS
+======================================== */
+
+.category-icon-0 {
+  background: linear-gradient(
+    135deg,
+    #48c878,
+    #1fa753
+  );
+}
+
+
+.category-icon-1 {
+  background: linear-gradient(
+    135deg,
+    #79c936,
+    #4e9418
+  );
+}
+
+
+.category-icon-2 {
+  background: linear-gradient(
+    135deg,
+    #3eb879,
+    #187b4b
+  );
+}
+
+
+.category-icon-3 {
+  background: linear-gradient(
+    135deg,
+    #65c84d,
+    #2e8c48
+  );
+}
+
+
+.category-icon-4 {
+  background: linear-gradient(
+    135deg,
+    #37bd91,
+    #17876a
+  );
+}
+
+
+.category-icon-5 {
+  background: linear-gradient(
+    135deg,
+    #50c979,
+    #248f50
+  );
+}
+
+
+/* ========================================
+   INFORMATION
+======================================== */
+
+.category-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.category-info h3 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+
+.category-info span {
+  color: #777777;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+/* ========================================
+   ARROW
+======================================== */
+
+.category-arrow {
+  color: #b5b5b5;
+
+  font-size: 18px;
+
+  opacity: 0;
+
+  transform: translateX(-5px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.category-card:hover .category-arrow {
+  opacity: 1;
+
+  color: #79c936;
+
+  transform: translateX(0);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 850px) {
+
+  .category-section {
+    padding: 75px 25px;
+  }
+
+
+  .category-grid {
+    column-gap: 30px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+  .category-section {
+    padding: 65px 18px;
+  }
+
+
+  .category-header {
+    align-items: flex-start;
+
+    margin-bottom: 30px;
+  }
+
+
+  .category-header h2 {
+    font-size: 44px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .category-header p {
+    font-size: 13px;
+  }
+
+
+  .category-all {
+    min-width: 60px;
+
+    padding: 10px 17px;
+  }
+
+
+  .category-grid {
+    grid-template-columns: 1fr;
+
+    gap: 5px;
+  }
+
+
+  .category-card {
+    min-height: 65px;
+  }
+
+
+  .category-arrow {
+    opacity: 1;
+
+    transform: none;
+  }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 400px) {
+
+  .category-header {
+    flex-direction: column;
+  }
+
+
+  .category-header h2 {
+    font-size: 40px;
+  }
+
+
+  .category-all {
+    align-self: flex-start;
+  }
+
+}

@@ -1,0 +1,1234 @@
+/* =========================================
+   PROBLEM #3
+   JEEPNEY FARE & DISCOUNT SYSTEM
+========================================= */
+
+.hard-scep-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  color: #111;
+  padding-bottom: 100px;
+}
+
+.hard-scep-container {
+  width: min(1000px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hard-scep-hero {
+  background: #000;
+  color: #fff;
+  padding: 70px 0 80px;
+}
+
+.hard-scep-breadcrumb {
+  color: #777;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.hard-scep-badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.hard-badge,
+.cpp-badge {
+  padding: 7px 13px;
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+}
+
+.hard-badge {
+  background: #8edb35;
+  color: #000;
+}
+
+.cpp-badge {
+  background: #222;
+  color: #fff;
+}
+
+.hard-scep-hero h1 {
+  max-width: 900px;
+
+  font-size: clamp(40px, 6vw, 65px);
+  line-height: 1.02;
+
+  letter-spacing: -2.5px;
+
+  margin: 0 0 22px;
+
+  font-weight: 900;
+}
+
+.hard-scep-hero p {
+  max-width: 730px;
+
+  color: #aaa;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.hard-scep-main {
+  padding-top: 65px;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.scep-section {
+  display: grid;
+
+  grid-template-columns: 65px 1fr;
+
+  gap: 25px;
+
+  padding: 45px 0;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.scep-section-number {
+  color: #6da82a;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  padding-top: 8px;
+}
+
+.scep-section-content h2 {
+  font-size: 30px;
+
+  margin: 0 0 17px;
+
+  font-weight: 900;
+
+  letter-spacing: -0.5px;
+}
+
+.scep-section-content p {
+  color: #606060;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+
+  margin: 0 0 15px;
+}
+
+.scep-section-content strong {
+  color: #111;
+}
+
+
+/* =========================================
+   INPUT CARDS
+========================================= */
+
+.scep-input-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.scep-input-card {
+  background: #fff;
+
+  border: 1px solid #ddd;
+
+  border-radius: 15px;
+
+  padding: 22px;
+}
+
+.scep-input-card > span {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #000;
+
+  color: #8edb35;
+
+  border-radius: 9px;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  margin-bottom: 18px;
+}
+
+.scep-input-card h3 {
+  margin: 0 0 8px;
+
+  font-size: 17px;
+}
+
+.scep-input-card p {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   PASSENGER TYPES
+========================================= */
+
+.passenger-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.passenger-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  background: #fff;
+
+  border: 1px solid #ddd;
+
+  border-radius: 13px;
+
+  padding: 17px;
+}
+
+.passenger-card > span {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #000;
+
+  color: #8edb35;
+
+  border-radius: 9px;
+
+  font-weight: 900;
+}
+
+.passenger-card strong {
+  display: block;
+
+  margin-bottom: 4px;
+}
+
+.passenger-card small {
+  color: #777;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   FARE
+========================================= */
+
+.fare-highlight {
+  display: grid;
+
+  grid-template-columns: 1fr 60px 1fr;
+
+  align-items: center;
+
+  margin-top: 25px;
+
+  background: #000;
+
+  color: #fff;
+
+  border-radius: 17px;
+
+  padding: 30px;
+}
+
+.fare-highlight > div:not(.fare-divider) {
+  text-align: center;
+}
+
+.fare-label {
+  display: block;
+
+  color: #888;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.2px;
+
+  margin-bottom: 8px;
+}
+
+.fare-highlight strong {
+  display: block;
+
+  color: #8edb35;
+
+  font-size: 32px;
+}
+
+.fare-highlight p {
+  color: #999;
+
+  font-size: 12px;
+
+  margin: 7px 0 0;
+}
+
+.fare-divider {
+  color: #8edb35;
+
+  text-align: center;
+
+  font-size: 25px;
+
+  font-weight: 900;
+}
+
+.fare-examples {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+
+  margin-top: 15px;
+}
+
+.fare-examples div {
+  display: flex;
+
+  justify-content: space-between;
+
+  background: #fff;
+
+  border: 1px solid #ddd;
+
+  border-radius: 10px;
+
+  padding: 13px;
+
+  font-size: 12px;
+}
+
+.fare-examples strong {
+  color: #568d1d;
+}
+
+
+/* =========================================
+   CALCULATION BOX
+========================================= */
+
+.calculation-box {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  margin-top: 20px;
+
+  padding: 22px;
+
+  background: #eaf7dc;
+
+  border: 1px solid #d2e7b7;
+
+  border-radius: 14px;
+}
+
+.calculation-box > span {
+  color: #649b25;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 5px;
+}
+
+.calculation-box code {
+  font-family: Consolas, monospace;
+
+  color: #3f5c25;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   DISCOUNT TABLE
+========================================= */
+
+.discount-table {
+  margin-top: 25px;
+
+  background: #fff;
+
+  border: 1px solid #ddd;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+}
+
+.discount-row {
+  display: grid;
+
+  grid-template-columns: 1.4fr 1fr 1.2fr;
+
+  align-items: center;
+
+  padding: 15px 18px;
+
+  border-bottom: 1px solid #eee;
+
+  font-size: 13px;
+}
+
+.discount-row:last-child {
+  border-bottom: none;
+}
+
+.discount-header {
+  background: #111;
+
+  color: #fff;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.discount-row strong {
+  color: #649b25;
+}
+
+.discount-row code {
+  font-family: Consolas, monospace;
+
+  color: #555;
+}
+
+
+/* =========================================
+   BUSINESS RULES
+========================================= */
+
+.business-rules {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.business-rule {
+  display: grid;
+
+  grid-template-columns: 40px 1fr;
+
+  gap: 15px;
+
+  background: #fff;
+
+  border: 1px solid #ddd;
+
+  border-radius: 14px;
+
+  padding: 20px;
+}
+
+.business-rule > span {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #000;
+
+  color: #8edb35;
+
+  border-radius: 9px;
+
+  font-size: 11px;
+
+  font-weight: 900;
+}
+
+.business-rule h3 {
+  margin: 0 0 7px;
+
+  font-size: 16px;
+}
+
+.business-rule p {
+  margin-bottom: 10px;
+
+  font-size: 13px;
+}
+
+.business-rule code {
+  display: inline-block;
+
+  background: #f0f0f0;
+
+  padding: 7px 10px;
+
+  border-radius: 6px;
+
+  font-family: Consolas, monospace;
+
+  font-size: 11px;
+
+  margin-right: 8px;
+}
+
+.business-rule strong {
+  display: block;
+
+  color: #111;
+
+  font-size: 13px;
+
+  margin-top: 10px;
+}
+
+.business-rule small {
+  display: block;
+
+  color: #777;
+
+  margin-top: 5px;
+}
+
+
+/* =========================================
+   DECISION FLOW
+========================================= */
+
+.decision-flow {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-top: 30px;
+}
+
+.decision-box,
+.decision-question {
+  width: min(100%, 480px);
+
+  text-align: center;
+
+  padding: 15px;
+
+  border-radius: 11px;
+
+  font-size: 13px;
+}
+
+.decision-box {
+  background: #fff;
+
+  border: 1px solid #ddd;
+}
+
+.decision-box:first-child {
+  background: #111;
+
+  color: #8edb35;
+
+  border-color: #111;
+
+  font-weight: 900;
+}
+
+.decision-question {
+  background: #eaf7dc;
+
+  border: 1px solid #d2e7b7;
+
+  font-weight: 800;
+}
+
+.decision-arrow {
+  padding: 8px;
+
+  color: #888;
+
+  font-weight: 900;
+}
+
+.decision-branches {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+  width: min(100%, 600px);
+
+  margin: 5px 0;
+}
+
+.decision-branch {
+  padding: 13px;
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.decision-branch span {
+  font-size: 10px;
+
+  font-weight: 900;
+}
+
+.decision-branch strong {
+  font-size: 12px;
+}
+
+.decision-branch.invalid {
+  background: #fff0f0;
+
+  border: 1px solid #f1cccc;
+
+  color: #a44;
+}
+
+.decision-branch.valid {
+  background: #eaf7dc;
+
+  border: 1px solid #d2e7b7;
+
+  color: #4f7d20;
+}
+
+.decision-success {
+  width: min(100%, 480px);
+
+  padding: 18px;
+
+  background: #8edb35;
+
+  color: #000;
+
+  border-radius: 11px;
+
+  text-align: center;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   EXAMPLES
+========================================= */
+
+.scep-example-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.scep-example-card {
+  background: #111;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+}
+
+.scep-example-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 13px 17px;
+
+  color: #8edb35;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.5px;
+}
+
+.scep-example-card pre {
+  margin: 0;
+
+  padding: 20px;
+
+  color: #ddd;
+
+  font-family: Consolas, monospace;
+
+  font-size: 11px;
+
+  line-height: 1.75;
+
+  white-space: pre-wrap;
+}
+
+
+/* =========================================
+   CALCULATION SECTION
+========================================= */
+
+.calculation-section {
+  margin: 55px 0;
+
+  padding: 35px;
+
+  background: #eaf7dc;
+
+  border: 1px solid #d2e7b7;
+
+  border-radius: 18px;
+}
+
+.calculation-label {
+  color: #649b25;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.calculation-section h2 {
+  margin: 10px 0 25px;
+
+  font-size: 25px;
+}
+
+.calculation-steps {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+}
+
+.calculation-steps > div {
+  background: #fff;
+
+  border: 1px solid #dce8cf;
+
+  border-radius: 12px;
+
+  padding: 17px;
+}
+
+.calculation-steps span {
+  display: block;
+
+  color: #649b25;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  margin-bottom: 9px;
+}
+
+.calculation-steps p {
+  color: #777;
+
+  font-size: 12px;
+
+  margin: 0 0 8px;
+}
+
+.calculation-steps strong {
+  font-family: Consolas, monospace;
+
+  font-size: 13px;
+}
+
+.calculation-steps .calculation-final {
+  background: #000;
+
+  color: #fff;
+
+  border-color: #000;
+}
+
+.calculation-final p {
+  color: #999;
+}
+
+.calculation-final strong {
+  color: #8edb35;
+}
+
+
+/* =========================================
+   RESTRICTIONS
+========================================= */
+
+.restriction-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.restriction-group {
+  background: #fff;
+
+  border: 1px solid #ddd;
+
+  border-radius: 15px;
+
+  padding: 22px;
+}
+
+.restriction-group h3 {
+  margin: 0 0 17px;
+
+  font-size: 15px;
+}
+
+.restriction-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.restriction-tags span {
+  padding: 7px 9px;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+
+  font-family: Consolas, monospace;
+}
+
+.restriction-tags.allowed span {
+  background: #eaf7dc;
+
+  color: #568d1d;
+}
+
+.restriction-tags.blocked span {
+  background: #fff0f0;
+
+  color: #a05050;
+}
+
+
+/* =========================================
+   HARD MODE
+========================================= */
+
+.hard-mode-section {
+  margin: 55px 0;
+
+  padding: 45px 35px;
+
+  background: #000;
+
+  color: #fff;
+
+  border-radius: 20px;
+
+  text-align: center;
+}
+
+.hard-mode-icon {
+  font-size: 30px;
+
+  margin-bottom: 12px;
+}
+
+.hard-mode-section > span {
+  color: #8edb35;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.hard-mode-section h2 {
+  max-width: 650px;
+
+  margin: 13px auto;
+
+  font-size: 30px;
+
+  line-height: 1.25;
+}
+
+.hard-mode-section p {
+  max-width: 600px;
+
+  margin: 0 auto 25px;
+
+  color: #999;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.hard-mode-flow {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+}
+
+.hard-mode-flow div {
+  background: #1b1b1b;
+
+  border: 1px solid #333;
+
+  border-radius: 8px;
+
+  padding: 10px 12px;
+
+  font-size: 11px;
+}
+
+.hard-mode-flow span {
+  color: #8edb35;
+
+  font-weight: 900;
+}
+
+
+/* =========================================
+   STARTER CODE
+========================================= */
+
+.scep-starter-section {
+  margin-top: 55px;
+}
+
+.scep-starter-header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.scep-starter-header > div > span {
+  color: #649b25;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.scep-starter-header h2 {
+  margin: 7px 0 0;
+
+  font-size: 30px;
+}
+
+.scep-starter-header > strong {
+  background: #000;
+
+  color: #8edb35;
+
+  padding: 7px 13px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+}
+
+.scep-code {
+  background: #111;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.scep-code-header {
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 16px;
+
+  border-bottom: 1px solid #292929;
+}
+
+.code-dots {
+  display: flex;
+
+  gap: 7px;
+}
+
+.code-dots i {
+  display: block;
+
+  width: 9px;
+  height: 9px;
+
+  background: #555;
+
+  border-radius: 50%;
+}
+
+.scep-code-header small {
+  margin-left: 12px;
+
+  color: #777;
+
+  font-family: Consolas, monospace;
+}
+
+.scep-code pre {
+  margin: 0;
+
+  padding: 25px;
+
+  color: #ddd;
+
+  font-family: Consolas, monospace;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+  overflow-x: auto;
+}
+
+.scep-starter-note {
+  color: #888;
+
+  font-size: 12px;
+
+  margin-top: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 750px) {
+
+  .hard-scep-container {
+    width: min(100% - 25px, 1000px);
+  }
+
+  .hard-scep-hero {
+    padding: 55px 0;
+  }
+
+  .scep-section {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .scep-section-number {
+    padding-top: 0;
+  }
+
+  .scep-input-grid,
+  .calculation-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .fare-examples {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .scep-example-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .restriction-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fare-highlight {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .fare-divider {
+    transform: rotate(90deg);
+  }
+
+  .hard-mode-flow {
+    flex-direction: column;
+  }
+
+  .hard-mode-flow span {
+    transform: rotate(90deg);
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .hard-scep-hero h1 {
+    font-size: 39px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .scep-section-content h2 {
+    font-size: 25px;
+  }
+
+  .passenger-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .decision-branches {
+    grid-template-columns: 1fr;
+  }
+
+  .calculation-section {
+    padding: 25px 18px;
+  }
+
+  .hard-mode-section {
+    padding: 35px 20px;
+  }
+
+  .hard-mode-section h2 {
+    font-size: 24px;
+  }
+
+  .scep-starter-header h2 {
+    font-size: 25px;
+  }
+
+  .scep-code pre {
+    font-size: 11px;
+  }
+
+}
+
+.spsc-back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  border: none;
+  background: #8edb35;
+  border-radius: 10px;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 13px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+.spsc-back-btn:hover {
+  color: white;
+  background: black;
+  transform: translateX(-3px);
+}
