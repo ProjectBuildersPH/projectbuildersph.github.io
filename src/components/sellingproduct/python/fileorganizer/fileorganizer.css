@@ -1,0 +1,743 @@
+* {
+  box-sizing: border-box;
+}
+
+.character-course {
+  min-height: 100vh;
+  background: #f5f6f8;
+  color: #202124;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.course-header {
+  height: 70px;
+  background: #ffffff;
+  border-bottom: 1px solid #e1e4e8;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 30px;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.course-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+
+  background: #111827;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  font-weight: 700;
+}
+
+.course-brand h1 {
+  font-size: 17px;
+  margin: 0;
+}
+
+.course-brand span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* =========================
+   PROGRESS
+========================= */
+
+.course-progress {
+  width: 180px;
+}
+
+.course-progress span {
+  display: block;
+
+  font-size: 12px;
+
+  color: #6b7280;
+
+  margin-bottom: 6px;
+
+  text-align: right;
+}
+
+.progress-bar {
+  width: 100%;
+
+  height: 5px;
+
+  background: #e5e7eb;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+
+  background: #111827;
+
+  transition: width 0.3s ease;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.course-container {
+  display: flex;
+
+  min-height: calc(100vh - 70px);
+}
+
+.lesson-content {
+ flex: 1;
+  min-width: 0;
+  padding-top: 80px;
+}
+
+@media (max-width: 800px) {
+  .lesson-content {
+    padding-top: 20px;
+  }
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.lesson-sidebar {
+  width: 310px;
+
+  background: #ffffff;
+
+  border-right: 1px solid #e1e4e8;
+
+  flex-shrink: 0;
+
+  overflow-y: auto;
+}
+
+.sidebar-title {
+  padding: 25px 22px 18px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.sidebar-title span {
+  display: block;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: #777;
+
+  margin-bottom: 7px;
+}
+
+.sidebar-title strong {
+  font-size: 15px;
+}
+
+/* =========================
+   LESSON LIST
+========================= */
+
+.lesson-list {
+  padding: 8px 0;
+}
+
+.lesson-item {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 20px;
+
+  background: transparent;
+
+  border: none;
+
+  border-left: 3px solid transparent;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.lesson-item:hover {
+  background: #f5f6f8;
+}
+
+.lesson-item.active {
+  background: #eef0f3;
+
+  border-left-color: #111827;
+}
+
+.lesson-item.locked {
+  color: #777;
+}
+
+.lesson-item.locked:hover {
+  background: #f9fafb;
+}
+
+/* =========================
+   LESSON NUMBER
+========================= */
+
+.lesson-number {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  color: #555;
+
+  background: #ffffff;
+}
+
+.lesson-item.active .lesson-number {
+  background: #111827;
+
+  color: #ffffff;
+
+  border-color: #111827;
+}
+
+.lesson-number.locked-number {
+  border: none;
+
+  background: #f1f3f5;
+
+  font-size: 14px;
+}
+
+.lesson-item.locked .lesson-number {
+  color: #777;
+}
+
+/* =========================
+   LESSON INFO
+========================= */
+
+.lesson-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  min-width: 0;
+}
+
+.lesson-info span {
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #292929;
+}
+
+.lesson-item.locked .lesson-info span {
+  color: #666;
+}
+
+.lesson-info small {
+  font-size: 11px;
+
+  color: #888;
+}
+
+/* =========================
+   VIDEO
+========================= */
+
+.video-container {
+  width: 100%;
+
+  background: #111111;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  aspect-ratio: 16 / 9;
+
+  max-height: 620px;
+}
+
+.lesson-video {
+  width: 100%;
+
+  height: 100%;
+
+  max-width: 1100px;
+
+  display: block;
+
+  background: #000000;
+
+  border: none;
+}
+
+.youtube-video {
+  aspect-ratio: 16 / 9;
+}
+
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.lesson-actions {
+  margin-top: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 12px;
+}
+
+/* =========================
+   PURCHASE MODAL
+========================= */
+
+.purchase-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.68);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 9999;
+
+  padding: 20px;
+
+  animation: overlayFadeIn 0.2s ease;
+}
+
+.purchase-modal {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 430px;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  padding: 38px 30px 28px;
+
+  text-align: center;
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.3);
+
+  animation: modalFadeIn 0.25s ease;
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.modal-close {
+  position: absolute;
+
+  top: 10px;
+
+  right: 14px;
+
+  width: 36px;
+
+  height: 36px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #777;
+
+  font-size: 30px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  border-radius: 50%;
+}
+
+.modal-close:hover {
+  background: #f3f4f6;
+
+  color: #222;
+}
+
+/* =========================
+   MODAL LOCK
+========================= */
+
+.modal-lock-icon {
+  width: 70px;
+
+  height: 70px;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  background: #f3f4f6;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 32px;
+}
+
+.modal-label {
+  display: inline-block;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  color: #777;
+
+  margin-bottom: 8px;
+}
+
+.purchase-modal h2 {
+  margin: 0 0 10px;
+
+  font-size: 25px;
+
+  color: #202124;
+}
+
+.modal-description {
+  margin: 0 auto 20px;
+
+  max-width: 320px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+/* =========================
+   PRICING
+========================= */
+
+.pricing-options {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+}
+
+.price-option {
+  padding: 15px 10px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  background: #f9fafb;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.price-option span {
+  font-size: 12px;
+
+  color: #6b7280;
+}
+
+.price-option strong {
+  font-size: 22px;
+
+  color: #111827;
+}
+
+.purchase-text {
+  margin: 0 0 22px;
+
+  color: #555;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.purchase-text strong {
+  color: #111827;
+}
+
+/* =========================
+   CONTACT BUTTON
+========================= */
+
+.contact-button {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 13px 20px;
+
+  border-radius: 9px;
+
+  background: #0084ff;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-button:hover {
+  background: #0074e4;
+
+  transform: translateY(-1px);
+}
+
+/* =========================
+   CANCEL BUTTON
+========================= */
+
+.cancel-button {
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding: 10px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #777;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  color: #222;
+}
+
+/* =========================
+   MODAL ANIMATIONS
+========================= */
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+
+    transform: scale(0.94)
+      translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1)
+      translateY(0);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .course-header {
+    padding: 0 15px;
+  }
+
+  .course-brand h1 {
+    font-size: 14px;
+  }
+
+  .course-progress {
+    width: 120px;
+  }
+
+  .course-container {
+    flex-direction: column;
+  }
+
+  .lesson-sidebar {
+    width: 100%;
+
+    max-height: 300px;
+
+    border-right: none;
+
+    border-bottom: 1px solid #ddd;
+  }
+
+  .lesson-list {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lesson-item {
+    padding: 12px;
+  }
+
+  .video-container {
+    aspect-ratio: 16 / 9;
+
+    max-height: none;
+  }
+
+  .complete-button {
+    order: -1;
+
+    width: 100%;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+  .course-progress {
+    display: none;
+  }
+
+  .lesson-list {
+    grid-template-columns: 1fr;
+  }
+
+  .lesson-actions {
+    flex-direction: column;
+  }
+
+  .lesson-actions button {
+    width: 100%;
+  }
+
+  .purchase-modal {
+    padding: 35px 20px 22px;
+
+    border-radius: 15px;
+  }
+
+  .pricing-options {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-lock-icon {
+    width: 60px;
+
+    height: 60px;
+
+    font-size: 28px;
+  }
+
+  .purchase-modal h2 {
+    font-size: 22px;
+  }
+}
+
+

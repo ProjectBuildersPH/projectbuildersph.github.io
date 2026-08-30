@@ -36,6 +36,11 @@ import CharacterPositionFinder from "./components/problemlanding/cpplist/cppprob
 import SmartQueueManagementSystem from "./components/problemlanding/cpplist/cppproblems/smartqueuemanagementsystem";
 
 
+
+import CharacterSelling from "./components/sellingproduct/python/charactersearchsystem/CharacterSelling";
+import SellingProducts from "./components/sellingcategory/sellingproducts";
+import FileOrganizer from "./components/sellingproduct/python/fileorganizer/fileorganizer";
+
 import "./App.css";
 
 function App() {
@@ -57,6 +62,7 @@ function App() {
             element={
               <>
                 <Hero />
+                <SellingProducts/>
                 <Portfolio />
                 <Cert />
                 <Subs />
@@ -73,30 +79,34 @@ function App() {
               ECOMMERCE PROJECTS
           ======================================== */}
 
-          <Route
-            path="/ecommerce"
-            element={<Ecommerce />}
-          />
+          <Route path="/ecommerce" element={<Ecommerce />} />
 
-          <Route
-            path="/shopeasy"
-            element={<ShopEasy />}
-          />
-
-<Route
-  path="/academ"
-  element={<Academ />}
-/>
-
-<Route
-  path="/enrollmentsystem"
-  element={<EnrollmentSystem />}
-/>
+          <Route path="/shopeasy"  element={<ShopEasy />} />
+          
+          <Route path="/academ" element={<Academ />} /> 
+          
+          <Route path="/enrollmentsystem" element={<EnrollmentSystem />} />
+          
+          <Route path="/projects" element={<Project />} />
+          
+          <Route path="/pathcareer" element={<CAreerPath />} />
 
 
-<Route path="/projects" element={<Project />} />
+          {/* ========================================
+              Selling Products
+          ======================================== */}
+          
+          <Route path="/" element={<SellingProducts />} />
 
-<Route path="/pathcareer" element={<CAreerPath />} />
+           <Route path="/character-search" element={<CharacterSelling />} />
+
+           <Route path="/file-organizer" element={<FileOrganizer />} />
+
+
+
+
+
+
 
         {  /* Learning Page */}
         <Route path="/learn" element={<Learn />} />
@@ -117,11 +127,11 @@ function App() {
 
         <Route path="/learn/cpp/problem/8" element={<CharacterPositionFinder/>} />
 
-        <Route path="/learn/cpp/problem/9"  element={<SmartQueueManagementSystem />} 
+        <Route path="/learn/cpp/problem/9"  element={<SmartQueueManagementSystem />} />
 
-
+        {/* ======================================== PYTHON CHARACTER SEARCH SYSTEM ======================================== */} 
         
-/>
+        <Route path="/learn/python/character-search" element={<CharacterSelling />} />
 
         </Routes>
 

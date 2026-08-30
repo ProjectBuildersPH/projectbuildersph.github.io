@@ -22,7 +22,7 @@ const projects = [
     image: revivePaint,
 
     liveDemo:
-      "https://revivepaints.netlify.app/",
+      "https://revivepaint.co",
   },
 
   /*
