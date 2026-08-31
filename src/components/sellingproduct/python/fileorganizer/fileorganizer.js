@@ -26,7 +26,7 @@ print("Character Search System")`,
 
   {
     id: 3,
-    title: "Choosing a Character",
+    title: "Importing shutil",
     description:
       "Next, we ask the user which character they want to search for.",
     video: "/videos/character-search/03-character-input.mp4",
@@ -36,7 +36,7 @@ print("Character Search System")`,
 
   {
     id: 4,
-    title: "Creating the Counter",
+    title: "Choosing the Folder",
     description:
       "We create a variable called count. This will keep track of how many times the searched character appears.",
     video: "/videos/character-search/04-counter.mp4",
