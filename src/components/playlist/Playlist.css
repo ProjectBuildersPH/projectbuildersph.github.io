@@ -1,3 +1,4 @@
+
 /* ========================================
    PLAYLIST SECTION
 ======================================== */
@@ -23,35 +24,25 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-
   gap: 30px;
-
   margin-bottom: 28px;
 }
 
 .playlist-label {
   display: block;
-
   margin-bottom: 8px;
-
   color: #79c936;
-
   font-size: 11px;
   font-weight: 900;
-
   letter-spacing: 2px;
 }
 
 .playlist-header h2 {
   margin: 0;
-
   color: #111111;
-
   font-size: 42px;
   line-height: 1;
-
   letter-spacing: -2px;
-
   font-weight: 900;
 }
 
@@ -61,29 +52,40 @@
 
 .playlist-header p {
   max-width: 500px;
-
   margin: 12px 0 0;
-
   color: #707070;
-
   font-size: 14px;
   line-height: 1.5;
 }
 
 
 /* ========================================
-   YOUTUBE BUTTON
+   YOUTUBE ACTION BUTTONS
+======================================== */
+
+.playlist-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+
+/* ========================================
+   VISIT CHANNEL BUTTON
 ======================================== */
 
 .playlist-channel {
-  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   padding: 11px 18px;
 
   border-radius: 25px;
 
   background: #111111;
-
   color: #ffffff;
 
   font-size: 12px;
@@ -96,10 +98,63 @@
 
 .playlist-channel:hover {
   background: #79c936;
-
   color: #111111;
-
   transform: translateY(-2px);
+}
+
+
+/* ========================================
+   SUBSCRIBE BUTTON
+======================================== */
+
+.playlist-subscribe {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 11px 18px;
+
+  border-radius: 25px;
+
+  background: #ff0000;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.playlist-subscribe:hover {
+  background: #cc0000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 0, 0, 0.18);
+}
+
+.subscribe-icon {
+  font-size: 9px;
+}
+
+
+/* ========================================
+   PLAYLIST STATUS
+======================================== */
+
+.playlist-status {
+  padding: 30px;
+  text-align: center;
+
+  color: #707070;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.playlist-error {
+  color: #d93025;
 }
 
 
@@ -118,7 +173,6 @@
   border-radius: 18px;
 
   background: #ffffff;
-
   border: 1px solid #e9ece6;
 }
 
@@ -133,13 +187,11 @@
 
 .playlist-list::-webkit-scrollbar-track {
   background: #edf1eb;
-
   border-radius: 20px;
 }
 
 .playlist-list::-webkit-scrollbar-thumb {
   background: #79c936;
-
   border-radius: 20px;
 }
 
@@ -194,14 +246,12 @@
   height: 30px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   border-radius: 50%;
 
   background: #eaf7df;
-
   color: #459016;
 
   font-size: 12px;
@@ -258,7 +308,6 @@
   height: 30px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
@@ -290,9 +339,7 @@
 
 .playlist-meta {
   display: flex;
-
   align-items: center;
-
   gap: 7px;
 
   margin-bottom: 5px;
@@ -300,7 +347,6 @@
   color: #21843b;
 
   font-size: 9px;
-
   font-weight: 900;
 
   letter-spacing: 0.8px;
@@ -316,7 +362,6 @@
   color: #111111;
 
   font-size: 17px;
-
   line-height: 1.2;
 
   font-weight: 900;
@@ -328,13 +373,10 @@
   color: #737b75;
 
   font-size: 12px;
-
   line-height: 1.4;
 
   white-space: nowrap;
-
   overflow: hidden;
-
   text-overflow: ellipsis;
 }
 
@@ -345,7 +387,6 @@
 
 .playlist-stats {
   display: flex;
-
   align-items: center;
   justify-content: center;
 
@@ -365,7 +406,6 @@
   color: #111111;
 
   font-size: 11px;
-
   font-weight: 900;
 }
 
@@ -374,14 +414,12 @@
   height: 27px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   border-radius: 50%;
 
   background: #eaf7df;
-
   color: #159447;
 
   font-size: 9px;
@@ -392,14 +430,12 @@
   height: 28px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   border-radius: 50%;
 
   background: #111111;
-
   color: #79c936;
 
   font-size: 9px;
@@ -418,6 +454,10 @@
 
   .playlist-header {
     align-items: flex-start;
+  }
+
+  .playlist-actions {
+    flex-wrap: wrap;
   }
 
   .playlist-row {
@@ -440,7 +480,6 @@
   .playlist-info h3 {
     font-size: 15px;
   }
-
 }
 
 
@@ -456,7 +495,6 @@
 
   .playlist-header {
     flex-direction: column;
-
     align-items: flex-start;
 
     margin-bottom: 20px;
@@ -466,13 +504,24 @@
     font-size: 34px;
   }
 
-  .playlist-channel {
+  .playlist-actions {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    gap: 8px;
+  }
+
+  .playlist-channel,
+  .playlist-subscribe {
     font-size: 11px;
+    padding: 10px 15px;
   }
 
   .playlist-list {
     height: 500px;
-
     padding-right: 3px;
   }
 
@@ -518,5 +567,5 @@
   .playlist-stats {
     display: none;
   }
-
 }
+
