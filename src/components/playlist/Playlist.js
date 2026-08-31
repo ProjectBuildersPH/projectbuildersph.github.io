@@ -118,7 +118,7 @@ function Playlist() {
             {/* Subscribe */}
 
             <a
-              href="https://www.youtube.com/@NextGenCoder2026?sub_confirmation=1"
+              href="https://www.youtube.com/@ProjectBuildersPH/playlists"
               target="_blank"
               rel="noreferrer"
               className="playlist-subscribe"
