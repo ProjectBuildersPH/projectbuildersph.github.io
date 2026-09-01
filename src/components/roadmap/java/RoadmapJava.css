@@ -1,0 +1,1254 @@
+/* =========================================================
+   PROJECTBUILDERS PH — C++ ROADMAP
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.java-roadmap-page {
+  min-height: 100vh;
+  background: #f7f9f7;
+  color: #17231c;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.roadmap-header {
+  min-height: 82px;
+  padding: 18px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5ebe6;
+
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.java-logo {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #183d29;
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+
+  box-shadow: 0 6px 18px rgba(24, 61, 41, 0.15);
+}
+
+.header-title h1 {
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.header-title p {
+  margin: 4px 0 0;
+
+  color: #718078;
+  font-size: 13px;
+}
+
+.header-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 9px 14px;
+
+  background: #f1f7f2;
+  border: 1px solid #dce9df;
+  border-radius: 12px;
+}
+
+.header-badge-icon {
+  font-size: 19px;
+}
+
+.header-badge strong {
+  display: block;
+
+  color: #183d29;
+
+  font-size: 11px;
+  letter-spacing: 0.7px;
+}
+
+.header-badge small {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #7a877f;
+  font-size: 10px;
+}
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+.roadmap-layout {
+  position: relative;
+}
+
+.roadmap-content {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+
+  padding: 55px 0 100px;
+
+  transition: width 0.3s ease;
+}
+
+.roadmap-content.panel-open {
+  width: min(760px, 72%);
+  margin-left: 5%;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero-section {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+
+  margin-bottom: 65px;
+}
+
+.hero-copy {
+  max-width: 720px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 12px;
+
+  color: #34734b;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.hero-copy h2 {
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 0.98;
+  letter-spacing: -2.8px;
+  font-weight: 850;
+
+  color: #17231c;
+}
+
+.hero-copy p {
+  max-width: 620px;
+
+  margin: 20px 0 0;
+
+  color: #66736b;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.journey-stat {
+  min-width: 145px;
+
+  padding: 20px;
+
+  background: #ffffff;
+  border: 1px solid #e3e9e4;
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 25px rgba(30, 52, 38, 0.05);
+}
+
+.journey-stat strong {
+  display: block;
+
+  color: #183d29;
+
+  font-size: 36px;
+  line-height: 1;
+
+  font-weight: 850;
+}
+
+.journey-stat span {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #7b877f;
+
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* =========================================================
+   ROADMAP
+   ========================================================= */
+
+.roadmap {
+  position: relative;
+  padding-left: 78px;
+}
+
+.road-line {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 25px;
+
+  width: 2px;
+
+  background: #dce5de;
+}
+
+/* =========================================================
+   STAGE
+   ========================================================= */
+
+.roadmap-stage {
+  position: relative;
+
+  margin-bottom: 70px;
+}
+
+.stage-marker {
+  position: absolute;
+
+  left: -78px;
+  top: 0;
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  border: 4px solid #f7f9f7;
+
+  box-shadow:
+    0 0 0 2px #dbe5dd,
+    0 8px 20px rgba(31, 55, 39, 0.08);
+
+  z-index: 2;
+}
+
+.stage-marker span {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 850;
+}
+
+/* Stage colors */
+
+.roadmap-stage.blue .stage-marker span {
+  background: #3478c5;
+}
+
+.roadmap-stage.green .stage-marker span {
+  background: #3d8a5a;
+}
+
+.roadmap-stage.orange .stage-marker span {
+  background: #d9822b;
+}
+
+.roadmap-stage.purple .stage-marker span {
+  background: #8059b7;
+}
+
+.roadmap-stage.red .stage-marker span {
+  background: #c95151;
+}
+
+/* =========================================================
+   STAGE HEADING
+   ========================================================= */
+
+.stage-heading {
+  margin-bottom: 22px;
+}
+
+.stage-level {
+  display: inline-block;
+
+  margin-bottom: 7px;
+
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 1.5px;
+
+  color: #718078;
+}
+
+.stage-heading h3 {
+  margin: 0;
+
+  font-size: 27px;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+
+  color: #17231c;
+}
+
+.stage-heading p {
+  margin: 5px 0 0;
+
+  color: #7a867e;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   TOPIC GRID
+   ========================================================= */
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+/* =========================================================
+   TOPIC CARD
+   ========================================================= */
+
+.topic-card {
+  position: relative;
+
+  min-height: 160px;
+
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: 43px minmax(0, 1fr) 22px;
+  align-items: start;
+  gap: 14px;
+
+  text-align: left;
+
+  border: 1px solid #e2e8e3;
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #bdd2c2;
+
+  background: #fcfefc;
+
+  box-shadow:
+    0 12px 30px rgba(31, 59, 40, 0.08);
+}
+
+.topic-card:active {
+  transform: translateY(-1px);
+}
+
+.topic-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #f1f6f2;
+
+  color: #34734b;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.topic-card-content {
+  min-width: 0;
+}
+
+.topic-card-content > span {
+  display: inline-block;
+
+  margin-bottom: 5px;
+
+  color: #819087;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.topic-card-content h4 {
+  margin: 0;
+
+  color: #1a2820;
+
+  font-size: 15px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.topic-card-content p {
+  margin: 8px 0 0;
+
+  color: #7a867f;
+
+  font-size: 11px;
+  line-height: 1.55;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.topic-arrow {
+  align-self: center;
+
+  color: #9aa59e;
+
+  font-size: 18px;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.topic-card:hover .topic-arrow {
+  transform: translateX(4px);
+  color: #34734b;
+}
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.panel-overlay {
+  position: fixed;
+  top: var(--site-navbar-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: rgba(14, 25, 18, 0.35);
+  backdrop-filter: blur(2px);
+
+  z-index: 80;
+  animation: overlayIn 0.2s ease;
+}
+
+@keyframes overlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   LESSON PANEL
+   ========================================================= */
+
+.topic-panel {
+  position: fixed;
+
+  top: var(--site-navbar-height);
+  right: 0;
+
+  width: min(560px, 92vw);
+  height: calc(100vh - var(--site-navbar-height));
+
+  background: #ffffff;
+  z-index: 90;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow:
+    -15px 0 45px rgba(16, 31, 21, 0.14);
+
+  animation: panelIn 0.3s ease;
+}
+
+
+@keyframes panelIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* =========================================================
+   PANEL TOP
+   ========================================================= */
+
+.panel-top {
+  position: relative;
+
+  padding: 35px 36px 27px;
+
+  border-bottom: 1px solid #e5ebe6;
+
+  background: #fbfdfb;
+}
+
+.close-panel {
+  position: absolute;
+
+  top: 20px;
+  right: 22px;
+
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid #e0e6e1;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #65736a;
+
+  font-size: 25px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.close-panel:hover {
+  background: #f0f5f1;
+  color: #183d29;
+}
+
+.panel-label {
+  display: inline-block;
+
+  margin-bottom: 9px;
+
+  color: #34734b;
+
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 1.4px;
+}
+
+.panel-top h2 {
+  max-width: 430px;
+
+  margin: 0;
+
+  color: #17231c;
+
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.topic-meta {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 17px;
+}
+
+.topic-meta span {
+  padding: 7px 10px;
+
+  border-radius: 8px;
+
+  background: #edf4ef;
+
+  color: #5c6c61;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   PANEL BODY
+   ========================================================= */
+
+.panel-body {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 30px 36px 50px;
+}
+
+.panel-body::-webkit-scrollbar {
+  width: 7px;
+}
+
+.panel-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.panel-body::-webkit-scrollbar-thumb {
+  background: #d2dbd4;
+  border-radius: 20px;
+}
+
+/* =========================================================
+   EXPLANATION
+   ========================================================= */
+
+.explanation {
+  margin-bottom: 30px;
+}
+
+.explanation h3,
+.concept-section h3,
+.code-section h3 {
+  margin: 0 0 10px;
+
+  color: #1b2921;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.explanation p {
+  margin: 0;
+
+  color: #69766e;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CONCEPTS
+   ========================================================= */
+
+.concept-section {
+  margin-bottom: 32px;
+}
+
+.concept-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.concept-item {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 29px minmax(0, 1fr) 28px;
+  align-items: center;
+
+  padding: 10px 12px;
+
+  border: 1px solid #e4eae5;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  font-family: inherit;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.concept-item:hover {
+  background: #f7faf8;
+  border-color: #c9d9cd;
+  transform: translateX(2px);
+}
+
+.concept-item.selected {
+  background: #edf6ef;
+  border-color: #a9c5b0;
+}
+
+.concept-item > span {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #f0f4f1;
+
+  color: #68766d;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.concept-item p {
+  margin: 0;
+
+  color: #3d4b42;
+
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.concept-play {
+  color: #4b8b5e;
+
+  font-size: 11px;
+
+  text-align: center;
+}
+
+/* =========================================================
+   CONCEPT VIDEO
+   ========================================================= */
+
+.concept-video {
+  margin-top: 15px;
+
+  overflow: hidden;
+
+  border: 1px solid #dce6de;
+  border-radius: 14px;
+
+  background: #f8fbf9;
+}
+
+.concept-video-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 13px 15px;
+
+  border-bottom: 1px solid #e1e9e3;
+}
+
+.concept-video-header span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #5a8a65;
+
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: 1px;
+}
+
+.concept-video-header h4 {
+  margin: 0;
+
+  color: #25352b;
+
+  font-size: 12px;
+}
+
+.concept-video-header button {
+  width: 28px;
+  height: 28px;
+
+  border: 0;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #69766e;
+
+  font-size: 19px;
+
+  cursor: pointer;
+}
+
+.concept-video-player {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  background: #101612;
+}
+
+.concept-video-player iframe {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+}
+
+/* =========================================================
+   CODE SECTION
+   ========================================================= */
+
+.code-section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+}
+
+.section-title h3 {
+  margin: 0;
+}
+
+.section-title span {
+  padding: 5px 8px;
+
+  border-radius: 6px;
+
+  background: #eef2ef;
+
+  color: #65736a;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.code-section pre {
+  margin: 0;
+
+  padding: 18px;
+
+  overflow-x: auto;
+
+  border-radius: 13px;
+
+  background: #17221b;
+
+  color: #dbe8de;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+
+  font-size: 11px;
+  line-height: 1.7;
+
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.code-section code {
+  font-family: inherit;
+}
+
+/* =========================================================
+   FULL VIDEO
+   ========================================================= */
+
+.video-section {
+  margin-bottom: 25px;
+}
+
+.video-button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 13px 16px;
+
+  border: 1px solid #c9dbcd;
+  border-radius: 11px;
+
+  background: #eef6f0;
+
+  color: #2f6940;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.video-button:hover {
+  background: #e3f0e6;
+  transform: translateY(-1px);
+}
+
+.video-button.active {
+  background: #e5f0e8;
+}
+
+.play-icon {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  font-size: 10px;
+}
+
+.video-container {
+  position: relative;
+
+  width: 100%;
+
+  margin-top: 12px;
+
+  overflow: hidden;
+
+  border-radius: 13px;
+
+  background: #111;
+  aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+}
+
+/* =========================================================
+   COMPLETE BUTTON
+   ========================================================= */
+
+.complete-button {
+  width: 100%;
+
+  padding: 14px 18px;
+
+  border: 0;
+  border-radius: 11px;
+
+  background: #183d29;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.complete-button:hover {
+  background: #245538;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 8px 20px rgba(24, 61, 41, 0.15);
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .roadmap-header {
+    padding: 16px 4%;
+  }
+
+  .roadmap-content,
+  .roadmap-content.panel-open {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .topic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section {
+    align-items: flex-start;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+     :root {
+    --site-navbar-height: 70px;
+  }
+
+  .topic-panel {
+    width: 100%;
+  }
+  
+  .roadmap-header {
+    min-height: 70px;
+
+    padding: 12px 18px;
+  }
+
+  .header-title h1 {
+    font-size: 16px;
+  }
+
+  .header-title p {
+    font-size: 10px;
+  }
+
+  .java-logo {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+  }
+
+  .header-badge {
+    display: none;
+  }
+
+  .roadmap-content,
+  .roadmap-content.panel-open {
+    width: calc(100% - 32px);
+
+    padding-top: 35px;
+  }
+
+  .hero-section {
+    display: block;
+
+    margin-bottom: 45px;
+  }
+
+  .hero-copy h2 {
+    font-size: 40px;
+    letter-spacing: -2px;
+  }
+
+  .hero-copy p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .journey-stat {
+    display: inline-block;
+
+    min-width: 120px;
+
+    margin-top: 22px;
+
+    padding: 14px 18px;
+  }
+
+  .journey-stat strong {
+    font-size: 28px;
+  }
+
+  .roadmap {
+    padding-left: 52px;
+  }
+
+  .road-line {
+    left: 18px;
+  }
+
+  .stage-marker {
+    left: -52px;
+
+    width: 38px;
+    height: 38px;
+
+    border-width: 3px;
+  }
+
+  .stage-marker span {
+    width: 27px;
+    height: 27px;
+
+    font-size: 10px;
+  }
+
+  .roadmap-stage {
+    margin-bottom: 50px;
+  }
+
+  .stage-heading h3 {
+    font-size: 22px;
+  }
+
+  .stage-heading p {
+    font-size: 11px;
+  }
+
+  .topic-card {
+    min-height: 145px;
+
+    padding: 15px;
+
+    grid-template-columns: 38px minmax(0, 1fr) 18px;
+
+    gap: 11px;
+  }
+
+  .topic-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+  }
+
+  .topic-card-content h4 {
+    font-size: 14px;
+  }
+
+  .topic-card-content p {
+    font-size: 10px;
+  }
+
+  .topic-panel {
+    width: 100%;
+  }
+
+  .panel-top {
+    padding: 28px 22px 23px;
+  }
+
+  .panel-top h2 {
+    font-size: 25px;
+  }
+
+  .panel-body {
+    padding: 25px 22px 45px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:root {
+  --site-navbar-height: 98px;
+}

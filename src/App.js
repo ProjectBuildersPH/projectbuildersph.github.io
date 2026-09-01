@@ -41,6 +41,13 @@ import CharacterSelling from "./components/sellingproduct/python/charactersearch
 import SellingProducts from "./components/sellingcategory/sellingproducts";
 import FileOrganizer from "./components/sellingproduct/python/fileorganizer/fileorganizer";
 
+
+import RoadmapCpp from "./components/roadmap/cpp/RoadmapCpp";
+import RoadmapJava from "./components/roadmap/java/RoadmapJava";
+import RoadmapPython from "./components/roadmap/python/RoadmapPython";
+import RoadmapCSharp from "./components/roadmap/CSharp/RoadmapCSharp";
+import RoadmapC from "./components/roadmap/c/RoadmapC";
+
 import "./App.css";
 
 function App() {
@@ -73,6 +80,9 @@ function App() {
               </>
             }
           />
+
+
+
 
 
           {/* ========================================
@@ -132,6 +142,18 @@ function App() {
         {/* ======================================== PYTHON CHARACTER SEARCH SYSTEM ======================================== */} 
         
         <Route path="/learn/python/character-search" element={<CharacterSelling />} />
+
+
+          {/* ========================================
+              Road Map
+          ======================================== */}
+
+          <Route path="/roadmap/cpp" element={<RoadmapCpp />} />
+           <Route path="/roadmapjava/java" element={<RoadmapJava />} />
+            <Route path="/roadmappy/python" element={<RoadmapPython />} />
+            <Route path="/roadmapcsharp/csharp" element={<RoadmapCSharp />} />
+            <Route path="/roadmapC/c" element={<RoadmapC />} />
+           
 
         </Routes>
 

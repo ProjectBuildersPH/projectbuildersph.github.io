@@ -1,10 +1,15 @@
+
 /* =========================================================
    PROJECT BUILDERS PH - NAVBAR
+   =========================================================
+
    Brand Colors
-   Green  : #9ACF4A
-   Dark   : #111111
-   Ivory  : #F4F1E8
-   Gray   : #D9D5C9
+
+   Green : #9ACF4A
+   Dark  : #111111
+   Ivory : #F4F1E8
+   Gray  : #D9D5C9
+
 ========================================================= */
 
 
@@ -18,6 +23,7 @@
   left: 0;
 
   width: 100%;
+
   z-index: 1000;
 
   background: rgba(244, 241, 232, 0.96);
@@ -95,10 +101,10 @@
 
 
 /* =========================================================
-   NAVIGATION LINKS
+   NORMAL NAVIGATION LINKS
 ========================================================= */
 
-.navbar-menu a {
+.navbar-menu > a {
   position: relative;
 
   color: #111111;
@@ -120,7 +126,7 @@
    NAVIGATION HOVER
 ========================================================= */
 
-.navbar-menu a:not(.navbar-contact)::after {
+.navbar-menu > a:not(.navbar-contact)::after {
   content: "";
 
   position: absolute;
@@ -141,14 +147,319 @@
     width 0.3s ease;
 }
 
-.navbar-menu a:not(.navbar-contact):hover {
+.navbar-menu > a:not(.navbar-contact):hover {
   color: #7FB83D;
 
   transform: translateY(-1px);
 }
 
-.navbar-menu a:not(.navbar-contact):hover::after {
+.navbar-menu > a:not(.navbar-contact):hover::after {
   width: 70%;
+}
+
+
+/* =========================================================
+   ROADMAP DROPDOWN
+========================================================= */
+
+.navbar-dropdown {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================================
+   ROADMAP BUTTON
+========================================================= */
+
+.navbar-dropdown-button {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 0;
+
+  background: transparent;
+  border: none;
+
+  color: #111111;
+
+  font-family: inherit;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.navbar-dropdown-button:hover {
+  color: #7FB83D;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ROADMAP UNDERLINE
+========================================================= */
+
+.navbar-dropdown-button::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -9px;
+
+  width: 0;
+  height: 3px;
+
+  border-radius: 10px;
+
+  background: #9ACF4A;
+
+  transform: translateX(-50%);
+
+  transition:
+    width 0.3s ease;
+}
+
+.navbar-dropdown:hover
+.navbar-dropdown-button::after,
+.navbar-dropdown.dropdown-active
+.navbar-dropdown-button::after {
+  width: 70%;
+}
+
+
+/* =========================================================
+   DROPDOWN ARROW
+========================================================= */
+
+.dropdown-arrow {
+  display: inline-block;
+
+  font-size: 15px;
+
+  line-height: 1;
+
+  margin-top: -2px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.navbar-dropdown:hover
+.dropdown-arrow,
+.navbar-dropdown.dropdown-active
+.dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   DROPDOWN MENU
+========================================================= */
+
+.navbar-dropdown-menu {
+  position: absolute;
+
+  top: calc(100% + 18px);
+
+  left: 50%;
+
+  width: 235px;
+
+  padding: 10px;
+
+  box-sizing: border-box;
+
+  background: rgba(244, 241, 232, 0.98);
+
+  border: 1px solid rgba(17, 17, 17, 0.08);
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.12);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform:
+    translateX(-50%)
+    translateY(-10px);
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    transform 0.25s ease;
+
+  z-index: 1100;
+}
+
+
+/* =========================================================
+   DROPDOWN GREEN TOP LINE
+========================================================= */
+
+.navbar-dropdown-menu::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 20px;
+  right: 20px;
+
+  height: 3px;
+
+  background: #9ACF4A;
+
+  border-radius:
+    0 0 10px 10px;
+}
+
+
+/* =========================================================
+   SHOW DROPDOWN
+========================================================= */
+
+.navbar-dropdown:hover
+.navbar-dropdown-menu,
+
+.navbar-dropdown.dropdown-active
+.navbar-dropdown-menu {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform:
+    translateX(-50%)
+    translateY(0);
+}
+
+
+/* =========================================================
+   DROPDOWN LINKS
+========================================================= */
+
+.navbar-dropdown-menu a {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 11px 12px;
+
+  color: #111111;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  border-radius: 8px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* =========================================================
+   DROPDOWN LINK HOVER
+========================================================= */
+
+.navbar-dropdown-menu a:hover {
+  background: rgba(154, 207, 74, 0.15);
+
+  color: #7FB83D;
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   LANGUAGE ICON
+========================================================= */
+
+.language-icon {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  background: #111111;
+
+  color: #F4F1E8;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+/* =========================================================
+   LANGUAGE ICON HOVER
+========================================================= */
+
+.navbar-dropdown-menu a:hover
+.language-icon {
+  background: #9ACF4A;
+
+  color: #111111;
+}
+
+
+.cpp-icon {
+  font-size: 10px;
+}
+
+.java-icon {
+  font-size: 17px;
+}
+
+.python-icon {
+  font-size: 10px;
+}
+
+.csharp-icon {
+  font-size: 10px;
+}
+
+.c-icon {
+  font-size: 16px;
 }
 
 
@@ -158,6 +469,7 @@
 
 .navbar-contact {
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
@@ -174,6 +486,7 @@
   border-radius: 8px;
 
   font-size: 14px !important;
+
   font-weight: 700 !important;
 
   text-decoration: none;
@@ -221,6 +534,7 @@
   cursor: pointer;
 
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
 
@@ -293,13 +607,15 @@
     gap: 22px;
   }
 
-  .navbar-menu a {
+  .navbar-menu > a,
+  .navbar-dropdown-button {
     font-size: 14px;
   }
 
   .navbar-logo img {
     width: 140px;
   }
+
 }
 
 
@@ -311,22 +627,23 @@
 
   .navbar-container {
     width: 90%;
+
     height: 72px;
   }
 
 
-  /* -----------------------------------------
-     Logo
-  ----------------------------------------- */
+  /* ---------------------------------------------------------
+     LOGO
+  --------------------------------------------------------- */
 
   .navbar-logo img {
     width: 130px;
   }
 
 
-  /* -----------------------------------------
-     Hamburger
-  ----------------------------------------- */
+  /* ---------------------------------------------------------
+     HAMBURGER
+  --------------------------------------------------------- */
 
   .navbar-toggle {
     display: flex;
@@ -337,9 +654,9 @@
   }
 
 
-  /* -----------------------------------------
-     Mobile Menu
-  ----------------------------------------- */
+  /* ---------------------------------------------------------
+     MOBILE MENU
+  --------------------------------------------------------- */
 
   .navbar-menu {
     position: absolute;
@@ -356,6 +673,7 @@
     display: flex;
 
     flex-direction: column;
+
     align-items: stretch;
 
     gap: 6px;
@@ -369,6 +687,7 @@
       0 10px 25px rgba(0, 0, 0, 0.08);
 
     opacity: 0;
+
     visibility: hidden;
 
     transform: translateY(-15px);
@@ -380,9 +699,9 @@
   }
 
 
-  /* -----------------------------------------
-     Open Menu
-  ----------------------------------------- */
+  /* ---------------------------------------------------------
+     OPEN MENU
+  --------------------------------------------------------- */
 
   .navbar-menu.active {
     opacity: 1;
@@ -393,11 +712,11 @@
   }
 
 
-  /* -----------------------------------------
-     Mobile Links
-  ----------------------------------------- */
+  /* ---------------------------------------------------------
+     MOBILE LINKS
+  --------------------------------------------------------- */
 
-  .navbar-menu a {
+  .navbar-menu > a {
     width: 100%;
 
     box-sizing: border-box;
@@ -413,23 +732,138 @@
       color 0.3s ease;
   }
 
-  .navbar-menu a:hover {
+  .navbar-menu > a:hover {
     background: rgba(154, 207, 74, 0.15);
 
     transform: none;
   }
 
 
-  /* Remove desktop underline on mobile */
+  /* Remove desktop underline */
 
-  .navbar-menu a:not(.navbar-contact)::after {
+  .navbar-menu > a:not(.navbar-contact)::after {
     display: none;
   }
 
 
-  /* -----------------------------------------
-     Mobile Contact Button
-  ----------------------------------------- */
+  /* =======================================================
+     MOBILE ROADMAP
+  ======================================================= */
+
+  .navbar-dropdown {
+    width: 100%;
+
+    display: block;
+  }
+
+
+  .navbar-dropdown-button {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 15px;
+
+    justify-content: space-between;
+
+    font-size: 16px;
+
+    border-radius: 7px;
+  }
+
+  .navbar-dropdown-button:hover {
+    background: rgba(154, 207, 74, 0.15);
+
+    transform: none;
+  }
+
+
+  /* Remove underline */
+
+  .navbar-dropdown-button::after {
+    display: none;
+  }
+
+
+  /* ---------------------------------------------------------
+     MOBILE DROPDOWN
+  --------------------------------------------------------- */
+
+  .navbar-dropdown-menu {
+    position: static;
+
+    width: 100%;
+
+    min-width: 0;
+
+    box-sizing: border-box;
+
+    margin-top: 4px;
+
+    padding: 5px;
+
+    background: rgba(217, 213, 201, 0.35);
+
+    border: none;
+
+    border-radius: 8px;
+
+    box-shadow: none;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transform: none;
+
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease,
+      max-height 0.3s ease;
+  }
+
+
+  .navbar-dropdown-menu::before {
+    display: none;
+  }
+
+
+  /* OPEN MOBILE DROPDOWN */
+
+  .navbar-dropdown.dropdown-active
+  .navbar-dropdown-menu {
+    opacity: 1;
+
+    visibility: visible;
+
+    max-height: 350px;
+  }
+
+
+  /* ---------------------------------------------------------
+     MOBILE DROPDOWN LINKS
+  --------------------------------------------------------- */
+
+  .navbar-dropdown-menu a {
+    padding: 10px 12px;
+
+    font-size: 15px;
+  }
+
+
+  .language-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+
+  /* ---------------------------------------------------------
+     MOBILE CONTACT
+  --------------------------------------------------------- */
 
   .navbar-contact {
     margin-top: 12px;
@@ -442,6 +876,7 @@
 
     box-sizing: border-box;
   }
+
 }
 
 
@@ -463,6 +898,7 @@
     padding-left: 4%;
     padding-right: 4%;
   }
+
 }
 
 
@@ -471,8 +907,10 @@
 ========================================================= */
 
 .navbar-menu a:focus-visible,
+.navbar-dropdown-button:focus-visible,
 .navbar-toggle:focus-visible {
   outline: 3px solid rgba(154, 207, 74, 0.6);
 
   outline-offset: 3px;
 }
+
