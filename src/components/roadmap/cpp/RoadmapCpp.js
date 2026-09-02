@@ -66,31 +66,31 @@ int main() {
         concepts: [
           {
             title: "Variables",
-            video: "https://www.youtube.com/embed/2NWeucMKrLI",
+            video: "https://www.youtube.com/embed/teNCytgJngw",
           },
           {
             title: "int",
-            video: "https://www.youtube.com/embed/2NWeucMKrLI",
+            video: "https://www.youtube.com/embed/ljBnZqb1Rck",
           },
           {
             title: "double",
-            video: "https://www.youtube.com/embed/2NWeucMKrLI",
+            video: "https://www.youtube.com/embed/YGy2pfjq69g",
           },
           {
             title: "char",
-            video: "https://www.youtube.com/embed/2NWeucMKrLI",
+            video: "https://www.youtube.com/embed/EnVlJm0OF0I",
           },
           {
             title: "bool",
-            video: "https://www.youtube.com/embed/G-7vxayrP1s",
+            video: "https://www.youtube.com/embed/6sRopgvGZ3Y",
           },
           {
             title: "string",
-            video: "https://www.youtube.com/embed/2NWeucMKrLI",
+            video: "https://www.youtube.com/embed/EnVlJm0OF0I",
           },
           {
             title: "Constants",
-            video: "https://www.youtube.com/embed/2NWeucMKrLI",
+            video: "https://www.youtube.com/embed/cTaQZG_ja98",
           },
         ],
 
@@ -115,16 +115,16 @@ string name = "Alex";`,
         concepts: [
           {
             title: "cout",
-            video: "https://www.youtube.com/embed/8jLOx1hD3_o",
+            video: "https://www.youtube.com/embed/ppSVak8prvk",
           },
           {
             title: "cin",
-            video: "https://www.youtube.com/embed/8jLOx1hD3_o",
+            video: "https://www.youtube.com/embed/hCqRaLgOApM",
           },
 
           {
             title: "Output formatting",
-            video: "https://www.youtube.com/embed/8jLOx1hD3_o",
+            video: "https://www.youtube.com/embed/79CEeB5izz0",
           },
         ],
 
@@ -158,11 +158,11 @@ cout << "Hello " << name;`,
           },
           {
             title: "Assignment operators",
-            video: "https://www.youtube.com/embed/_bYFu9mBnr4",
+            video: "https://www.youtube.com/embed/KCx7JW8j1Ag",
           },
           {
             title: "Comparison operators",
-            video: "https://www.youtube.com/embed/_bYFu9mBnr4",
+            video: "https://www.youtube.com/embed/7j9OuthtAHA",
           },
           {
             title: "Logical operators AND (&&)",
@@ -178,7 +178,7 @@ cout << "Hello " << name;`,
           },
           {
             title: "Increment and decrement",
-            video: "https://www.youtube.com/embed/_bYFu9mBnr4",
+            video: "https://www.youtube.com/embed/jW7DLmtBzss",
           },
         ],
 
@@ -220,11 +220,11 @@ cout << (a > 5 && b < 10);`,
           },
           {
             title: "switch",
-            video: "https://www.youtube.com/embed/9Ck1u1Y0qZQ",
+            video: "https://www.youtube.com/embed/BVOXkd80nnA",
           },
           {
             title: "Ternary operator",
-            video: "https://www.youtube.com/embed/9Ck1u1Y0qZQ",
+            video: "https://www.youtube.com/embed/Eg-fL_Pfie8",
           },
         ],
 
@@ -271,11 +271,11 @@ else {
           },
           {
             title: "break",
-            video: "https://www.youtube.com/embed/Gl2P2xKk2gE",
+            video: "https://www.youtube.com/embed/Mygjqm7ZDb4",
           },
           {
             title: "continue",
-            video: "https://www.youtube.com/embed/Gl2P2xKk2gE",
+            video: "https://www.youtube.com/embed/KYrTaRRe-ow",
           },
         ],
 
