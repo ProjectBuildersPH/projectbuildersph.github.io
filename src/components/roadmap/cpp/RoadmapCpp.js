@@ -82,7 +82,7 @@ int main() {
           },
           {
             title: "bool",
-            video: "https://www.youtube.com/embed/2NWeucMKrLI",
+            video: "https://www.youtube.com/embed/G-7vxayrP1s",
           },
           {
             title: "string",
@@ -121,14 +121,7 @@ string name = "Alex";`,
             title: "cin",
             video: "https://www.youtube.com/embed/8jLOx1hD3_o",
           },
-          {
-            title: "User input",
-            video: "https://www.youtube.com/embed/8jLOx1hD3_o",
-          },
-          {
-            title: "Multiple inputs",
-            video: "https://www.youtube.com/embed/8jLOx1hD3_o",
-          },
+
           {
             title: "Output formatting",
             video: "https://www.youtube.com/embed/8jLOx1hD3_o",
@@ -161,7 +154,7 @@ cout << "Hello " << name;`,
         concepts: [
           {
             title: "Arithmetic operators",
-            video: "https://www.youtube.com/embed/_bYFu9mBnr4",
+            video: "https://www.youtube.com/embed/JllfsLJzUvc",
           },
           {
             title: "Assignment operators",
@@ -172,8 +165,16 @@ cout << "Hello " << name;`,
             video: "https://www.youtube.com/embed/_bYFu9mBnr4",
           },
           {
-            title: "Logical operators",
-            video: "https://www.youtube.com/embed/_bYFu9mBnr4",
+            title: "Logical operators AND (&&)",
+            video: "https://www.youtube.com/embed/GRTUBdiwB-Q",
+          },
+          {
+            title: "Logical operators OR (||)",
+            video: "https://www.youtube.com/embed/TnlqNM_Js2I",
+          },
+                    {
+            title: "Logical operators NOT (!)",
+            video: "https://www.youtube.com/embed/UHN-iw2IkGY",
           },
           {
             title: "Increment and decrement",
@@ -203,19 +204,19 @@ cout << (a > 5 && b < 10);`,
         concepts: [
           {
             title: "if",
-            video: "https://www.youtube.com/embed/9Ck1u1Y0qZQ",
+            video: "https://www.youtube.com/embed/8RWnBlu2-BE",
           },
           {
-            title: "else",
-            video: "https://www.youtube.com/embed/9Ck1u1Y0qZQ",
+            title: "if , else",
+            video: "https://www.youtube.com/embed/jimASne606E",
           },
           {
             title: "else if",
-            video: "https://www.youtube.com/embed/9Ck1u1Y0qZQ",
+            video: "https://www.youtube.com/embed/Ew_VsbHBdVs",
           },
           {
             title: "Nested conditions",
-            video: "https://www.youtube.com/embed/9Ck1u1Y0qZQ",
+            video: "https://www.youtube.com/embed/qA2UHTU2B_Y",
           },
           {
             title: "switch",
@@ -254,19 +255,19 @@ else {
         concepts: [
           {
             title: "for loop",
-            video: "https://www.youtube.com/embed/Gl2P2xKk2gE",
+            video: "https://www.youtube.com/embed/ru0H9lMqU8U",
           },
           {
             title: "while loop",
-            video: "https://www.youtube.com/embed/Gl2P2xKk2gE",
+            video: "https://www.youtube.com/embed/Pp4GSerrhGI",
           },
           {
             title: "do while",
-            video: "https://www.youtube.com/embed/Gl2P2xKk2gE",
+            video: "https://www.youtube.com/embed/0s86Tb0OcR8",
           },
           {
-            title: "Nested loops",
-            video: "https://www.youtube.com/embed/Gl2P2xKk2gE",
+            title: "Nested Do While loops",
+            video: "https://www.youtube.com/embed/2ThmTArFSBs",
           },
           {
             title: "break",
@@ -307,7 +308,7 @@ else {
         concepts: [
           {
             title: "Creating arrays",
-            video: "https://www.youtube.com/embed/2D0bSp2bK2Q",
+            video: "https://www.youtube.com/embed/0UzIcBs-UH4",
           },
           {
             title: "Indexing",
