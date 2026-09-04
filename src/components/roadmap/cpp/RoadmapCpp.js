@@ -121,6 +121,10 @@ string name = "Alex";`,
             title: "cin",
             video: "https://www.youtube.com/embed/hCqRaLgOApM",
           },
+          {
+            title: "GetLine",
+            video: "https://www.youtube.com/embed/yf3-yd37k6A",
+          },
 
           {
             title: "Output formatting",
@@ -312,23 +316,23 @@ else {
           },
           {
             title: "Indexing",
-            video: "https://www.youtube.com/embed/2D0bSp2bK2Q",
+            video: "https://www.youtube.com/embed/D6Gt6j54IX4",
           },
           {
             title: "Traversing",
-            video: "https://www.youtube.com/embed/2D0bSp2bK2Q",
+            video: "https://www.youtube.com/embed/4vlGJmLRves",
           },
           {
             title: "Searching",
-            video: "https://www.youtube.com/embed/2D0bSp2bK2Q",
+            video: "https://www.youtube.com/embed/TRHu-_K579w",
           },
           {
             title: "Updating values",
-            video: "https://www.youtube.com/embed/2D0bSp2bK2Q",
+            video: "https://www.youtube.com/embed/m-aHPgZYTQo",
           },
           {
             title: "Multidimensional arrays",
-            video: "https://www.youtube.com/embed/2D0bSp2bK2Q",
+            video: "https://www.youtube.com/embed/fmuQXQUTMEQ",
           },
         ],
 
@@ -354,28 +358,24 @@ for (int i = 0; i < 5; i++) {
 
         concepts: [
           {
-            title: "std::string",
-            video: "https://www.youtube.com/embed/3C9E2yZ9d6Q",
-          },
-          {
             title: "Length",
-            video: "https://www.youtube.com/embed/3C9E2yZ9d6Q",
+            video: "https://www.youtube.com/embed/tZtSsdoqrjg",
           },
           {
             title: "Concatenation",
-            video: "https://www.youtube.com/embed/3C9E2yZ9d6Q",
+            video: "https://www.youtube.com/embed/tavL4uYPlJc",
           },
           {
             title: "Searching",
-            video: "https://www.youtube.com/embed/3C9E2yZ9d6Q",
+            video: "https://www.youtube.com/embed/Aw_tl8Bwh7Y",
           },
           {
             title: "Substrings",
-            video: "https://www.youtube.com/embed/3C9E2yZ9d6Q",
+            video: "https://www.youtube.com/embed/hj-W-6ETM9s",
           },
           {
             title: "Comparison",
-            video: "https://www.youtube.com/embed/3C9E2yZ9d6Q",
+            video: "https://www.youtube.com/embed/S6fz9zRJNoo",
           },
         ],
 
@@ -414,7 +414,7 @@ cout << message;`,
           },
           {
             title: "void",
-            video: "https://www.youtube.com/embed/9V2VnqB9m8E",
+            video: "https://www.youtube.com/embed/oEd_XxAgFO8",
           },
           {
             title: "Function overloading",
@@ -453,14 +453,6 @@ cout << result;`,
           },
           {
             title: "Pass by reference",
-            video: "https://www.youtube.com/embed/IzoFn3dfsPA",
-          },
-          {
-            title: "Reference parameters",
-            video: "https://www.youtube.com/embed/IzoFn3dfsPA",
-          },
-          {
-            title: "const references",
             video: "https://www.youtube.com/embed/IzoFn3dfsPA",
           },
         ],

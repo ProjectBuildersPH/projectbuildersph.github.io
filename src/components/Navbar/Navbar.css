@@ -1,20 +1,17 @@
-
 /* =========================================================
    PROJECT BUILDERS PH - NAVBAR
    =========================================================
 
    Brand Colors
-
    Green : #9ACF4A
    Dark  : #111111
    Ivory : #F4F1E8
    Gray  : #D9D5C9
-
 ========================================================= */
 
 
 /* =========================================================
-   NAVBAR
+   GLOBAL NAVBAR
 ========================================================= */
 
 .navbar {
@@ -23,6 +20,7 @@
   left: 0;
 
   width: 100%;
+  height: auto;
 
   z-index: 1000;
 
@@ -33,12 +31,7 @@
 
   border-bottom: 1px solid rgba(17, 17, 17, 0.08);
 
-  box-shadow:
-    0 4px 20px rgba(0, 0, 0, 0.04);
-
-  transition:
-    background 0.3s ease,
-    box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 
@@ -68,10 +61,11 @@
   display: flex;
   align-items: center;
 
+  flex-shrink: 0;
+
   text-decoration: none;
 
-  transition:
-    transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .navbar-logo:hover {
@@ -79,17 +73,17 @@
 }
 
 .navbar-logo img {
+  display: block;
+
   width: 155px;
   height: auto;
-
-  display: block;
 
   object-fit: contain;
 }
 
 
 /* =========================================================
-   NAVIGATION MENU
+   DESKTOP NAVIGATION
 ========================================================= */
 
 .navbar-menu {
@@ -107,14 +101,20 @@
 .navbar-menu > a {
   position: relative;
 
+  display: inline-flex;
+  align-items: center;
+
   color: #111111;
 
-  text-decoration: none;
-
+  font-family: inherit;
   font-size: 15px;
   font-weight: 600;
 
   letter-spacing: 0.2px;
+
+  text-decoration: none;
+
+  white-space: nowrap;
 
   transition:
     color 0.3s ease,
@@ -123,7 +123,7 @@
 
 
 /* =========================================================
-   NAVIGATION HOVER
+   NAVIGATION LINK UNDERLINE
 ========================================================= */
 
 .navbar-menu > a:not(.navbar-contact)::after {
@@ -137,15 +137,19 @@
   width: 0;
   height: 3px;
 
-  border-radius: 10px;
-
   background: #9ACF4A;
+
+  border-radius: 10px;
 
   transform: translateX(-50%);
 
-  transition:
-    width 0.3s ease;
+  transition: width 0.3s ease;
 }
+
+
+/* =========================================================
+   NAVIGATION HOVER
+========================================================= */
 
 .navbar-menu > a:not(.navbar-contact):hover {
   color: #7FB83D;
@@ -159,7 +163,7 @@
 
 
 /* =========================================================
-   ROADMAP DROPDOWN
+   ROADMAP CONTAINER
 ========================================================= */
 
 .navbar-dropdown {
@@ -184,8 +188,9 @@
 
   padding: 0;
 
-  background: transparent;
   border: none;
+
+  background: transparent;
 
   color: #111111;
 
@@ -197,6 +202,8 @@
   letter-spacing: 0.2px;
 
   cursor: pointer;
+
+  white-space: nowrap;
 
   transition:
     color 0.3s ease,
@@ -225,58 +232,50 @@
   width: 0;
   height: 3px;
 
-  border-radius: 10px;
-
   background: #9ACF4A;
+
+  border-radius: 10px;
 
   transform: translateX(-50%);
 
-  transition:
-    width 0.3s ease;
+  transition: width 0.3s ease;
 }
 
-.navbar-dropdown:hover
-.navbar-dropdown-button::after,
-.navbar-dropdown.dropdown-active
-.navbar-dropdown-button::after {
+.navbar-dropdown:hover .navbar-dropdown-button::after,
+.navbar-dropdown.dropdown-active .navbar-dropdown-button::after {
   width: 70%;
 }
 
 
 /* =========================================================
-   DROPDOWN ARROW
+   ROADMAP ARROW
 ========================================================= */
 
 .dropdown-arrow {
   display: inline-block;
 
-  font-size: 15px;
+  color: #111111;
 
+  font-size: 14px;
   line-height: 1;
 
-  margin-top: -2px;
-
-  transition:
-    transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-.navbar-dropdown:hover
-.dropdown-arrow,
-.navbar-dropdown.dropdown-active
-.dropdown-arrow {
+.navbar-dropdown:hover .dropdown-arrow,
+.navbar-dropdown.dropdown-active .dropdown-arrow {
   transform: rotate(180deg);
 }
 
 
 /* =========================================================
-   DROPDOWN MENU
+   DESKTOP ROADMAP DROPDOWN
 ========================================================= */
 
 .navbar-dropdown-menu {
   position: absolute;
 
   top: calc(100% + 18px);
-
   left: 50%;
 
   width: 235px;
@@ -285,17 +284,15 @@
 
   box-sizing: border-box;
 
-  background: rgba(244, 241, 232, 0.98);
+  background: rgba(244, 241, 232, 0.99);
 
   border: 1px solid rgba(17, 17, 17, 0.08);
 
   border-radius: 12px;
 
-  box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 
   opacity: 0;
-
   visibility: hidden;
 
   transform:
@@ -328,22 +325,17 @@
 
   background: #9ACF4A;
 
-  border-radius:
-    0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
 }
 
 
 /* =========================================================
-   SHOW DROPDOWN
+   SHOW DESKTOP DROPDOWN
 ========================================================= */
 
-.navbar-dropdown:hover
-.navbar-dropdown-menu,
-
-.navbar-dropdown.dropdown-active
-.navbar-dropdown-menu {
+.navbar-dropdown:hover .navbar-dropdown-menu,
+.navbar-dropdown.dropdown-active .navbar-dropdown-menu {
   opacity: 1;
-
   visibility: visible;
 
   transform:
@@ -358,7 +350,6 @@
 
 .navbar-dropdown-menu a {
   display: flex;
-
   align-items: center;
 
   gap: 12px;
@@ -373,8 +364,8 @@
 
   text-decoration: none;
 
+  font-family: inherit;
   font-size: 14px;
-
   font-weight: 600;
 
   border-radius: 8px;
@@ -412,17 +403,22 @@
   width: 34px;
   height: 34px;
 
-  flex-shrink: 0;
+  min-width: 34px;
 
-  border-radius: 8px;
+  flex-shrink: 0;
 
   background: #111111;
 
   color: #F4F1E8;
 
-  font-size: 11px;
+  border-radius: 8px;
 
+  font-family: inherit;
+
+  font-size: 11px;
   font-weight: 800;
+
+  line-height: 1;
 
   transition:
     background 0.25s ease,
@@ -434,13 +430,16 @@
    LANGUAGE ICON HOVER
 ========================================================= */
 
-.navbar-dropdown-menu a:hover
-.language-icon {
+.navbar-dropdown-menu a:hover .language-icon {
   background: #9ACF4A;
 
   color: #111111;
 }
 
+
+/* =========================================================
+   LANGUAGE ICON SIZES
+========================================================= */
 
 .cpp-icon {
   font-size: 10px;
@@ -477,6 +476,8 @@
 
   padding: 11px 20px;
 
+  box-sizing: border-box;
+
   background: #9ACF4A;
 
   color: #111111 !important;
@@ -485,18 +486,19 @@
 
   border-radius: 8px;
 
-  font-size: 14px !important;
+  font-family: inherit;
 
+  font-size: 14px !important;
   font-weight: 700 !important;
 
   text-decoration: none;
 
-  box-shadow:
-    0 5px 15px rgba(154, 207, 74, 0.18);
+  box-shadow: 0 5px 15px rgba(154, 207, 74, 0.18);
 
   transition:
     background 0.3s ease,
     border-color 0.3s ease,
+    color 0.3s ease,
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
@@ -510,8 +512,7 @@
 
   transform: translateY(-2px);
 
-  box-shadow:
-    0 8px 22px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -527,14 +528,13 @@
 
   padding: 8px;
 
-  background: transparent;
-
   border: none;
+
+  background: transparent;
 
   cursor: pointer;
 
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
 
@@ -542,8 +542,7 @@
 
   border-radius: 8px;
 
-  transition:
-    background 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .navbar-toggle:hover {
@@ -573,7 +572,7 @@
 
 
 /* =========================================================
-   HAMBURGER ACTIVE → X
+   HAMBURGER → X
 ========================================================= */
 
 .navbar-toggle.active span:nth-child(1) {
@@ -615,7 +614,6 @@
   .navbar-logo img {
     width: 140px;
   }
-
 }
 
 
@@ -625,6 +623,14 @@
 
 @media (max-width: 768px) {
 
+  /* =======================================================
+     NAVBAR
+  ======================================================= */
+
+  .navbar {
+    width: 100%;
+  }
+
   .navbar-container {
     width: 90%;
 
@@ -632,31 +638,31 @@
   }
 
 
-  /* ---------------------------------------------------------
+  /* =======================================================
      LOGO
-  --------------------------------------------------------- */
+  ======================================================= */
 
   .navbar-logo img {
     width: 130px;
   }
 
 
-  /* ---------------------------------------------------------
+  /* =======================================================
      HAMBURGER
-  --------------------------------------------------------- */
+  ======================================================= */
 
   .navbar-toggle {
     display: flex;
 
     position: relative;
 
-    z-index: 1001;
+    z-index: 1200;
   }
 
 
-  /* ---------------------------------------------------------
-     MOBILE MENU
-  --------------------------------------------------------- */
+  /* =======================================================
+     MOBILE NAVIGATION
+  ======================================================= */
 
   .navbar-menu {
     position: absolute;
@@ -671,23 +677,18 @@
     padding: 28px 5% 32px;
 
     display: flex;
-
     flex-direction: column;
-
     align-items: stretch;
 
     gap: 6px;
 
-    background: rgba(244, 241, 232, 0.98);
+    background: rgba(244, 241, 232, 0.99);
 
-    border-bottom:
-      1px solid rgba(17, 17, 17, 0.08);
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
 
-    box-shadow:
-      0 10px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 
     opacity: 0;
-
     visibility: hidden;
 
     transform: translateY(-15px);
@@ -696,12 +697,14 @@
       opacity 0.3s ease,
       visibility 0.3s ease,
       transform 0.3s ease;
+
+    z-index: 1150;
   }
 
 
-  /* ---------------------------------------------------------
-     OPEN MENU
-  --------------------------------------------------------- */
+  /* =======================================================
+     OPEN MOBILE NAVIGATION
+  ======================================================= */
 
   .navbar-menu.active {
     opacity: 1;
@@ -712,18 +715,24 @@
   }
 
 
-  /* ---------------------------------------------------------
-     MOBILE LINKS
-  --------------------------------------------------------- */
+  /* =======================================================
+     MOBILE NORMAL LINKS
+  ======================================================= */
 
   .navbar-menu > a {
+    display: flex;
+    align-items: center;
+
     width: 100%;
 
     box-sizing: border-box;
 
     padding: 13px 15px;
 
+    color: #111111;
+
     font-size: 16px;
+    font-weight: 600;
 
     border-radius: 7px;
 
@@ -735,148 +744,351 @@
   .navbar-menu > a:hover {
     background: rgba(154, 207, 74, 0.15);
 
+    color: #111111;
+
     transform: none;
   }
 
 
   /* Remove desktop underline */
-
   .navbar-menu > a:not(.navbar-contact)::after {
     display: none;
   }
 
 
   /* =======================================================
-     MOBILE ROADMAP
+     MOBILE ROADMAP CONTAINER
   ======================================================= */
 
   .navbar-dropdown {
+    position: relative;
+
     width: 100%;
 
     display: block;
   }
 
 
+  /* =======================================================
+     MOBILE ROADMAP BUTTON
+  ======================================================= */
+
   .navbar-dropdown-button {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     width: 100%;
 
     box-sizing: border-box;
 
     padding: 13px 15px;
 
-    justify-content: space-between;
+    margin: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #111111;
+
+    font-family: inherit;
 
     font-size: 16px;
+    font-weight: 600;
+
+    letter-spacing: normal;
+
+    text-align: left;
+
+    cursor: pointer;
 
     border-radius: 7px;
+
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
   }
 
   .navbar-dropdown-button:hover {
     background: rgba(154, 207, 74, 0.15);
 
+    color: #111111;
+
     transform: none;
   }
 
 
-  /* Remove underline */
-
+  /* Remove desktop underline */
   .navbar-dropdown-button::after {
     display: none;
   }
 
 
-  /* ---------------------------------------------------------
-     MOBILE DROPDOWN
-  --------------------------------------------------------- */
+  /* =======================================================
+     MOBILE ROADMAP ARROW
+  ======================================================= */
+
+  .dropdown-arrow {
+    display: inline-block;
+
+    color: #111111;
+
+    font-size: 13px;
+
+    line-height: 1;
+
+    margin: 0;
+
+    transform: rotate(0deg);
+
+    transition: transform 0.25s ease;
+  }
+
+  .navbar-dropdown.dropdown-active .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+
+  /* =======================================================
+     MOBILE ROADMAP DROPDOWN
+     
+     IMPORTANT:
+     This overrides ALL desktop dropdown behavior.
+  ======================================================= */
 
   .navbar-dropdown-menu {
-    position: static;
+    position: static !important;
 
-    width: 100%;
+    top: auto !important;
+    left: auto !important;
 
-    min-width: 0;
+    width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 4px 0 0 0 !important;
+
+    padding: 6px !important;
 
     box-sizing: border-box;
 
-    margin-top: 4px;
+    background: rgba(217, 213, 201, 0.45) !important;
 
-    padding: 5px;
-
-    background: rgba(217, 213, 201, 0.35);
-
-    border: none;
+    border: none !important;
 
     border-radius: 8px;
 
-    box-shadow: none;
+    box-shadow: none !important;
 
-    opacity: 0;
+    transform: none !important;
 
-    visibility: hidden;
+    /*
+      Closed by default.
+    */
+    display: none;
 
-    max-height: 0;
+    opacity: 1 !important;
 
-    overflow: hidden;
+    visibility: visible !important;
+
+    z-index: 1160;
+  }
+
+
+  /* =======================================================
+     MOBILE ROADMAP DROPDOWN OPEN
+  ======================================================= */
+
+  .navbar-dropdown.dropdown-active .navbar-dropdown-menu {
+    display: block !important;
+
+    width: 100% !important;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    transform: none !important;
+  }
+
+
+  /* Remove desktop green line */
+  .navbar-dropdown-menu::before {
+    display: none !important;
+  }
+
+
+  /* =======================================================
+     MOBILE ROADMAP LINKS
+  ======================================================= */
+
+  .navbar-dropdown-menu a {
+    position: relative;
+
+    display: flex !important;
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100% !important;
+
+    min-height: 52px;
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 10px 12px !important;
+
+    background: transparent !important;
+
+    color: #111111 !important;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
 
     transform: none;
 
+    z-index: 1161;
+
     transition:
-      opacity 0.25s ease,
-      visibility 0.25s ease,
-      max-height 0.3s ease;
+      background 0.25s ease,
+      color 0.25s ease;
   }
 
 
-  .navbar-dropdown-menu::before {
-    display: none;
+  /* =======================================================
+     MOBILE ROADMAP LINK HOVER
+  ======================================================= */
+
+  .navbar-dropdown-menu a:hover {
+    background: rgba(154, 207, 74, 0.2) !important;
+
+    color: #111111 !important;
+
+    transform: none;
   }
 
 
-  /* OPEN MOBILE DROPDOWN */
+  /* =======================================================
+     MOBILE LANGUAGE ICONS
+  ======================================================= */
 
-  .navbar-dropdown.dropdown-active
-  .navbar-dropdown-menu {
-    opacity: 1;
+  .navbar-dropdown-menu .language-icon {
+    display: inline-flex !important;
 
-    visibility: visible;
+    align-items: center;
+    justify-content: center;
 
-    max-height: 350px;
+    width: 32px !important;
+    height: 32px !important;
+
+    min-width: 32px !important;
+
+    flex-shrink: 0;
+
+    box-sizing: border-box;
+
+    background: #111111 !important;
+
+    color: #F4F1E8 !important;
+
+    border-radius: 8px;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    line-height: 1;
   }
 
 
-  /* ---------------------------------------------------------
-     MOBILE DROPDOWN LINKS
-  --------------------------------------------------------- */
+  /* =======================================================
+     MOBILE ICON HOVER
+  ======================================================= */
 
-  .navbar-dropdown-menu a {
-    padding: 10px 12px;
+  .navbar-dropdown-menu a:hover .language-icon {
+    background: #9ACF4A !important;
 
-    font-size: 15px;
+    color: #111111 !important;
   }
 
 
-  .language-icon {
-    width: 32px;
-    height: 32px;
+  /* =======================================================
+     MOBILE ICON SIZES
+  ======================================================= */
+
+  .navbar-dropdown-menu .cpp-icon {
+    font-size: 10px;
+  }
+
+  .navbar-dropdown-menu .java-icon {
+    font-size: 17px;
+  }
+
+  .navbar-dropdown-menu .python-icon {
+    font-size: 10px;
+  }
+
+  .navbar-dropdown-menu .csharp-icon {
+    font-size: 10px;
+  }
+
+  .navbar-dropdown-menu .c-icon {
+    font-size: 16px;
   }
 
 
-  /* ---------------------------------------------------------
+  /* =======================================================
      MOBILE CONTACT
-  --------------------------------------------------------- */
+  ======================================================= */
 
-  .navbar-contact {
-    margin-top: 12px;
+  .navbar-menu > .navbar-contact {
+    display: flex;
 
     width: 100%;
 
+    margin-top: 12px;
+
     padding: 13px 20px;
+
+    box-sizing: border-box;
+
+    justify-content: center;
 
     text-align: center;
 
-    box-sizing: border-box;
+    background: #9ACF4A;
+
+    color: #111111 !important;
+
+    border: 2px solid #9ACF4A;
+
+    border-radius: 8px;
   }
 
+  .navbar-menu > .navbar-contact:hover {
+    background: #111111;
+
+    border-color: #111111;
+
+    color: #FFFFFF !important;
+  }
 }
 
 
@@ -899,6 +1111,19 @@
     padding-right: 4%;
   }
 
+  .navbar-dropdown-menu a {
+    min-height: 50px;
+
+    padding: 9px 10px !important;
+
+    font-size: 14px;
+  }
+
+  .navbar-dropdown-menu .language-icon {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+  }
 }
 
 
@@ -914,3 +1139,25 @@
   outline-offset: 3px;
 }
 
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .navbar,
+  .navbar-logo,
+  .navbar-menu,
+  .navbar-menu > a,
+  .navbar-dropdown-button,
+  .navbar-dropdown-menu,
+  .navbar-dropdown-menu a,
+  .dropdown-arrow,
+  .navbar-contact,
+  .navbar-toggle,
+  .navbar-toggle span,
+  .language-icon {
+    transition: none !important;
+  }
+}

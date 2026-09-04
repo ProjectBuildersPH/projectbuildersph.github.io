@@ -21,24 +21,8 @@ const roadmapData = [
 
         concepts: [
           {
-            title: "What is Java?",
-            video: "https://www.youtube.com/embed/eIrMbAQSU34",
-          },
-          {
-            title: "History of Java",
-            video: "https://www.youtube.com/embed/eIrMbAQSU34",
-          },
-          {
-            title: "Where Java is used",
-            video: "https://www.youtube.com/embed/eIrMbAQSU34",
-          },
-          {
-            title: "JDK, JRE, and JVM",
-            video: "https://www.youtube.com/embed/eIrMbAQSU34",
-          },
-          {
-            title: "Your first Java program",
-            video: "https://www.youtube.com/embed/eIrMbAQSU34",
+            title: "Setting up Java on VSCODE",
+            video: "https://www.youtube.com/embed/0dvt8uDgFpc",
           },
         ],
 
@@ -65,28 +49,32 @@ const roadmapData = [
 
         concepts: [
           {
+            title: "System.out.println",
+            video: "https://www.youtube.com/embed/_sa2YgAILjw",
+          },
+          {
             title: "Variables",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/iSMTOgH9WPU",
           },
           {
             title: "int",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/TCczPplqjeM",
           },
           {
             title: "double",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/OfSg6dRX5BY",
           },
           {
             title: "char",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/LOB6VxU4zJA",
           },
           {
             title: "boolean",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/85FdroKpbbg",
           },
           {
             title: "String",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/ohyizjjHi74",
           },
           {
             title: "Constants",
@@ -114,24 +102,16 @@ String name = "Alex";`,
 
         concepts: [
           {
-            title: "System.out.println",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
-          },
-          {
             title: "Scanner",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/LE6SQOtNl8s",
           },
           {
             title: "User input",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/YKlpeiVpUTk",
           },
           {
             title: "Multiple inputs",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
-          },
-          {
-            title: "Input validation",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/yHDLQI2UQSQ",
           },
         ],
 
@@ -166,23 +146,31 @@ public class Main {
         concepts: [
           {
             title: "Arithmetic operators",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/N0kpY0kwVzo",
           },
           {
             title: "Assignment operators",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/TQ-ElGZwwlg",
           },
           {
             title: "Comparison operators",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/71pivkAr9A4",
           },
           {
-            title: "Logical operators",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            title: "Logic Gate AND  &&",
+            video: "https://www.youtube.com/embed/ajeOxTkwAYk",
+          },
+          {
+            title: "Logic Gate OR",
+            video: "https://www.youtube.com/embed/VeMKkI2bCuo",
+          },
+          {
+            title: "Logic Gate NOT",
+            video: "https://www.youtube.com/embed/IfHgPd9ir9g",
           },
           {
             title: "Increment and decrement",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/PVT1v0Kucb0",
           },
         ],
 
@@ -208,11 +196,11 @@ System.out.println(a > 5 && b < 10);`,
         concepts: [
           {
             title: "if",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/4j3tni8tudE",
           },
           {
             title: "else",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/qKiWNCfa4vo",
           },
           {
             title: "else if",
@@ -228,7 +216,7 @@ System.out.println(a > 5 && b < 10);`,
           },
           {
             title: "Ternary operator",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/I7-qzMqrsdA",
           },
         ],
 
@@ -262,19 +250,19 @@ if (score >= 90) {
         concepts: [
           {
             title: "for loop",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/grzOtXrwBpA",
           },
           {
             title: "while loop",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/JA_GrIlITcE",
           },
           {
             title: "do while",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/oQfDhBY9xIw",
           },
           {
             title: "Nested loops",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/rsXc1cJ3OYI",
           },
           {
             title: "break",
@@ -317,15 +305,15 @@ if (score >= 90) {
         concepts: [
           {
             title: "Creating arrays",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/Oa_7JFLb-ms",
           },
           {
             title: "Indexing",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/zxGQQs4zWD4",
           },
           {
-            title: "Traversing",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            title: "Array Loops",
+            video: "https://www.youtube.com/embed/cStYzRtLm2E",
           },
           {
             title: "Searching",
@@ -333,7 +321,7 @@ if (score >= 90) {
           },
           {
             title: "Updating values",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/awUwLMKgB-k",
           },
           {
             title: "Multidimensional arrays",
