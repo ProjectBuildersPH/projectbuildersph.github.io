@@ -29,7 +29,7 @@ function Hero() {
           <div className="hero-buttons">
 
             <a
-              href="https://m.me/ch/AbaC8jEalxMV_TrB/" target="_blank" rel="noopener noreferrer"
+             href="https://m.me/ch/AbaC8jEalxMV_TrB/" target="_blank" rel="noopener noreferrer"
               className="hero-btn primary"
             >
               Join the Community

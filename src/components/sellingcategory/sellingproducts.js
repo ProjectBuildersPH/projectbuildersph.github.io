@@ -29,6 +29,73 @@ const products = [
     level: "Intermediate",
     popular: true,
   },
+
+    {
+    id: 2,
+    title: "File Organizer",
+    category: "PROJECT Automation",
+    creator: "ProjectBuildersPH",
+    duration: "4h 20m",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
+    description:
+      "Build a Python character search program that finds a specific character, displays its index positions, and counts its total occurrences.",
+    level: "Intermediate",
+    popular: true,
+  },
+
+    {
+    id: 2,
+    title: "File Organizer",
+    category: "PROJECT Automation",
+    creator: "ProjectBuildersPH",
+    duration: "4h 20m",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
+    description:
+      "Build a Python character search program that finds a specific character, displays its index positions, and counts its total occurrences.",
+    level: "Intermediate",
+    popular: true,
+  },
+    {
+    id: 2,
+    title: "File Organizer",
+    category: "PROJECT Automation",
+    creator: "ProjectBuildersPH",
+    duration: "4h 20m",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
+    description:
+      "Build a Python character search program that finds a specific character, displays its index positions, and counts its total occurrences.",
+    level: "Intermediate",
+    popular: true,
+  },
+    {
+    id: 2,
+    title: "File Organizer",
+    category: "PROJECT Automation",
+    creator: "ProjectBuildersPH",
+    duration: "4h 20m",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
+    description:
+      "Build a Python character search program that finds a specific character, displays its index positions, and counts its total occurrences.",
+    level: "Intermediate",
+    popular: true,
+  },
+    {
+    id: 2,
+    title: "File Organizer",
+    category: "PROJECT Automation",
+    creator: "ProjectBuildersPH",
+    duration: "4h 20m",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
+    description:
+      "Build a Python character search program that finds a specific character, displays its index positions, and counts its total occurrences.",
+    level: "Intermediate",
+    popular: true,
+  },
   
 ];
 
