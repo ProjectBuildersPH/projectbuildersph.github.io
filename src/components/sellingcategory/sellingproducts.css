@@ -463,32 +463,12 @@
    CAROUSEL
 ======================================== */
 
-.selling-carousel {
-  --card-width: 300px;
-  width: 100%;
-  overflow: hidden;
-}
+.selling-carousel { --card-width: 300px; --slide-width: 25%; width: 100%; overflow: hidden; }
 
 
-.selling-track {
-  display: flex;
-  width: max-content;
+.selling-track { display: flex; width: max-content; transition: transform 0.45s ease; }
 
-  transition: transform 0.45s ease;
-}
-
-
-.selling-card {
-  flex: 0 0 var(--card-width);
-
-   width: var(--card-width);
-
-  padding: 0 9px;
-
-  box-sizing: border-box;
-
-  cursor: pointer;
-}
+.selling-card { flex: 0 0 var(--card-width); width: var(--card-width); padding: 0 9px; box-sizing: border-box; }
 
 
 .selling-image {
@@ -871,14 +851,9 @@
 
 @media (max-width: 1000px) {
 
-    .selling-carousel {
-    --card-width: 280px;
-  }
+.selling-carousel { --card-width: 280px; --slide-width: 280px; }
 
-  .selling-card {
-    flex: 0 0 280px;
-    width: 280px;
-  }
+.selling-card { flex: 0 0 280px; width: 280px; }
 
   .selling-search-wrapper {
     width: 240px;
@@ -966,28 +941,55 @@
 
 
 
+@media (max-width: 700px) {
+
+.selling-carousel { --card-width: 260px; --slide-width: 260px; }
+
+ .selling-search-wrapper { width: 100%; margin-left: 0; }
+
+ .selling-search { height: 46px; }
+
+ .selling-container { padding: 0 15px; }
+
+ .selling-section { margin-top: 30px; padding: 20px; }
+
+ .selling-heading { align-items: flex-start; flex-direction: column; gap: 20px; }
+
+ .selling-heading h2 { font-size: 26px; }
+
+ .selling-card { flex: 0 0 260px; width: 260px; }
+
+ .selling-image { height: 165px; }
+
+ .selling-card h3 { font-size: 16px; }
+
+ .selling-description { font-size: 10px; }
+
+ .selling-modal-content { grid-template-columns: 1fr; max-height: 90vh; overflow-y: auto; }
+
+ .modal-image { height: 220px; min-height: 220px; }
+
+ .modal-body { padding: 30px; }
+
+ .modal-body h2 { font-size: 28px; }
+
+
+}
+
+
+/* ======================================== SMALL MOBILE ======================================== */ 
+
 @media (max-width: 450px) {
+  
+.selling-carousel { --card-width: 100%; --slide-width: 100%; } 
 
-      .selling-carousel {
-    --card-width: 100%;
-  }
+.selling-card { flex: 0 0 100%; width: 100%; } 
 
-  .selling-card {
-    flex: 0 0 100%;
-    width: 100%;
-  }
+.selling-image { height: 190px; }
 
-  .selling-image {
-    height: 190px;
-  }
+.selling-card h3 { font-size: 19px; }
 
-  .selling-card h3 {
-    font-size: 19px;
-  }
-
-  .selling-section {
-    padding: 17px;
-  }
+.selling-section { padding: 17px; } 
 
 }
 

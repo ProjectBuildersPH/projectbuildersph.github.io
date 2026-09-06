@@ -78,7 +78,7 @@ const roadmapData = [
           },
           {
             title: "Constants",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/ScTa61wGqDY",
           },
         ],
 
@@ -204,15 +204,15 @@ System.out.println(a > 5 && b < 10);`,
           },
           {
             title: "else if",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/JFlXnOMOi9c",
           },
           {
             title: "Nested conditions",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/DqTPkTTRRes",
           },
           {
             title: "switch",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/gJHXWQsZXSk",
           },
           {
             title: "Ternary operator",
@@ -266,11 +266,11 @@ if (score >= 90) {
           },
           {
             title: "break",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/FIZYQLtg9g8",
           },
           {
             title: "continue",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/CJo2xnmdAIE",
           },
         ],
 

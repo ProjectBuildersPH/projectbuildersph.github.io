@@ -335,8 +335,8 @@ function SellingProducts() {
               <div
                 className="selling-track"
                 style={{
-                  transform: `translateX(calc(-${currentIndex} * (100% / 4)))`,
-                }}
+  transform: `translateX(calc(-${currentIndex} * var(--slide-width)))`,
+}}
               >
 
                 {filteredProducts.map((product) => (
