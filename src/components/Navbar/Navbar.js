@@ -118,6 +118,17 @@ const Navbar = () => {
               </Link>
 
               <Link
+                to="/roadmapjs/javscript"
+                onClick={closeMenu}
+              >
+                <span className="language-icon java-icon">
+                  JS
+                </span>
+
+                <span>JavaScript Roadmap</span>
+              </Link>              
+
+              <Link
                 to="/roadmappy/python"
                 onClick={closeMenu}
               >

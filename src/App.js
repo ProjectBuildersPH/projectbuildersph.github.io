@@ -34,6 +34,7 @@ import MediumJPFCS from "./components/problemlanding/cpplist/cppproblems/mediumj
 import SmartParkingGarageManagementSystem from "./components/problemlanding/cpplist/cppproblems/smartparkinggaragemanagementsystem";
 import CharacterPositionFinder from "./components/problemlanding/cpplist/cppproblems/characterpositionfinder";
 import SmartQueueManagementSystem from "./components/problemlanding/cpplist/cppproblems/smartqueuemanagementsystem";
+import ShirtSelling from "./components/tshirt/shirtselling";
 
 
 
@@ -47,6 +48,9 @@ import RoadmapJava from "./components/roadmap/java/RoadmapJava";
 import RoadmapPython from "./components/roadmap/python/RoadmapPython";
 import RoadmapCSharp from "./components/roadmap/CSharp/RoadmapCSharp";
 import RoadmapC from "./components/roadmap/c/RoadmapC";
+import Javscript from "./components/roadmap/Javascript/javscript";
+
+
 
 import "./App.css";
 
@@ -153,6 +157,7 @@ function App() {
             <Route path="/roadmappy/python" element={<RoadmapPython />} />
             <Route path="/roadmapcsharp/csharp" element={<RoadmapCSharp />} />
             <Route path="/roadmapC/c" element={<RoadmapC />} />
+            <Route path="/roadmapjs/javscript" element={<Javscript />} />
            
 
         </Routes>
