@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a431dc5a.css",
-    "main.js": "/static/js/main.5e74e515.js",
+    "main.css": "/static/css/main.52a75b77.css",
+    "main.js": "/static/js/main.05929dc9.js",
     "static/media/t1.mp4": "/static/media/t1.4d19c790873d8ecb0179.mp4",
     "static/media/t2.mp4": "/static/media/t2.617e1d1f96a8fa2cce9a.mp4",
     "static/media/tutor.mp4": "/static/media/tutor.4cdef896664c79014e84.mp4",
@@ -15,6 +15,7 @@
     "static/media/tablogo.png": "/static/media/tablogo.eb186f51e1f3eed7b15a.png",
     "static/media/database.png": "/static/media/database.83fb106962251212bb18.png",
     "static/media/categories.png": "/static/media/categories.a8cb20fceade8994dcf1.png",
+    "static/media/struggle.png": "/static/media/struggle.cf6ec84b8775e85e534a.png",
     "static/media/dashboard.png": "/static/media/dashboard.14d97d31137231217086.png",
     "static/media/career.png": "/static/media/career.55b540cc243b24e9ea98.png",
     "static/media/sad.png": "/static/media/sad.4ff1b7f3b9f7110e1558.png",
@@ -33,11 +34,11 @@
     "static/media/java.png": "/static/media/java.c0f7c0147ad6cb151008.png",
     "static/media/cpp.png": "/static/media/cpp.cf93335ad353d07a30e0.png",
     "index.html": "/index.html",
-    "main.a431dc5a.css.map": "/static/css/main.a431dc5a.css.map",
-    "main.5e74e515.js.map": "/static/js/main.5e74e515.js.map"
+    "main.52a75b77.css.map": "/static/css/main.52a75b77.css.map",
+    "main.05929dc9.js.map": "/static/js/main.05929dc9.js.map"
   },
   "entrypoints": [
-    "static/css/main.a431dc5a.css",
-    "static/js/main.5e74e515.js"
+    "static/css/main.52a75b77.css",
+    "static/js/main.05929dc9.js"
   ]
 }
