@@ -32,8 +32,8 @@ const products = [
 
     {
     id: 2,
-    title: "File Organizer",
-    category: "PROJECT Automation",
+    title: "OOP Bank System",
+    category: "Java Console",
     creator: "ProjectBuildersPH",
     duration: "4h 20m",
     image:

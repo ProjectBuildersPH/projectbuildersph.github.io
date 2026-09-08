@@ -73,8 +73,12 @@ int main() {
             video: "https://www.youtube.com/embed/ljBnZqb1Rck",
           },
           {
+            title: "Float",
+            video: "https://www.youtube.com/embed/BtZA-zUhqgg",
+          },
+          {
             title: "double",
-            video: "https://www.youtube.com/embed/YGy2pfjq69g",
+            video: "https://www.youtube.com/embed/qYqbe-q8U30",
           },
           {
             title: "char",
@@ -402,27 +406,27 @@ cout << message;`,
         concepts: [
           {
             title: "Function declaration",
-            video: "https://www.youtube.com/embed/9V2VnqB9m8E",
+            video: "https://www.youtube.com/embed/WQeGIyE3YWw",
           },
           {
             title: "Parameters",
-            video: "https://www.youtube.com/embed/9V2VnqB9m8E",
+            video: "https://www.youtube.com/embed/CY4ux7ay78Y",
           },
           {
             title: "Return values",
-            video: "https://www.youtube.com/embed/9V2VnqB9m8E",
+            video: "https://www.youtube.com/embed/a0Xj4Tamxvc",
           },
           {
             title: "void",
-            video: "https://www.youtube.com/embed/oEd_XxAgFO8",
+            video: "https://www.youtube.com/embed/mA2JfwcBgBU",
           },
           {
             title: "Function overloading",
-            video: "https://www.youtube.com/embed/9V2VnqB9m8E",
+            video: "https://www.youtube.com/embed/YMgQlpcQRYo",
           },
           {
             title: "Scope",
-            video: "https://www.youtube.com/embed/9V2VnqB9m8E",
+            video: "https://www.youtube.com/embed/DOvCnxPV1Is",
           },
         ],
 
@@ -449,11 +453,11 @@ cout << result;`,
         concepts: [
           {
             title: "Reference variables",
-            video: "https://www.youtube.com/embed/IzoFn3dfsPA",
+            video: "https://www.youtube.com/embed/skopYaze51Y",
           },
           {
             title: "Pass by reference",
-            video: "https://www.youtube.com/embed/IzoFn3dfsPA",
+            video: "https://www.youtube.com/embed/37opqUXtX18",
           },
         ],
 
@@ -482,23 +486,15 @@ cout << value;`,
         concepts: [
           {
             title: "Memory addresses",
-            video: "https://www.youtube.com/embed/zuegQmMdy8M",
-          },
-          {
-            title: "& operator",
-            video: "https://www.youtube.com/embed/zuegQmMdy8M",
+            video: "https://www.youtube.com/embed/m8qonypTDVI",
           },
           {
             title: "* operator",
-            video: "https://www.youtube.com/embed/zuegQmMdy8M",
-          },
-          {
-            title: "Pointer variables",
-            video: "https://www.youtube.com/embed/zuegQmMdy8M",
+            video: "https://www.youtube.com/embed/GWo7fGMbjFw",
           },
           {
             title: "Dereferencing",
-            video: "https://www.youtube.com/embed/zuegQmMdy8M",
+            video: "https://www.youtube.com/embed/HR0yZdTxhNY",
           },
           {
             title: "Pointer arithmetic",
