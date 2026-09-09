@@ -12,24 +12,22 @@
 }
 
 
-/* ================================
+/* ========================================
    HORIZONTAL UPLOAD
-   ================================ */
+   ======================================== */
 
 .upload-row {
     display: flex;
-
     align-items: stretch;
 
     gap: 20px;
-
     width: 100%;
 }
 
 
-/* ================================
+/* ========================================
    FILE UPLOAD BOX
-   ================================ */
+   ======================================== */
 
 .file-upload-box {
     flex: 1;
@@ -37,15 +35,12 @@
     min-height: 120px;
 
     border: 3px dashed #111;
-
     border-radius: 14px;
 
     padding: 20px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     gap: 12px;
@@ -72,24 +67,25 @@
 }
 
 
-/* ================================
+/* ========================================
    FILE ICON
-   ================================ */
+   ======================================== */
 
 .file-upload-icon {
     font-size: 38px;
+
+    flex-shrink: 0;
 }
 
 
-/* ================================
+/* ========================================
    FILE TEXT
-   ================================ */
+   ======================================== */
 
 .file-upload-box p {
     margin: 0 0 4px;
 
     font-weight: 800;
-
     font-size: 16px;
 }
 
@@ -114,18 +110,18 @@
 }
 
 
-/* ================================
-   HIDDEN INPUT
-   ================================ */
+/* ========================================
+   HIDDEN FILE INPUT
+   ======================================== */
 
 .file-upload-box input[type="file"] {
     display: none;
 }
 
 
-/* ================================
+/* ========================================
    SELECTED FILE
-   ================================ */
+   ======================================== */
 
 .file-selected-title {
     color: #111 !important;
@@ -154,9 +150,9 @@
 }
 
 
-/* ================================
+/* ========================================
    UPLOAD BUTTON
-   ================================ */
+   ======================================== */
 
 .upload-button {
     width: 230px;
@@ -201,9 +197,9 @@
 }
 
 
-/* ================================
+/* ========================================
    MESSAGE
-   ================================ */
+   ======================================== */
 
 .upload-message {
     margin-top: 20px;
@@ -224,24 +220,26 @@
 }
 
 
-/* ================================
-   UPLOADED FILES
-   ================================ */
+/* ========================================
+   REPOSITORY FILES
+   ======================================== */
 
-.uploaded-files {
+.repo-files {
     width: 100%;
 
     margin-top: 25px;
 
-    border-top: 2px solid #111;
-
     padding-top: 20px;
+
+    border-top: 2px solid #111;
 }
 
 
-/* Header */
+/* ========================================
+   REPOSITORY HEADER
+   ======================================== */
 
-.uploaded-files-header {
+.repo-files-header {
     display: flex;
 
     justify-content: space-between;
@@ -251,7 +249,7 @@
     margin-bottom: 12px;
 }
 
-.uploaded-files-header h3 {
+.repo-files-header h3 {
     margin: 0;
 
     font-size: 18px;
@@ -259,7 +257,7 @@
     font-weight: 900;
 }
 
-.uploaded-files-header span {
+.repo-files-header span {
     background: #9bdc20;
 
     border: 2px solid #111;
@@ -274,11 +272,11 @@
 }
 
 
-/* ================================
-   SCROLLABLE FILE LIST
-   ================================ */
+/* ========================================
+   SCROLLABLE REPOSITORY FILE LIST
+   ======================================== */
 
-.uploaded-files-list {
+.repo-files-list {
     max-height: 260px;
 
     overflow-y: auto;
@@ -287,21 +285,21 @@
 }
 
 
-/* ================================
+/* ========================================
    SCROLLBAR
-   ================================ */
+   ======================================== */
 
-.uploaded-files-list::-webkit-scrollbar {
+.repo-files-list::-webkit-scrollbar {
     width: 9px;
 }
 
-.uploaded-files-list::-webkit-scrollbar-track {
+.repo-files-list::-webkit-scrollbar-track {
     background: #eeeeee;
 
     border-radius: 10px;
 }
 
-.uploaded-files-list::-webkit-scrollbar-thumb {
+.repo-files-list::-webkit-scrollbar-thumb {
     background: #9bdc20;
 
     border: 2px solid #111;
@@ -309,16 +307,16 @@
     border-radius: 10px;
 }
 
-.uploaded-files-list::-webkit-scrollbar-thumb:hover {
+.repo-files-list::-webkit-scrollbar-thumb:hover {
     background: #7caf13;
 }
 
 
-/* ================================
-   FILE ITEM
-   ================================ */
+/* ========================================
+   REPOSITORY FILE
+   ======================================== */
 
-.uploaded-file {
+.repo-file {
     display: flex;
 
     align-items: center;
@@ -335,27 +333,45 @@
 
     border-radius: 10px;
 
+    text-decoration: none;
+
+    color: #111;
+
+    cursor: pointer;
+
     transition: 0.15s;
 }
 
-.uploaded-file:hover {
+.repo-file:hover {
     background: #efffd5;
 
     transform: translateX(2px);
 }
 
 
-/* File icon */
+/* ========================================
+   FILE ICON
+   ======================================== */
 
-.uploaded-file-icon {
+.repo-file-icon {
     font-size: 22px;
+
+    flex-shrink: 0;
 }
 
 
-/* File name */
+/* ========================================
+   FILE INFORMATION
+   ======================================== */
 
-.uploaded-file-name {
+.repo-file-info {
     flex: 1;
+
+    min-width: 0;
+}
+
+.repo-file-name {
+    display: block;
 
     overflow: hidden;
 
@@ -365,13 +381,76 @@
 
     font-size: 14px;
 
-    font-weight: 700;
+    font-weight: 800;
+}
+
+.repo-file-info small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #777;
+
+    font-size: 11px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
 }
 
 
-/* Success check */
+/* ========================================
+   DOWNLOAD BUTTON
+   ======================================== */
 
-.uploaded-check {
+.repo-file-download {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 32px;
+
+    height: 32px;
+
+    flex-shrink: 0;
+
+    background: #ffffff;
+
+    color: #111;
+
+    border: 2px solid #111;
+
+    border-radius: 8px;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    text-decoration: none;
+
+    transition: 0.15s;
+}
+
+.repo-file-download:hover {
+    background: #9bdc20;
+
+    transform: translateY(-2px);
+}
+
+.repo-file:hover .repo-file-download {
+    background: #9bdc20;
+}
+
+
+/* ========================================
+   SUCCESS CHECK
+   ======================================== */
+
+.repo-file-check {
     display: flex;
 
     align-items: center;
@@ -381,6 +460,8 @@
     width: 25px;
 
     height: 25px;
+
+    flex-shrink: 0;
 
     background: #9bdc20;
 
@@ -394,9 +475,30 @@
 }
 
 
-/* ================================
+/* ========================================
+   EMPTY REPOSITORY
+   ======================================== */
+
+.no-files {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #f5f5f5;
+
+    border: 2px dashed #999;
+
+    border-radius: 10px;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
    MOBILE
-   ================================ */
+   ======================================== */
 
 @media (max-width: 650px) {
 
@@ -416,220 +518,7 @@
         width: 100%;
     }
 
-    .uploaded-files-list {
+    .repo-files-list {
         max-height: 220px;
     }
 }
-
-
-
-/* ================================
-   REPOSITORY FILES
-   ================================ */
-
-.repo-files {
-    width: 100%;
-    margin-top: 25px;
-    padding-top: 20px;
-    border-top: 2px solid #111;
-}
-
-.repo-files-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-}
-
-.repo-files-header h3 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 900;
-}
-
-.repo-files-header span {
-    background: #9bdc20;
-    border: 2px solid #111;
-    border-radius: 20px;
-    padding: 4px 10px;
-    font-size: 12px;
-    font-weight: 800;
-}
-
-
-/* Scrollable list */
-
-.repo-files-list {
-    max-height: 260px;
-    overflow-y: auto;
-    padding-right: 8px;
-}
-
-
-/* Scrollbar */
-
-.repo-files-list::-webkit-scrollbar {
-    width: 9px;
-}
-
-.repo-files-list::-webkit-scrollbar-track {
-    background: #eeeeee;
-    border-radius: 10px;
-}
-
-.repo-files-list::-webkit-scrollbar-thumb {
-    background: #9bdc20;
-    border: 2px solid #111;
-    border-radius: 10px;
-}
-
-.repo-files-list::-webkit-scrollbar-thumb:hover {
-    background: #7caf13;
-}
-
-
-/* File */
-
-.repo-file {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    padding: 12px 14px;
-
-    margin-bottom: 8px;
-
-    background: #f9fff0;
-
-    border: 2px solid #111;
-
-    border-radius: 10px;
-
-    transition: 0.15s;
-}
-
-.repo-file:hover {
-    background: #efffd5;
-    transform: translateX(2px);
-}
-
-.repo-file-icon {
-    font-size: 22px;
-}
-
-.repo-file-info {
-    flex: 1;
-    min-width: 0;
-}
-
-.repo-file-name {
-    display: block;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
-    font-size: 14px;
-    font-weight: 800;
-}
-
-.repo-file-info small {
-    display: block;
-
-    margin-top: 3px;
-
-    color: #777;
-
-    font-size: 11px;
-}
-
-.repo-file-check {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 25px;
-    height: 25px;
-
-    background: #9bdc20;
-
-    border: 2px solid #111;
-
-    border-radius: 50%;
-
-    font-size: 13px;
-    font-weight: 900;
-}
-
-
-/* Empty repository */
-
-.no-files {
-    padding: 25px;
-
-    text-align: center;
-
-    background: #f5f5f5;
-
-    border: 2px dashed #999;
-
-    border-radius: 10px;
-
-    color: #777;
-
-    font-size: 14px;
-}
-
-/* ========================================
-   REPOSITORY FILE DOWNLOAD
-   ======================================== */
-
-.repo-file {
-    text-decoration: none;
-    color: #111;
-    cursor: pointer;
-}
-
-.repo-file-download {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 32px;
-    height: 32px;
-
-    background: #ffffff;
-
-    border: 2px solid #111;
-
-    border-radius: 8px;
-
-    font-size: 20px;
-
-    font-weight: 900;
-
-    transition: 0.15s;
-}
-
-.repo-file-download:hover {
-    background: #9bdc20;
-
-    transform: translateY(-2px);
-}
-
-
-/* Make the whole file row clickable */
-
-.repo-file:hover .repo-file-download {
-    background: #9bdc20;
-}
-
-
-/* Keep the file information from pushing buttons */
-
-.repo-file-info {
-    flex: 1;
-    min-width: 0;
-} 

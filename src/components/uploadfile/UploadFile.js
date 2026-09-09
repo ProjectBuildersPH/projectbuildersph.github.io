@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import "./UploadFile.css";
 
+const API_URL = "http://localhost:5000";
+
 function UploadFile() {
     const [file, setFile] = useState(null);
     const [message, setMessage] = useState("");
@@ -8,64 +10,47 @@ function UploadFile() {
 
     const fileInputRef = useRef(null);
 
-
     // ========================================
-    // GET FILES FROM GITHUB
+    // GET FILES FROM GITHUB REPOSITORY
     // ========================================
 
     const loadRepoFiles = async () => {
         try {
-
             const response = await fetch(
-                "http://localhost:5000/api/files"
+                `${API_URL}/api/files`
             );
 
-            const result =
-                await response.json();
+            const result = await response.json();
 
             if (response.ok) {
-
-                setRepoFiles(
-                    result.files || []
-                );
-
+                setRepoFiles(result.files || []);
             } else {
-
-                console.error(
-                    "Failed to load files:",
-                    result
+                console.error("Failed to load files:", result);
+                setMessage(
+                    result.message || "Failed to load repository files."
                 );
-
             }
-
         } catch (error) {
-
             console.error(
                 "Unable to load repository files:",
                 error
             );
-
         }
     };
-
 
     // ========================================
     // LOAD FILES WHEN PAGE OPENS
     // ========================================
 
     useEffect(() => {
-
         loadRepoFiles();
-
     }, []);
-
 
     // ========================================
     // VALIDATE FILE
     // ========================================
 
     const validateFile = (selectedFile) => {
-
         const allowedExtensions = [
             ".cpp",
             ".h",
@@ -79,16 +64,13 @@ function UploadFile() {
             (extension) =>
                 fileName.endsWith(extension)
         );
-
     };
-
 
     // ========================================
     // FILE SELECTION
     // ========================================
 
     const handleFileChange = (event) => {
-
         const selectedFile =
             event.target.files[0];
 
@@ -96,34 +78,26 @@ function UploadFile() {
             return;
         }
 
-
         if (!validateFile(selectedFile)) {
-
             setMessage(
                 "Only .cpp, .h and .hpp files are allowed."
             );
 
             setFile(null);
-
             event.target.value = "";
 
             return;
         }
 
-
         setMessage("");
-
         setFile(selectedFile);
-
     };
-
 
     // ========================================
     // DRAG AND DROP
     // ========================================
 
     const handleDrop = (event) => {
-
         event.preventDefault();
 
         const droppedFile =
@@ -133,9 +107,7 @@ function UploadFile() {
             return;
         }
 
-
         if (!validateFile(droppedFile)) {
-
             setMessage(
                 "Only .cpp, .h and .hpp files are allowed."
             );
@@ -143,32 +115,24 @@ function UploadFile() {
             return;
         }
 
-
         setMessage("");
-
         setFile(droppedFile);
-
     };
-
 
     // ========================================
     // UPLOAD FILE
     // ========================================
 
     const handleSubmit = async (event) => {
-
         event.preventDefault();
 
-
         if (!file) {
-
             setMessage(
                 "Please select a C++ file."
             );
 
             return;
         }
-
 
         const formData =
             new FormData();
@@ -178,79 +142,61 @@ function UploadFile() {
             file
         );
 
-
-        setMessage(
-            "Uploading..."
-        );
-
+        setMessage("Uploading...");
 
         try {
-
             const response =
                 await fetch(
-                    "http://localhost:5000/api/upload",
+                    `${API_URL}/api/upload`,
                     {
                         method: "POST",
-                        body: formData,
+                        body: formData
                     }
                 );
-
 
             const result =
                 await response.json();
 
-
             if (response.ok) {
-
                 setMessage(
                     "✓ File uploaded successfully!"
                 );
 
-
                 setFile(null);
 
-
                 if (fileInputRef.current) {
-
-                    fileInputRef.current.value =
-                        "";
-
+                    fileInputRef.current.value = "";
                 }
 
-
-                // Reload repository
+                // Read the GitHub repository again
                 await loadRepoFiles();
 
             } else {
-
                 setMessage(
                     result.message ||
+                    result.error ||
                     "Upload failed."
                 );
-
             }
 
         } catch (error) {
-
-            console.error(error);
+            console.error(
+                "Upload error:",
+                error
+            );
 
             setMessage(
                 "Unable to connect to the server."
             );
-
         }
-
     };
-
 
     // ========================================
     // RENDER
     // ========================================
 
     return (
-
         <div className="upload-page">
-
 
             {/* ========================================
                 UPLOAD
@@ -260,14 +206,13 @@ function UploadFile() {
 
                 <div className="upload-row">
 
-
                     {/* FILE SELECT BOX */}
 
                     <div
                         className="file-upload-box"
 
                         onClick={() =>
-                            fileInputRef.current.click()
+                            fileInputRef.current?.click()
                         }
 
                         onDragOver={(event) =>
@@ -281,11 +226,8 @@ function UploadFile() {
                             📁
                         </div>
 
-
                         {file ? (
-
                             <>
-
                                 <p className="file-selected-title">
                                     File selected
                                 </p>
@@ -293,13 +235,9 @@ function UploadFile() {
                                 <span className="file-name">
                                     {file.name}
                                 </span>
-
                             </>
-
                         ) : (
-
                             <>
-
                                 <p>
                                     Click to upload
                                 </p>
@@ -311,11 +249,8 @@ function UploadFile() {
                                 <small>
                                     .cpp • .h • .hpp
                                 </small>
-
                             </>
-
                         )}
-
 
                         <input
                             ref={fileInputRef}
@@ -325,7 +260,6 @@ function UploadFile() {
                         />
 
                     </div>
-
 
                     {/* UPLOAD BUTTON */}
 
@@ -340,19 +274,15 @@ function UploadFile() {
 
             </form>
 
-
             {/* ========================================
                 MESSAGE
             ======================================== */}
 
             {message && (
-
                 <div className="upload-message">
                     {message}
                 </div>
-
             )}
-
 
             {/* ========================================
                 REPOSITORY FILES
@@ -360,28 +290,24 @@ function UploadFile() {
 
             <div className="repo-files">
 
-
                 <div className="repo-files-header">
 
                     <h3>
                         Repository Files
                     </h3>
 
-
                     <span>
-
                         {repoFiles.length} file
                         {repoFiles.length !== 1
                             ? "s"
                             : ""}
-
                     </span>
 
                 </div>
 
+                {/* SCROLLABLE FILE LIST */}
 
                 <div className="repo-files-list">
-
 
                     {repoFiles.length === 0 ? (
 
@@ -393,19 +319,14 @@ function UploadFile() {
 
                         repoFiles.map((repoFile) => (
 
-                            <a
+                            <div
                                 className="repo-file"
                                 key={repoFile.path}
-                                href={repoFile.downloadUrl}
-                                download={repoFile.name}
-                                target="_blank"
-                                rel="noopener noreferrer"
                             >
 
                                 <div className="repo-file-icon">
                                     📄
                                 </div>
-
 
                                 <div className="repo-file-info">
 
@@ -419,19 +340,29 @@ function UploadFile() {
 
                                 </div>
 
-
                                 {/* DOWNLOAD */}
 
-                                <span className="repo-file-download">
+                                <a
+                                    className="repo-file-download"
+                                    href={repoFile.downloadUrl}
+                                    download={repoFile.name}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={(event) =>
+                                        event.stopPropagation()
+                                    }
+                                    title={`Download ${repoFile.name}`}
+                                >
                                     ↓
-                                </span>
+                                </a>
 
+                                {/* SUCCESS */}
 
                                 <span className="repo-file-check">
                                     ✓
                                 </span>
 
-                            </a>
+                            </div>
 
                         ))
 
@@ -442,9 +373,7 @@ function UploadFile() {
             </div>
 
         </div>
-
     );
-
 }
 
 export default UploadFile;
