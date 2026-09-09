@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./mediumjpfcs.css";
 
+import UploadFile from "../../../uploadfile/UploadFile";
+
 const MediumJPFCS = () => {
       useEffect(() => {
     window.scrollTo({
@@ -150,8 +152,6 @@ const MediumJPFCS = () => {
           </div>
 
         </section>
-
-
         {/* =========================================
             THE CHALLENGE
         ========================================= */}
@@ -1058,6 +1058,8 @@ const MediumJPFCS = () => {
           </Link>
 
         </div>
+
+           <UploadFile />
 
       </main>
 

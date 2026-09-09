@@ -129,6 +129,15 @@ string name = "Alex";`,
             title: "GetLine",
             video: "https://www.youtube.com/embed/yf3-yd37k6A",
           },
+          {
+            title: "Int",
+            video: "https://www.youtube.com/embed/l6KWsAPzHMo",
+          },
+
+          {
+            title: "Float",
+            video: "https://www.youtube.com/embed/gngB1Pd-wtA",
+          },
 
           {
             title: "Output formatting",

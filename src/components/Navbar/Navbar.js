@@ -66,6 +66,11 @@ const Navbar = () => {
             Projects
           </Link>
 
+          {/* Shop Apparel */}
+          <Link to="/tshirt" onClick={closeMenu}>
+            Apparel
+          </Link>
+
           {/* =================================================
               ROADMAP DROPDOWN
           ================================================== */}
@@ -169,7 +174,7 @@ const Navbar = () => {
             Learn
           </Link>
 
-          {/* COMMUNITY */}
+          {/* COMMUNITY
           <a
             href="https://m.me/ch/AbaC8jEalxMV_TrB/"
             target="_blank"
@@ -178,6 +183,8 @@ const Navbar = () => {
           >
             Community
           </a>
+
+           */}
 
           {/* CONTACT */}
           <a

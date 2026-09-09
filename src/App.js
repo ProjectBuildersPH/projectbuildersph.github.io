@@ -37,18 +37,21 @@ import SmartQueueManagementSystem from "./components/problemlanding/cpplist/cppp
 import ShirtSelling from "./components/tshirt/shirtselling";
 
 
-
+// Selling
 import CharacterSelling from "./components/sellingproduct/python/charactersearchsystem/CharacterSelling";
 import SellingProducts from "./components/sellingcategory/sellingproducts";
 import FileOrganizer from "./components/sellingproduct/python/fileorganizer/fileorganizer";
+import Bank from "./components/sellingproduct/java/oopbanksystem/bank";
 
 
+// Roadmap
 import RoadmapCpp from "./components/roadmap/cpp/RoadmapCpp";
 import RoadmapJava from "./components/roadmap/java/RoadmapJava";
 import RoadmapPython from "./components/roadmap/python/RoadmapPython";
 import RoadmapCSharp from "./components/roadmap/CSharp/RoadmapCSharp";
 import RoadmapC from "./components/roadmap/c/RoadmapC";
 import Javscript from "./components/roadmap/Javascript/javscript";
+
 
 
 
@@ -102,8 +105,10 @@ function App() {
           <Route path="/enrollmentsystem" element={<EnrollmentSystem />} />
           
           <Route path="/projects" element={<Project />} />
+
+          <Route path="/projects" element={<Project />} />
           
-          <Route path="/pathcareer" element={<CAreerPath />} />
+          <Route path="/tshirt" element={<ShirtSelling />} />
 
 
           {/* ========================================
@@ -115,6 +120,8 @@ function App() {
            <Route path="/character-search" element={<CharacterSelling />} />
 
            <Route path="/file-organizer" element={<FileOrganizer />} />
+
+           <Route path="/oop-bank" element={<Bank />} />
 
 
 

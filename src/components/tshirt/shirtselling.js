@@ -2,6 +2,7 @@ import React from "react";
 import "./shirtselling.css";
 import midterm from "../../shirtdesign/midterm.png";
 import survivalmode from "../../shirtdesign/survivalmode.jpg";
+import struggle from "../../shirtdesign/struggle.png";
 
 const shirtData = [
   {
@@ -9,7 +10,7 @@ const shirtData = [
     name: "Midterm Exam",
     category: "T-Shirt",
     price: "",
-    description: "A programmer shirt made for surviving C++ exams and debugging sessions.",
+    description: "For programmers facing the ultimate boss battle: the midterm exam, where every line of code counts.",
     image: midterm,
   },
   {
@@ -17,8 +18,16 @@ const shirtData = [
     name: "Survivor Mode",
     category: "T-Shirt",
     price: "",
-    description: "For Java developers who survive every error, loop, and exam.",
+    description: "For programmers who keep coding through bugs, errors, deadlines, and endless debugging sessions.",
      image: survivalmode,
+  },
+  {
+    id: 3,
+    name: "Struggle",
+    category: "T-Shirt",
+    price: "",
+    description: "For every programmer who has stared at one error for hours and somehow made it worse.",
+     image: struggle,
   },
 
 ];
@@ -131,13 +140,15 @@ function ShirtSelling() {
                 </div>
 
 
-                <button
-                  type="button"
-                  className="shirt-button"
-                >
-                  View Design
-                  <span>→</span>
-                </button>
+<a
+  href="https://www.messenger.com/e2ee/t/9333023970159622"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="shirt-button"
+>
+  Order Now
+  <span>→</span>
+</a>
 
               </div>
 

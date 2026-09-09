@@ -31,7 +31,7 @@ const products = [
   },
 
     {
-    id: 2,
+    id: 3,
     title: "OOP Bank System",
     category: "Java Console",
     creator: "ProjectBuildersPH",
@@ -345,6 +345,7 @@ function SellingProducts() {
   className="selling-card"
   key={product.id}
   onClick={() => {
+   
     if (product.id === 1) {
       navigate("/character-search");
       return;
@@ -354,6 +355,12 @@ function SellingProducts() {
     navigate("/file-organizer");
     return;
   }
+
+      if (product.id === 3) {
+    navigate("/oop-bank");
+    return;
+  }
+
 
     setSelectedProduct(product);
   }}
