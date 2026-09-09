@@ -1,22 +1,15 @@
 /* =========================================================
-   JAVASCRIPT ROADMAP
-   PROJECTBUILDERS PH
-   C++ ROADMAP VISUAL STYLE
-
-   GREEN • WHITE • DARK GREEN
+   PROJECTBUILDERS PH — C++ ROADMAP
    ========================================================= */
 
+* {
+  box-sizing: border-box;
+}
 
-/* =========================================================
-   GLOBAL
-   ========================================================= */
-
-.javascript-page {
+.java-roadmap-page {
   min-height: 100vh;
-
   background: #f7f9f7;
   color: #17231c;
-
   font-family:
     Inter,
     -apple-system,
@@ -25,416 +18,362 @@
     sans-serif;
 }
 
-.javascript-page *,
-.javascript-page *::before,
-.javascript-page *::after {
-  box-sizing: border-box;
-}
-
-
 /* =========================================================
    HEADER
-   IMPORTANT:
-   The main ProjectBuildersPH navbar already exists.
-   Therefore this header is NOT sticky.
    ========================================================= */
 
-.javascript-page .javascript-header {
+.roadmap-header {
   min-height: 82px;
-
-  padding: 28px 6% 30px;
+  padding: 18px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
 
   background: #ffffff;
-
   border-bottom: 1px solid #e5ebe6;
 
-  position: relative;
-  z-index: 1;
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 
-.javascript-page .js-header-content {
-  width: min(1180px, 92%);
-
-  margin: 0 auto;
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-
-/* =========================================================
-   JAVASCRIPT ICON
-   ========================================================= */
-
-.javascript-page .js-terminal {
+.java-logo {
   width: 48px;
   height: 48px;
 
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 
-  margin-bottom: 12px;
-
-  background: #183d29;
-
-  border: 0;
   border-radius: 13px;
 
+  background: #183d29;
   color: #ffffff;
 
   font-size: 17px;
   font-weight: 800;
-
   letter-spacing: -0.5px;
 
-  box-shadow:
-    0 6px 18px rgba(24, 61, 41, 0.15);
+  box-shadow: 0 6px 18px rgba(24, 61, 41, 0.15);
 }
 
-
-/* =========================================================
-   HEADER LABEL
-   ========================================================= */
-
-.javascript-page .js-label {
-  margin: 0 0 7px;
-
-  color: #34734b;
-
-  font-size: 10px;
-  font-weight: 850;
-
-  letter-spacing: 1.6px;
-}
-
-.javascript-page .js-label span {
-  color: #718078;
-}
-
-
-/* =========================================================
-   HEADER TITLE
-   ========================================================= */
-
-.javascript-page .js-header-content h1 {
+.header-title h1 {
   margin: 0;
 
-  color: #17231c;
-
-  font-size: 38px;
-  line-height: 1.05;
-
-  font-weight: 850;
-
-  letter-spacing: -1.8px;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.5px;
 }
 
-.javascript-page .js-header-content h1 span {
-  color: #183d29;
+.header-title p {
+  margin: 4px 0 0;
+
+  color: #718078;
+  font-size: 13px;
 }
 
-
-/* =========================================================
-   HEADER DESCRIPTION
-   ========================================================= */
-
-.javascript-page .js-description {
-  max-width: 650px;
-
-  margin: 12px 0 22px;
-
-  color: #66736b;
-
-  font-size: 14px;
-
-  line-height: 1.7;
-}
-
-
-/* =========================================================
-   PROGRESS
-   ========================================================= */
-
-.javascript-page .js-progress-wrapper {
-  max-width: 545px;
-}
-
-.javascript-page .js-progress-info {
+.header-badge {
   display: flex;
-
   align-items: center;
-  justify-content: space-between;
+  gap: 10px;
 
-  margin-bottom: 7px;
+  padding: 9px 14px;
+
+  background: #f1f7f2;
+  border: 1px solid #dce9df;
+  border-radius: 12px;
+}
+
+.header-badge-icon {
+  font-size: 19px;
+}
+
+.header-badge strong {
+  display: block;
+
+  color: #183d29;
+
+  font-size: 11px;
+  letter-spacing: 0.7px;
+}
+
+.header-badge small {
+  display: block;
+
+  margin-top: 2px;
 
   color: #7a877f;
-
   font-size: 10px;
-  font-weight: 700;
-
-  letter-spacing: 0.8px;
 }
-
-.javascript-page .js-progress-info strong {
-  color: #34734b;
-}
-
-.javascript-page .js-progress-bar {
-  width: 100%;
-  height: 5px;
-
-  overflow: hidden;
-
-  background: #e3eae4;
-
-  border-radius: 10px;
-}
-
-.javascript-page .js-progress-fill {
-  height: 100%;
-
-  background: #34734b;
-
-  border-radius: 10px;
-
-  transition: width 0.35s ease;
-}
-
 
 /* =========================================================
-   MAIN CONTAINER
+   LAYOUT
    ========================================================= */
 
-.javascript-page .javascript-container {
-  width: min(1180px, 92%);
+.roadmap-layout {
+  position: relative;
+}
 
+.roadmap-content {
+  width: min(1180px, 92%);
   margin: 0 auto;
 
   padding: 55px 0 100px;
+
+  transition: width 0.3s ease;
 }
 
+.roadmap-content.panel-open {
+  width: min(760px, 72%);
+  margin-left: 5%;
+}
 
 /* =========================================================
-   ROADMAP INTRO
+   HERO
    ========================================================= */
 
-.javascript-page .roadmap-intro {
+.hero-section {
   display: flex;
-
   align-items: flex-end;
   justify-content: space-between;
-
   gap: 40px;
-
-  margin-bottom: 55px;
-}
-
-.javascript-page .section-tag {
-  margin: 0 0 9px;
-
-  color: #34734b;
-
-  font-size: 11px;
-  font-weight: 850;
-
-  letter-spacing: 1.6px;
-}
-
-.javascript-page .roadmap-intro h2 {
-  margin: 0;
-
-  color: #17231c;
-
-  font-size: clamp(38px, 5vw, 58px);
-
-  line-height: 0.98;
-
-  font-weight: 850;
-
-  letter-spacing: -2.8px;
-}
-
-
-/* =========================================================
-   TOPIC COUNT
-   ========================================================= */
-
-.javascript-page .topic-count {
-  min-width: 120px;
-
-  padding: 10px 14px;
-
-  text-align: center;
-
-  background: #ffffff;
-
-  border: 1px solid #e3e9e4;
-
-  border-radius: 12px;
-
-  color: #718078;
-
-  font-size: 10px;
-  font-weight: 700;
-
-  box-shadow:
-    0 8px 25px rgba(30, 52, 38, 0.05);
-}
-
-
-/* =========================================================
-   ROADMAP STAGE
-   Scoped to JavaScript so C++ CSS cannot interfere.
-   ========================================================= */
-
-.javascript-page .roadmap-stage {
-  position: relative;
 
   margin-bottom: 65px;
 }
 
+.hero-copy {
+  max-width: 720px;
+}
 
-/* =========================================================
-   STAGE HEADER
-   ========================================================= */
-
-.javascript-page .stage-header {
-  display: flex;
-
+.eyebrow {
+  display: inline-flex;
   align-items: center;
 
-  gap: 15px;
+  margin-bottom: 12px;
 
-  margin-bottom: 22px;
+  color: #34734b;
 
-  padding-bottom: 15px;
-
-  border-bottom: 1px solid #dfe7e1;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
 }
 
-.javascript-page .stage-header > div:last-child {
-  min-width: 0;
+.hero-copy h2 {
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 0.98;
+  letter-spacing: -2.8px;
+  font-weight: 850;
+
+  color: #17231c;
 }
 
+.hero-copy p {
+  max-width: 620px;
+
+  margin: 20px 0 0;
+
+  color: #66736b;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.journey-stat {
+  min-width: 145px;
+
+  padding: 20px;
+
+  background: #ffffff;
+  border: 1px solid #e3e9e4;
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 25px rgba(30, 52, 38, 0.05);
+}
+
+.journey-stat strong {
+  display: block;
+
+  color: #183d29;
+
+  font-size: 36px;
+  line-height: 1;
+
+  font-weight: 850;
+}
+
+.journey-stat span {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #7b877f;
+
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
 
 /* =========================================================
-   STAGE NUMBER
+   ROADMAP
    ========================================================= */
 
-.javascript-page .stage-number {
-  width: 48px;
-  height: 48px;
+.roadmap {
+  position: relative;
+  padding-left: 78px;
+}
+
+.road-line {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 25px;
+
+  width: 2px;
+
+  background: #dce5de;
+}
+
+/* =========================================================
+   STAGE
+   ========================================================= */
+
+.roadmap-stage {
+  position: relative;
+
+  margin-bottom: 70px;
+}
+
+.stage-marker {
+  position: absolute;
+
+  left: -78px;
+  top: 0;
+
+  width: 52px;
+  height: 52px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  flex-shrink: 0;
+  border-radius: 50%;
 
-  border: 0;
+  background: #ffffff;
+
+  border: 4px solid #f7f9f7;
+
+  box-shadow:
+    0 0 0 2px #dbe5dd,
+    0 8px 20px rgba(31, 55, 39, 0.08);
+
+  z-index: 2;
+}
+
+.stage-marker span {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   border-radius: 50%;
 
   color: #ffffff;
 
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 850;
-
-  box-shadow:
-    0 8px 20px rgba(31, 55, 39, 0.10);
 }
 
+/* Stage colors */
 
-/* =========================================================
-   STAGE COLORS
-
-   Change/remove these if you want every stage green.
-   ========================================================= */
-
-.javascript-page .roadmap-stage:nth-of-type(1) .stage-number {
+.roadmap-stage.blue .stage-marker span {
   background: #3478c5;
 }
 
-.javascript-page .roadmap-stage:nth-of-type(2) .stage-number {
+.roadmap-stage.green .stage-marker span {
   background: #3d8a5a;
 }
 
-.javascript-page .roadmap-stage:nth-of-type(3) .stage-number {
+.roadmap-stage.orange .stage-marker span {
   background: #d9822b;
 }
 
-.javascript-page .roadmap-stage:nth-of-type(4) .stage-number {
+.roadmap-stage.purple .stage-marker span {
   background: #8059b7;
 }
 
-.javascript-page .roadmap-stage:nth-of-type(5) .stage-number {
+.roadmap-stage.red .stage-marker span {
   background: #c95151;
 }
 
-
 /* =========================================================
-   STAGE LEVEL
+   STAGE HEADING
    ========================================================= */
 
-.javascript-page .stage-level {
-  display: block;
+.stage-heading {
+  margin-bottom: 22px;
+}
 
-  margin-bottom: 4px;
+.stage-level {
+  display: inline-block;
 
-  color: #718078;
+  margin-bottom: 7px;
 
   font-size: 10px;
   font-weight: 850;
-
   letter-spacing: 1.5px;
+
+  color: #718078;
 }
 
-
-/* =========================================================
-   STAGE TITLE
-   ========================================================= */
-
-.javascript-page .stage-header h3 {
+.stage-heading h3 {
   margin: 0;
 
-  color: #17231c;
-
-  font-size: 22px;
-
+  font-size: 27px;
   line-height: 1.2;
+  letter-spacing: -0.8px;
 
-  font-weight: 800;
-
-  letter-spacing: -0.6px;
+  color: #17231c;
 }
 
-.javascript-page .stage-header p {
-  margin: 4px 0 0;
+.stage-heading p {
+  margin: 5px 0 0;
 
   color: #7a867e;
 
-  font-size: 12px;
+  font-size: 13px;
 }
-
 
 /* =========================================================
-   TOPICS GRID
+   TOPIC GRID
    ========================================================= */
 
-.javascript-page .topics-grid {
+.topic-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 13px;
 }
-
 
 /* =========================================================
    TOPIC CARD
    ========================================================= */
 
-.javascript-page .topic-card {
+.topic-card {
   position: relative;
 
   min-height: 160px;
@@ -442,22 +381,16 @@
   padding: 20px;
 
   display: grid;
-
-  grid-template-columns:
-    35px
-    minmax(0, 1fr);
-
+  grid-template-columns: 43px minmax(0, 1fr) 22px;
   align-items: start;
-
   gap: 14px;
 
   text-align: left;
 
-  background: #ffffff;
-
   border: 1px solid #e2e8e3;
-
   border-radius: 17px;
+
+  background: #ffffff;
 
   cursor: pointer;
 
@@ -470,284 +403,116 @@
     background 0.2s ease;
 }
 
-
-/* =========================================================
-   CARD HOVER
-   ========================================================= */
-
-.javascript-page .topic-card:hover {
+.topic-card:hover {
   transform: translateY(-3px);
 
-  background: #fcfefc;
-
   border-color: #bdd2c2;
+
+  background: #fcfefc;
 
   box-shadow:
     0 12px 30px rgba(31, 59, 40, 0.08);
 }
 
-.javascript-page .topic-card:active {
+.topic-card:active {
   transform: translateY(-1px);
 }
 
-
-/* =========================================================
-   COMPLETED CARD
-   ========================================================= */
-
-.javascript-page .topic-card.completed {
-  background: #fbfefb;
-
-  border-color: #b9d0bf;
-}
-
-.javascript-page .topic-card.completed::before {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-
-  top: 18px;
-  bottom: 18px;
-
-  width: 3px;
-
-  background: #34734b;
-
-  border-radius:
-    0 4px 4px 0;
-}
-
-
-/* =========================================================
-   TOPIC NUMBER
-   ========================================================= */
-
-.javascript-page .topic-number {
-  width: 35px;
-  height: 35px;
+.topic-icon {
+  width: 43px;
+  height: 43px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  flex-shrink: 0;
-
-  border-radius: 10px;
+  border-radius: 12px;
 
   background: #f1f6f2;
 
   color: #34734b;
 
-  font-size: 11px;
-  font-weight: 850;
+  font-size: 19px;
+  font-weight: 700;
 }
 
-
-/* =========================================================
-   CARD CONTENT
-   ========================================================= */
-
-.javascript-page .topic-card-content {
+.topic-card-content {
   min-width: 0;
 }
 
-
-/* =========================================================
-   CARD TOP
-   ========================================================= */
-
-.javascript-page .topic-top {
-  display: flex;
-
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 10px;
-
-  margin-bottom: 9px;
-}
-
-
-/* =========================================================
-   DIFFICULTY
-   ========================================================= */
-
-.javascript-page .difficulty {
+.topic-card-content > span {
   display: inline-block;
 
-  padding: 5px 7px;
+  margin-bottom: 5px;
 
-  border-radius: 6px;
+  color: #819087;
 
-  font-size: 8px;
-  font-weight: 850;
-
+  font-size: 9px;
+  font-weight: 800;
   letter-spacing: 0.8px;
-
   text-transform: uppercase;
 }
 
-
-/* Beginner */
-
-.javascript-page .difficulty.beginner {
-  color: #34734b;
-
-  background: #edf6ef;
-
-  border: 1px solid #cfe0d3;
-}
-
-
-/* Intermediate */
-
-.javascript-page .difficulty.intermediate {
-  color: #65736a;
-
-  background: #f1f4f1;
-
-  border: 1px solid #dfe5e0;
-}
-
-
-/* Advanced */
-
-.javascript-page .difficulty.advanced {
-  color: #8059b7;
-
-  background: #f4eff9;
-
-  border: 1px solid #dfd2ed;
-}
-
-
-/* =========================================================
-   DURATION
-   ========================================================= */
-
-.javascript-page .duration {
-  color: #8b968f;
-
-  font-size: 9px;
-  font-weight: 600;
-}
-
-
-/* =========================================================
-   CARD TITLE
-   ========================================================= */
-
-.javascript-page .topic-card h4 {
-  margin: 0 0 8px;
+.topic-card-content h4 {
+  margin: 0;
 
   color: #1a2820;
 
   font-size: 15px;
-
-  font-weight: 800;
-
   line-height: 1.3;
+  font-weight: 800;
 }
 
-
-/* =========================================================
-   CARD DESCRIPTION
-   ========================================================= */
-
-.javascript-page .topic-card p {
-  margin: 0;
+.topic-card-content p {
+  margin: 8px 0 0;
 
   color: #7a867f;
 
   font-size: 11px;
-
   line-height: 1.55;
 
   display: -webkit-box;
-
   -webkit-line-clamp: 3;
-
   -webkit-box-orient: vertical;
-
   overflow: hidden;
 }
 
+.topic-arrow {
+  align-self: center;
 
-/* =========================================================
-   CARD FOOTER
-   ========================================================= */
+  color: #9aa59e;
 
-.javascript-page .topic-footer {
-  display: flex;
-
-  align-items: center;
-  justify-content: space-between;
-
-  margin-top: 18px;
-
-  padding-top: 11px;
-
-  border-top: 1px solid #e8ede9;
-
-  color: #8a958e;
-
-  font-size: 9px;
-}
-
-
-/* =========================================================
-   OPEN LESSON
-   ========================================================= */
-
-.javascript-page .open-topic {
-  color: #34734b;
-
-  font-size: 9px;
-  font-weight: 800;
+  font-size: 18px;
 
   transition:
-    color 0.2s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
-.javascript-page .topic-card:hover .open-topic {
-  color: #183d29;
+.topic-card:hover .topic-arrow {
+  transform: translateX(4px);
+  color: #34734b;
 }
-
 
 /* =========================================================
-   LESSON OVERLAY
+   OVERLAY
    ========================================================= */
 
-.javascript-page .lesson-overlay {
+.panel-overlay {
   position: fixed;
-
-  top: var(--site-navbar-height, 98px);
-
+  top: var(--site-navbar-height);
   left: 0;
   right: 0;
   bottom: 0;
 
-  z-index: 80;
-
   background: rgba(14, 25, 18, 0.35);
-
   backdrop-filter: blur(2px);
 
-  overflow: hidden;
-
-  animation: jsOverlayIn 0.2s ease;
+  z-index: 80;
+  animation: overlayIn 0.2s ease;
 }
 
-
-/* =========================================================
-   OVERLAY ANIMATION
-   ========================================================= */
-
-@keyframes jsOverlayIn {
+@keyframes overlayIn {
   from {
     opacity: 0;
   }
@@ -757,51 +522,33 @@
   }
 }
 
-
 /* =========================================================
-   LESSON MODAL
-   Converted from centered dark modal
-   into C++-style right-side lesson panel.
+   LESSON PANEL
    ========================================================= */
 
-.javascript-page .lesson-modal {
+.topic-panel {
   position: fixed;
 
-  top: var(--site-navbar-height, 98px);
-
+  top: var(--site-navbar-height);
   right: 0;
-  bottom: 0;
 
   width: min(560px, 92vw);
-
-  margin: 0;
-
-  display: flex;
-
-  flex-direction: column;
+  height: calc(100vh - var(--site-navbar-height));
 
   background: #ffffff;
+  z-index: 90;
 
-  border: 0;
-
-  border-left: 1px solid #e2e8e3;
-
-  border-radius: 0;
-
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   box-shadow:
     -15px 0 45px rgba(16, 31, 21, 0.14);
 
-  animation: jsPanelIn 0.3s ease;
+  animation: panelIn 0.3s ease;
 }
 
 
-/* =========================================================
-   PANEL ANIMATION
-   ========================================================= */
-
-@keyframes jsPanelIn {
+@keyframes panelIn {
   from {
     transform: translateX(100%);
   }
@@ -811,78 +558,52 @@
   }
 }
 
-
 /* =========================================================
-   CLOSE BUTTON
+   PANEL TOP
    ========================================================= */
 
-.javascript-page .close-lesson {
+.panel-top {
+  position: relative;
+
+  padding: 35px 36px 27px;
+
+  border-bottom: 1px solid #e5ebe6;
+
+  background: #fbfdfb;
+}
+
+.close-panel {
   position: absolute;
 
   top: 20px;
   right: 22px;
 
-  z-index: 5;
-
   width: 38px;
   height: 38px;
 
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
   border: 1px solid #e0e6e1;
-
   border-radius: 10px;
 
   background: #ffffff;
 
   color: #65736a;
 
-  font-family: inherit;
-
   font-size: 25px;
-
   line-height: 1;
 
   cursor: pointer;
 
   transition:
     background 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease;
+    color 0.2s ease;
 }
 
-.javascript-page .close-lesson:hover {
+.close-panel:hover {
   background: #f0f5f1;
-
   color: #183d29;
-
-  border-color: #cbd9ce;
 }
 
-
-/* =========================================================
-   LESSON HEADER
-   ========================================================= */
-
-.javascript-page .lesson-heading {
-  position: relative;
-
-  padding: 35px 36px 27px;
-
-  background: #fbfdfb;
-
-  border-bottom: 1px solid #e5ebe6;
-}
-
-
-/* =========================================================
-   MODAL LABEL
-   ========================================================= */
-
-.javascript-page .modal-tag {
+.panel-label {
   display: inline-block;
 
   margin-bottom: 9px;
@@ -890,18 +611,11 @@
   color: #34734b;
 
   font-size: 9px;
-
   font-weight: 850;
-
   letter-spacing: 1.4px;
 }
 
-
-/* =========================================================
-   LESSON TITLE
-   ========================================================= */
-
-.javascript-page .lesson-heading h2 {
+.panel-top h2 {
   max-width: 430px;
 
   margin: 0;
@@ -909,22 +623,12 @@
   color: #17231c;
 
   font-size: 30px;
-
   line-height: 1.15;
-
-  font-weight: 800;
-
   letter-spacing: -1px;
 }
 
-
-/* =========================================================
-   LESSON META
-   ========================================================= */
-
-.javascript-page .lesson-meta {
+.topic-meta {
   display: flex;
-
   flex-wrap: wrap;
 
   gap: 9px;
@@ -932,10 +636,8 @@
   margin-top: 17px;
 }
 
-.javascript-page .lesson-meta span {
+.topic-meta span {
   padding: 7px 10px;
-
-  border: 0;
 
   border-radius: 8px;
 
@@ -944,16 +646,14 @@
   color: #5c6c61;
 
   font-size: 10px;
-
   font-weight: 700;
 }
 
-
 /* =========================================================
-   LESSON BODY
+   PANEL BODY
    ========================================================= */
 
-.javascript-page .lesson-body {
+.panel-body {
   flex: 1;
 
   overflow-y: auto;
@@ -961,129 +661,80 @@
   padding: 30px 36px 50px;
 }
 
-
-/* =========================================================
-   CUSTOM SCROLLBAR
-   ========================================================= */
-
-.javascript-page .lesson-body::-webkit-scrollbar {
+.panel-body::-webkit-scrollbar {
   width: 7px;
 }
 
-.javascript-page .lesson-body::-webkit-scrollbar-track {
+.panel-body::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.javascript-page .lesson-body::-webkit-scrollbar-thumb {
+.panel-body::-webkit-scrollbar-thumb {
   background: #d2dbd4;
-
   border-radius: 20px;
 }
 
-
 /* =========================================================
-   LESSON DESCRIPTION
+   EXPLANATION
    ========================================================= */
 
-.javascript-page .lesson-description,
-.javascript-page .lesson-section {
+.explanation {
   margin-bottom: 30px;
 }
 
-
-/* =========================================================
-   LESSON SECTION HEADINGS
-   ========================================================= */
-
-.javascript-page .lesson-description h3,
-.javascript-page .lesson-section h3 {
+.explanation h3,
+.concept-section h3,
+.code-section h3 {
   margin: 0 0 10px;
 
   color: #1b2921;
 
   font-size: 15px;
-
   font-weight: 800;
 }
 
-
-/* Green indicator */
-
-.javascript-page .lesson-description h3::before,
-.javascript-page .lesson-section h3::before {
-  content: "";
-
-  display: inline-block;
-
-  width: 4px;
-  height: 14px;
-
-  margin-right: 7px;
-
-  vertical-align: -2px;
-
-  border-radius: 3px;
-
-  background: #34734b;
-}
-
-
-/* =========================================================
-   LESSON DESCRIPTION TEXT
-   ========================================================= */
-
-.javascript-page .lesson-description p {
+.explanation p {
   margin: 0;
 
   color: #69766e;
 
   font-size: 13px;
-
   line-height: 1.7;
 }
 
-
 /* =========================================================
-   CONCEPT LIST
+   CONCEPTS
    ========================================================= */
 
-.javascript-page .concept-list {
+.concept-section {
+  margin-bottom: 32px;
+}
+
+.concept-list {
   display: flex;
-
   flex-direction: column;
-
   gap: 7px;
 }
 
-
-/* =========================================================
-   CONCEPT ITEM
-   ========================================================= */
-
-.javascript-page .concept-item {
+.concept-item {
   width: 100%;
 
-  padding: 11px 13px;
-
-  display: flex;
-
+  display: grid;
+  grid-template-columns: 29px minmax(0, 1fr) 28px;
   align-items: center;
+
+  padding: 10px 12px;
+
+  border: 1px solid #e4eae5;
+  border-radius: 10px;
 
   background: #ffffff;
 
-  border: 1px solid #e4eae5;
-
-  border-radius: 10px;
-
-  color: #3d4b42;
-
-  font-family: inherit;
-
-  font-size: 12px;
-
-  font-weight: 650;
+  cursor: pointer;
 
   text-align: left;
+
+  font-family: inherit;
 
   transition:
     border-color 0.2s ease,
@@ -1091,120 +742,176 @@
     transform 0.2s ease;
 }
 
-.javascript-page .concept-item:hover {
+.concept-item:hover {
   background: #f7faf8;
-
   border-color: #c9d9cd;
-
   transform: translateX(2px);
 }
 
+.concept-item.selected {
+  background: #edf6ef;
+  border-color: #a9c5b0;
+}
 
-/* =========================================================
-   CONCEPT NUMBER
-   ========================================================= */
-
-.javascript-page .concept-item span {
+.concept-item > span {
   width: 25px;
   height: 25px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
-
-  flex-shrink: 0;
-
-  margin-right: 9px;
 
   border-radius: 7px;
 
   background: #f0f4f1;
 
-  color: #4b8b5e;
+  color: #68766d;
 
   font-size: 10px;
-
   font-weight: 800;
 }
 
+.concept-item p {
+  margin: 0;
+
+  color: #3d4b42;
+
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.concept-play {
+  color: #4b8b5e;
+
+  font-size: 11px;
+
+  text-align: center;
+}
 
 /* =========================================================
-   CODE WINDOW
+   CONCEPT VIDEO
    ========================================================= */
 
-.javascript-page .code-window {
+.concept-video {
+  margin-top: 15px;
+
   overflow: hidden;
 
-  background: #17221b;
+  border: 1px solid #dce6de;
+  border-radius: 14px;
 
-  border: 1px solid #25352b;
-
-  border-radius: 13px;
-
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+  background: #f8fbf9;
 }
 
+.concept-video-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 13px 15px;
+
+  border-bottom: 1px solid #e1e9e3;
+}
+
+.concept-video-header span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #5a8a65;
+
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: 1px;
+}
+
+.concept-video-header h4 {
+  margin: 0;
+
+  color: #25352b;
+
+  font-size: 12px;
+}
+
+.concept-video-header button {
+  width: 28px;
+  height: 28px;
+
+  border: 0;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #69766e;
+
+  font-size: 19px;
+
+  cursor: pointer;
+}
+
+.concept-video-player {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  background: #101612;
+}
+
+.concept-video-player iframe {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+}
 
 /* =========================================================
-   CODE HEADER
+   CODE SECTION
    ========================================================= */
 
-.javascript-page .code-header {
+.code-section {
+  margin-bottom: 30px;
+}
+
+.section-title {
   display: flex;
-
   align-items: center;
+  justify-content: space-between;
 
-  height: 38px;
+  margin-bottom: 10px;
+}
 
-  padding: 0 13px;
+.section-title h3 {
+  margin: 0;
+}
 
-  gap: 12px;
+.section-title span {
+  padding: 5px 8px;
 
-  background: #1b2921;
+  border-radius: 6px;
 
-  border-bottom: 1px solid #2a3a30;
+  background: #eef2ef;
 
-  color: #7e9084;
+  color: #65736a;
 
   font-size: 9px;
+  font-weight: 800;
 }
 
-
-/* =========================================================
-   CODE DOTS
-   ========================================================= */
-
-.javascript-page .code-dots {
-  display: flex;
-
-  gap: 4px;
-}
-
-.javascript-page .code-dots span {
-  width: 7px;
-  height: 7px;
-
-  background: #506157;
-
-  border-radius: 50%;
-}
-
-
-/* =========================================================
-   CODE
-   ========================================================= */
-
-.javascript-page .code-window pre {
+.code-section pre {
   margin: 0;
 
   padding: 18px;
 
   overflow-x: auto;
-}
 
-.javascript-page .code-window code {
+  border-radius: 13px;
+
+  background: #17221b;
+
   color: #dbe8de;
 
   font-family:
@@ -1214,36 +921,92 @@
     monospace;
 
   font-size: 11px;
-
   line-height: 1.7;
+
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
+.code-section code {
+  font-family: inherit;
+}
 
 /* =========================================================
-   VIDEO
+   FULL VIDEO
    ========================================================= */
 
-.javascript-page .video-container {
+.video-section {
+  margin-bottom: 25px;
+}
+
+.video-button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 13px 16px;
+
+  border: 1px solid #c9dbcd;
+  border-radius: 11px;
+
+  background: #eef6f0;
+
+  color: #2f6940;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.video-button:hover {
+  background: #e3f0e6;
+  transform: translateY(-1px);
+}
+
+.video-button.active {
+  background: #e5f0e8;
+}
+
+.play-icon {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  font-size: 10px;
+}
+
+.video-container {
   position: relative;
 
   width: 100%;
 
-  aspect-ratio: 16 / 9;
+  margin-top: 12px;
 
   overflow: hidden;
 
-  background: #101612;
+  border-radius: 13px;
 
-  border: 1px solid #dce6de;
-
-  border-radius: 14px;
+  background: #111;
+  aspect-ratio: 16 / 9;
 }
 
-.javascript-page .video-container iframe {
-  position: absolute;
-
-  inset: 0;
-
+.video-container iframe {
   width: 100%;
   height: 100%;
 
@@ -1252,18 +1015,16 @@
   border: 0;
 }
 
-
 /* =========================================================
    COMPLETE BUTTON
    ========================================================= */
 
-.javascript-page .complete-button {
+.complete-button {
   width: 100%;
 
   padding: 14px 18px;
 
   border: 0;
-
   border-radius: 11px;
 
   background: #183d29;
@@ -1273,7 +1034,6 @@
   font-family: inherit;
 
   font-size: 12px;
-
   font-weight: 800;
 
   cursor: pointer;
@@ -1284,358 +1044,211 @@
     box-shadow 0.2s ease;
 }
 
-.javascript-page .complete-button:hover {
+.complete-button:hover {
   background: #245538;
 
   transform: translateY(-1px);
 
-  box-shadow:
-    0 8px 20px rgba(24, 61, 41, 0.15);
+  box-shadow: 0 8px 20px rgba(24, 61, 41, 0.15);
 }
-
 
 /* =========================================================
-   ALREADY COMPLETED
+   RESPONSIVE — TABLET
    ========================================================= */
 
-.javascript-page .complete-button.already-completed {
-  background: #edf6ef;
+@media (max-width: 900px) {
+  .roadmap-header {
+    padding: 16px 4%;
+  }
 
-  color: #34734b;
-
-  border: 1px solid #c4dac9;
-}
-
-.javascript-page .complete-button.already-completed:hover {
-  background: #e4f0e7;
-
-  color: #245538;
-}
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width: 1000px) {
-
-  .javascript-page .javascript-container {
+  .roadmap-content,
+  .roadmap-content.panel-open {
     width: 90%;
+    margin: 0 auto;
   }
 
-  .javascript-page .topics-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+  .topic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section {
+    align-items: flex-start;
   }
 }
 
-
 /* =========================================================
-   MOBILE
+   RESPONSIVE — MOBILE
    ========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 
-  /* -------------------------------------------------------
-     HEADER
-     ------------------------------------------------------- */
-
-  .javascript-page .javascript-header {
-    min-height: 70px;
-
-    padding: 25px 18px 28px;
+     :root {
+    --site-navbar-height: 70px;
   }
 
-  .javascript-page .js-header-content {
+  .topic-panel {
     width: 100%;
   }
+  
+  .roadmap-header {
+    min-height: 70px;
 
-  .javascript-page .js-terminal {
+    padding: 12px 18px;
+  }
+
+  .header-title h1 {
+    font-size: 16px;
+  }
+
+  .header-title p {
+    font-size: 10px;
+  }
+
+  .java-logo {
     width: 40px;
     height: 40px;
-
-    margin-bottom: 10px;
 
     border-radius: 10px;
 
     font-size: 14px;
   }
 
-  .javascript-page .js-header-content h1 {
-    font-size: 30px;
-
-    letter-spacing: -1.5px;
+  .header-badge {
+    display: none;
   }
 
-  .javascript-page .js-description {
-    font-size: 12px;
-
-    line-height: 1.6;
-  }
-
-  .javascript-page .js-progress-wrapper {
-    max-width: 100%;
-
-    margin-top: 17px;
-  }
-
-
-  /* -------------------------------------------------------
-     MAIN
-     ------------------------------------------------------- */
-
-  .javascript-page .javascript-container {
+  .roadmap-content,
+  .roadmap-content.panel-open {
     width: calc(100% - 32px);
 
-    margin: 0 auto;
-
-    padding-top: 38px;
-
-    padding-bottom: 60px;
+    padding-top: 35px;
   }
 
-
-  /* -------------------------------------------------------
-     INTRO
-     ------------------------------------------------------- */
-
-  .javascript-page .roadmap-intro {
+  .hero-section {
     display: block;
 
     margin-bottom: 45px;
   }
 
-  .javascript-page .roadmap-intro h2 {
+  .hero-copy h2 {
     font-size: 40px;
-
     letter-spacing: -2px;
   }
 
-  .javascript-page .topic-count {
+  .hero-copy p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .journey-stat {
     display: inline-block;
 
-    margin-top: 20px;
+    min-width: 120px;
+
+    margin-top: 22px;
+
+    padding: 14px 18px;
   }
 
-
-  /* -------------------------------------------------------
-     STAGES
-     ------------------------------------------------------- */
-
-  .javascript-page .roadmap-stage {
-    margin-bottom: 50px;
+  .journey-stat strong {
+    font-size: 28px;
   }
 
-  .javascript-page .stage-header {
-    gap: 11px;
-
-    margin-bottom: 18px;
-
-    padding-bottom: 12px;
+  .roadmap {
+    padding-left: 52px;
   }
 
-  .javascript-page .stage-number {
+  .road-line {
+    left: 18px;
+  }
+
+  .stage-marker {
+    left: -52px;
+
     width: 38px;
     height: 38px;
+
+    border-width: 3px;
+  }
+
+  .stage-marker span {
+    width: 27px;
+    height: 27px;
 
     font-size: 10px;
   }
 
-  .javascript-page .stage-header h3 {
-    font-size: 19px;
+  .roadmap-stage {
+    margin-bottom: 50px;
   }
 
-  .javascript-page .stage-header p {
+  .stage-heading h3 {
+    font-size: 22px;
+  }
+
+  .stage-heading p {
     font-size: 11px;
   }
 
-
-  /* -------------------------------------------------------
-     TOPICS
-     ------------------------------------------------------- */
-
-  .javascript-page .topics-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .javascript-page .topic-card {
+  .topic-card {
     min-height: 145px;
 
     padding: 15px;
 
-    grid-template-columns:
-      38px
-      minmax(0, 1fr);
+    grid-template-columns: 38px minmax(0, 1fr) 18px;
 
     gap: 11px;
   }
 
-  .javascript-page .topic-number {
+  .topic-icon {
     width: 38px;
     height: 38px;
 
     border-radius: 10px;
+
+    font-size: 16px;
   }
 
-  .javascript-page .topic-card h4 {
+  .topic-card-content h4 {
     font-size: 14px;
   }
 
-  .javascript-page .topic-card p {
+  .topic-card-content p {
     font-size: 10px;
   }
 
-
-  /* -------------------------------------------------------
-     LESSON OVERLAY
-     ------------------------------------------------------- */
-
-  .javascript-page .lesson-overlay {
-    top: var(--site-navbar-height, 98px);
-
-    padding: 0;
-  }
-
-
-  /* -------------------------------------------------------
-     LESSON PANEL
-     ------------------------------------------------------- */
-
-  .javascript-page .lesson-modal {
-    top: var(--site-navbar-height, 98px);
-
+  .topic-panel {
     width: 100%;
-
-    border-left: 0;
   }
 
-  .javascript-page .lesson-heading {
+  .panel-top {
     padding: 28px 22px 23px;
   }
 
-  .javascript-page .lesson-heading h2 {
+  .panel-top h2 {
     font-size: 25px;
   }
 
-  .javascript-page .lesson-body {
+  .panel-body {
     padding: 25px 22px 45px;
   }
-
-  .javascript-page .concept-list {
-    display: flex;
-
-    flex-direction: column;
-  }
 }
-
-
-/* =========================================================
-   SMALL PHONE
-   ========================================================= */
-
-@media (max-width: 450px) {
-
-  .javascript-page .js-header-content h1 {
-    font-size: 27px;
-  }
-
-  .javascript-page .js-description {
-    font-size: 11px;
-  }
-
-  .javascript-page .roadmap-intro h2 {
-    font-size: 34px;
-
-    letter-spacing: -1.7px;
-  }
-
-  .javascript-page .topic-card {
-    min-height: 140px;
-
-    padding: 14px;
-  }
-
-  .javascript-page .topic-card h4 {
-    font-size: 13px;
-  }
-
-  .javascript-page .topic-card p {
-    font-size: 10px;
-  }
-
-  .javascript-page .lesson-heading h2 {
-    font-size: 22px;
-  }
-
-  .javascript-page .lesson-description p {
-    font-size: 12px;
-  }
-}
-
 
 /* =========================================================
    REDUCED MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
-  .javascript-page *,
-  .javascript-page *::before,
-  .javascript-page *::after {
+  *,
+  *::before,
+  *::after {
     scroll-behavior: auto !important;
-
     animation-duration: 0.01ms !important;
-
     animation-iteration-count: 1 !important;
-
     transition-duration: 0.01ms !important;
   }
 }
 
-
-/* =========================================================
-   SITE NAVBAR HEIGHT
-   ========================================================= */
-
 :root {
   --site-navbar-height: 98px;
-}
-
-
-/* =========================================================
-   EXTRA SAFETY AGAINST GLOBAL CSS
-   ========================================================= */
-
-/*
-   These prevent the original C++ roadmap CSS from
-   accidentally affecting the JavaScript roadmap.
-*/
-
-.javascript-page .roadmap-stage {
-  all: revert;
-  position: relative;
-  margin-bottom: 65px;
-  color: #17231c;
-}
-
-.javascript-page .topic-card {
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-}
-
-.javascript-page .concept-item {
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-}
-
-.javascript-page button {
-  font-family: inherit;
 }

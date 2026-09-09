@@ -106,7 +106,7 @@ function App() {
           
           <Route path="/projects" element={<Project />} />
 
-          <Route path="/projects" element={<Project />} />
+          <Route path="/pathcareer" element={<CAreerPath />} />
           
           <Route path="/tshirt" element={<ShirtSelling />} />
 

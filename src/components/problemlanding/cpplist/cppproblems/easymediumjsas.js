@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./easymediumjsas.css";
 
+
 const EasyMediumJSAS = () => {
     useEffect(() => {
   window.scrollTo({

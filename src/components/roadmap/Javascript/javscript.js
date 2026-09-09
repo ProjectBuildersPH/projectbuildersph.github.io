@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+
+import React, { useEffect, useState } from "react";
 import "./javscript.css";
 
 const roadmapData = [
@@ -6,154 +7,236 @@ const roadmapData = [
     id: 1,
     level: "BEGINNER",
     title: "JavaScript Fundamentals",
-    subtitle: "Start Here",
+    subtitle: "Learn the Building Blocks",
+    color: "blue",
+
     topics: [
       {
-        id: "js-introduction",
-        title: "Introduction to JavaScript",
-        difficulty: "Beginner",
-        duration: "15 min",
-        description:
-          "Learn what JavaScript is, where it is used, and how it makes websites interactive.",
-        concepts: [
-          "What is JavaScript?",
-          "JavaScript vs HTML and CSS",
-          "Where JavaScript is used",
-          "Running JavaScript",
-        ],
-        code: `console.log("Hello, JavaScript!");`,
-        video: "https://www.youtube.com/embed/PkZNo7MFNFg",
-      },
-      {
-        id: "js-variables",
-        title: "Variables",
+        id: "variables",
+        title: "Variables & Data Types",
         difficulty: "Beginner",
         duration: "20 min",
         description:
-          "Learn how to store and work with data using let, const, and var.",
+          "Learn how JavaScript stores information using variables and different data types.",
+
         concepts: [
-          "let",
-          "const",
-          "var",
-          "Variable naming",
-          "Changing values",
+          {
+            title: "let",
+            video: "https://www.youtube.com/embed/pE_9ROLmgts",
+          },
+          {
+            title: "const",
+            video: "https://www.youtube.com/embed/Cdb6x9UTiAo",
+          },
+          {
+            title: "var",
+            video: "https://www.youtube.com/embed/1CP6tqDzidQ",
+          },
+          {
+            title: "String",
+            video: "https://www.youtube.com/embed/pom4gcG_f4Q",
+          },
+          {
+            title: "Number",
+            video: "https://www.youtube.com/embed/SqgR9WQSwUA",
+          },
+          {
+            title: "Boolean",
+            video: "https://www.youtube.com/embed/tZL0AB21cSA",
+          },
+          {
+            title: "Undefined",
+            video: "https://www.youtube.com/embed/ScKwHA-aiog",
+          },
+          {
+            title: "Null",
+            video: "https://www.youtube.com/embed/SplpsvZff30",
+          },
+          {
+            title: "Arrays",
+            video: "https://www.youtube.com/embed/_bIF8A3fcVc",
+          },
+          {
+            title: "Objects",
+            video: "https://www.youtube.com/embed/We1559yOLb0",
+          },
         ],
-        code: `let name = "Alex";
-const age = 20;
+
+        code: `let age = 20;
+const price = 99.99;
+let grade = "A";
+let student = true;
+let name = "Alex";
 
 console.log(name);
 console.log(age);`,
-        video: "https://www.youtube.com/embed/9WIJQDcv43k",
-      },
-      {
-        id: "js-data-types",
-        title: "Data Types",
-        difficulty: "Beginner",
-        duration: "25 min",
-        description:
-          "Understand the different types of values JavaScript can store.",
-        concepts: [
-          "String",
-          "Number",
-          "Boolean",
-          "Undefined",
-          "Null",
-          "Object",
-          "Array",
-        ],
-        code: `let name = "Alex";
-let age = 20;
-let student = true;
 
-console.log(typeof name);
-console.log(typeof age);
-console.log(typeof student);`,
-        video: "https://www.youtube.com/embed/edlFjlzxkSI",
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
       },
+
       {
-        id: "js-operators",
-        title: "Operators",
+        id: "input-output",
+        title: "Input & Output",
+        difficulty: "Beginner",
+        duration: "20 min",
+
+        description:
+          "Learn how JavaScript displays information and receives input from users.",
+
+        concepts: [
+          {
+            title: "Input and Output",
+            video: "https://www.youtube.com/embed/RMzPlRF-vkg",
+          },
+        ],
+
+        code: `const name = prompt("Enter your name:");
+
+console.log(\`Hello \${name}!\`);`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
+      },
+
+      {
+        id: "operators",
+        title: "Operators & Expressions",
         difficulty: "Beginner",
         duration: "25 min",
+
         description:
-          "Learn arithmetic, comparison, logical, and assignment operators.",
+          "Use JavaScript operators to calculate values, compare information, and create logical expressions.",
+
         concepts: [
-          "Arithmetic operators",
-          "Assignment operators",
-          "Comparison operators",
-          "Logical operators",
+          {
+            title: "Arithmetic operators",
+            video: "https://www.youtube.com/embed/LcUAvfHZUTE",
+          },
+          {
+            title: "Assignment operators",
+            video: "https://www.youtube.com/embed/ydWaos69dBc",
+          },
+          {
+            title: "Comparison operators",
+            video: "https://www.youtube.com/embed/Aj5fjeeQ40Y",
+          },
+          {
+            title: "Logical AND",
+            video: "https://www.youtube.com/embed/qAgyDKP9BbE",
+          },
+          {
+            title: "Logical OR",
+            video: "https://www.youtube.com/embed/5M7uQo8Fb6E",
+          },
+          {
+            title: "Logical NOT",
+            video: "https://www.youtube.com/embed/kNDQLNoLSK4",
+          },
+          {
+            title: "Increment & decrement",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
         ],
+
         code: `let a = 10;
 let b = 5;
 
 console.log(a + b);
-console.log(a - b);
-console.log(a * b);
-console.log(a / b);
-console.log(a > b);`,
-        video: "https://www.youtube.com/embed/FZzyij43A54",
-      },
-      {
-        id: "js-input-output",
-        title: "Input and Output",
-        difficulty: "Beginner",
-        duration: "20 min",
-        description:
-          "Learn how JavaScript receives information and displays results.",
-        concepts: [
-          "console.log()",
-          "prompt()",
-          "alert()",
-          "Template literals",
-        ],
-        code: `let name = prompt("Enter your name:");
+console.log(a > b);
+console.log(a > 5 && b < 10);`,
 
-console.log("Hello " + name);
-alert(\`Welcome, \${name}!\`);`,
-        video: "https://www.youtube.com/embed/hdI2bqOjy3c",
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
       },
+
       {
-        id: "js-conditions",
-        title: "Conditions",
+        id: "conditions",
+        title: "Conditions & Decision Making",
+        difficulty: "Beginner",
+        duration: "25 min",
+
+        description:
+          "Teach your JavaScript programs how to make decisions using if, else, switch, and ternary operators.",
+
+        concepts: [
+          {
+            title: "if",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "else",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "else if",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Nested conditions",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "switch",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Ternary operator",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+        ],
+
+        code: `const score = 85;
+
+if (score >= 90) {
+  console.log("Excellent");
+} else if (score >= 75) {
+  console.log("Passed");
+} else {
+  console.log("Failed");
+}`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
+      },
+
+      {
+        id: "loops",
+        title: "Loops & Repetition",
         difficulty: "Beginner",
         duration: "30 min",
-        description:
-          "Learn how to make decisions using if, else if, and else.",
-        concepts: [
-          "if",
-          "else if",
-          "else",
-          "Comparison",
-          "Logical conditions",
-        ],
-        code: `let age = 18;
 
-if (age >= 18) {
-    console.log("You can vote.");
-} else {
-    console.log("You are too young.");
-}`,
-        video: "https://www.youtube.com/embed/IsG4Xd6LlsM",
-      },
-      {
-        id: "js-loops",
-        title: "Loops",
-        difficulty: "Beginner",
-        duration: "35 min",
         description:
-          "Learn how to repeat code using for, while, and do...while loops.",
+          "Learn how loops allow JavaScript programs to repeat instructions efficiently.",
+
         concepts: [
-          "for loop",
-          "while loop",
-          "do...while",
-          "Loop counter",
-          "break",
-          "continue",
+          {
+            title: "for loop",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "while loop",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "do while",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Nested loops",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "break",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "continue",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
         ],
+
         code: `for (let i = 1; i <= 5; i++) {
-    console.log("Number: " + i);
+  console.log(i);
 }`,
-        video: "https://www.youtube.com/embed/s9wW2PpJsmQ",
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
       },
     ],
   },
@@ -161,144 +244,230 @@ if (age >= 18) {
   {
     id: 2,
     level: "INTERMEDIATE",
-    title: "JavaScript Core",
-    subtitle: "Build Your Skills",
+    title: "Core JavaScript Skills",
+    subtitle: "Build Your Programming Logic",
+    color: "green",
+
     topics: [
       {
-        id: "js-functions",
-        title: "Functions",
-        difficulty: "Intermediate",
-        duration: "35 min",
-        description:
-          "Learn how to create reusable blocks of JavaScript code.",
-        concepts: [
-          "Function declaration",
-          "Parameters",
-          "Arguments",
-          "Return values",
-          "Arrow functions",
-        ],
-        code: `function greet(name) {
-    return "Hello, " + name;
-}
-
-console.log(greet("Alex"));`,
-        video: "https://www.youtube.com/embed/N8ap4k_1QEQ",
-      },
-      {
-        id: "js-arrays",
-        title: "Arrays",
+        id: "arrays",
+        title: "Arrays & Array Methods",
         difficulty: "Intermediate",
         duration: "30 min",
+
         description:
-          "Learn how to store multiple values in a single variable.",
+          "Store multiple values and process them using powerful JavaScript array methods.",
+
         concepts: [
-          "Creating arrays",
-          "Indexing",
-          "push()",
-          "pop()",
-          "shift()",
-          "unshift()",
+          {
+            title: "Creating arrays",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Indexing",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "push & pop",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "map",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "filter",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "reduce",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
         ],
-        code: `let fruits = ["Apple", "Banana", "Mango"];
 
-console.log(fruits[0]);
+        code: `const numbers = [10, 20, 30, 40, 50];
 
-fruits.push("Orange");
-
-console.log(fruits);`,
-        video: "https://www.youtube.com/embed/oigfaZ5ApsM",
-      },
-      {
-        id: "js-array-methods",
-        title: "Array Methods",
-        difficulty: "Intermediate",
-        duration: "40 min",
-        description:
-          "Master useful array methods for processing collections of data.",
-        concepts: [
-          "map()",
-          "filter()",
-          "reduce()",
-          "forEach()",
-          "find()",
-          "includes()",
-        ],
-        code: `const numbers = [1, 2, 3, 4, 5];
-
-const doubled = numbers.map(
-    number => number * 2
-);
+const doubled = numbers.map(number => number * 2);
 
 console.log(doubled);`,
-        video: "https://www.youtube.com/embed/R8rmfD9Y5-c",
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
       },
+
       {
-        id: "js-objects",
+        id: "objects",
         title: "Objects",
         difficulty: "Intermediate",
-        duration: "35 min",
+        duration: "30 min",
+
         description:
-          "Learn how to represent real-world entities using JavaScript objects.",
+          "Learn how JavaScript objects store related data and behavior using properties and methods.",
+
         concepts: [
-          "Object properties",
-          "Object methods",
-          "Dot notation",
-          "Bracket notation",
-          "Nested objects",
+          {
+            title: "Creating objects",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Properties",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Methods",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Object destructuring",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Object spread",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
         ],
+
         code: `const student = {
-    name: "Alex",
-    age: 20,
-    course: "IT"
+  name: "Alex",
+  age: 20,
+  course: "JavaScript",
+
+  introduce() {
+    console.log(\`Hi, I'm \${this.name}\`);
+  }
 };
 
-console.log(student.name);
-console.log(student.course);`,
-        video: "https://www.youtube.com/embed/PFmuCDHHpwk",
-      },
-      {
-        id: "js-dom",
-        title: "DOM Manipulation",
-        difficulty: "Intermediate",
-        duration: "45 min",
-        description:
-          "Learn how JavaScript interacts with HTML elements through the DOM.",
-        concepts: [
-          "document",
-          "getElementById()",
-          "querySelector()",
-          "textContent",
-          "innerHTML",
-          "classList",
-        ],
-        code: `const title =
-    document.querySelector("#title");
+student.introduce();`,
 
-title.textContent = "Hello JavaScript!";`,
-        video: "https://www.youtube.com/embed/5fb2aPlgoys",
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
       },
-      {
-        id: "js-events",
-        title: "Events",
-        difficulty: "Intermediate",
-        duration: "35 min",
-        description:
-          "Learn how to respond to user actions such as clicks and keyboard input.",
-        concepts: [
-          "click",
-          "mouseover",
-          "keydown",
-          "input",
-          "addEventListener()",
-        ],
-        code: `const button =
-    document.querySelector("#button");
 
-button.addEventListener("click", () => {
-    alert("Button clicked!");
-});`,
-        video: "https://www.youtube.com/embed/3PHXvlpOkf4",
+      {
+        id: "functions",
+        title: "Functions",
+        difficulty: "Intermediate",
+        duration: "30 min",
+
+        description:
+          "Create reusable blocks of code using regular functions, arrow functions, parameters, and return values.",
+
+        concepts: [
+          {
+            title: "Function declaration",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Parameters",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Return values",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Arrow functions",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Default parameters",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Scope",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+        ],
+
+        code: `function add(a, b) {
+  return a + b;
+}
+
+const result = add(10, 20);
+
+console.log(result);`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
+      },
+
+      {
+        id: "destructuring",
+        title: "Destructuring & Spread",
+        difficulty: "Intermediate",
+        duration: "25 min",
+
+        description:
+          "Work with arrays and objects more efficiently using destructuring, spread, and rest syntax.",
+
+        concepts: [
+          {
+            title: "Array destructuring",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Object destructuring",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Spread operator",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Rest parameters",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+        ],
+
+        code: `const user = {
+  name: "Alex",
+  age: 20
+};
+
+const { name, age } = user;
+
+console.log(name);
+console.log(age);`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
+      },
+
+      {
+        id: "modules",
+        title: "JavaScript Modules",
+        difficulty: "Intermediate",
+        duration: "30 min",
+
+        description:
+          "Organize JavaScript applications into reusable files using export and import.",
+
+        concepts: [
+          {
+            title: "export",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "import",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Named exports",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Default exports",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+        ],
+
+        code: `// math.js
+export function add(a, b) {
+  return a + b;
+}
+
+// app.js
+import { add } from "./math.js";
+
+console.log(add(10, 20));`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
       },
     ],
   },
@@ -307,259 +476,693 @@ button.addEventListener("click", () => {
     id: 3,
     level: "ADVANCED",
     title: "Advanced JavaScript",
-    subtitle: "Level Up",
+    subtitle: "Think Like a JavaScript Developer",
+    color: "orange",
+
     topics: [
       {
-        id: "js-es6",
-        title: "Modern JavaScript ES6+",
+        id: "dom",
+        title: "DOM Manipulation",
         difficulty: "Advanced",
         duration: "40 min",
+
         description:
-          "Learn modern JavaScript features introduced through ES6 and later versions.",
+          "Learn how JavaScript interacts with HTML elements and dynamically changes web pages.",
+
         concepts: [
-          "let and const",
-          "Arrow functions",
-          "Destructuring",
-          "Spread operator",
-          "Rest parameters",
-          "Template literals",
+          {
+            title: "querySelector",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "getElementById",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Changing content",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Changing styles",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Creating elements",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
         ],
-        code: `const user = {
-    name: "Alex",
-    age: 21
-};
 
-const { name, age } = user;
+        code: `const title = document.querySelector("#title");
 
-console.log(name);
-console.log(age);`,
-        video: "https://www.youtube.com/embed/NCwa_xi0Uuc",
+title.textContent = "Hello JavaScript";
+title.style.color = "yellow";`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
       },
+
       {
-        id: "js-destructuring",
-        title: "Destructuring",
+        id: "events",
+        title: "Events",
         difficulty: "Advanced",
-        duration: "25 min",
+        duration: "35 min",
+
         description:
-          "Learn how to extract values from arrays and objects efficiently.",
+          "Make web pages interactive by responding to clicks, keyboard input, forms, and other browser events.",
+
         concepts: [
-          "Object destructuring",
-          "Array destructuring",
-          "Default values",
-          "Nested destructuring",
+          {
+            title: "click events",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "input events",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "submit events",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Keyboard events",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Event listeners",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
         ],
-        code: `const person = {
-    name: "John",
-    age: 25
-};
 
-const { name, age } = person;
+        code: `const button = document.querySelector("#button");
 
-console.log(name);
-console.log(age);`,
-        video: "https://www.youtube.com/embed/NIq3qLaHCIs",
+button.addEventListener("click", () => {
+  console.log("Button clicked!");
+});`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
       },
+
       {
-        id: "js-async",
+        id: "async",
         title: "Asynchronous JavaScript",
         difficulty: "Advanced",
-        duration: "50 min",
+        duration: "45 min",
+
         description:
-          "Understand how JavaScript handles tasks that take time to complete.",
+          "Understand asynchronous programming using callbacks, promises, async functions, and await.",
+
         concepts: [
-          "Callbacks",
-          "Promises",
-          "async",
-          "await",
-          "setTimeout()",
+          {
+            title: "Callbacks",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Promises",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "async",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "await",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Error handling",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
         ],
+
         code: `async function getData() {
-    const response =
-        await fetch("https://api.example.com/data");
+  try {
+    const response = await fetch(
+      "https://api.example.com/users"
+    );
 
     const data = await response.json();
 
     console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 getData();`,
-        video: "https://www.youtube.com/embed/PoRJizFvM7s",
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
       },
+
       {
-        id: "js-fetch",
+        id: "fetch",
         title: "Fetch API",
         difficulty: "Advanced",
         duration: "40 min",
+
         description:
-          "Learn how to request data from APIs using the Fetch API.",
+          "Communicate with web APIs and retrieve or send data using the JavaScript Fetch API.",
+
         concepts: [
-          "fetch()",
-          "GET requests",
-          "JSON",
-          "Promises",
-          "async/await",
+          {
+            title: "fetch",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "GET requests",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "POST requests",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "JSON",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "API errors",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
         ],
+
         code: `fetch("https://api.example.com/users")
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => {
-        console.log(error);
-    });`,
-        video: "https://www.youtube.com/embed/cuEtnrL9-H0",
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
       },
+
       {
-        id: "js-modules",
-        title: "JavaScript Modules",
+        id: "error-handling",
+        title: "Error Handling",
         difficulty: "Advanced",
-        duration: "35 min",
+        duration: "30 min",
+
         description:
-          "Learn how to organize large JavaScript applications into reusable modules.",
+          "Handle JavaScript errors safely using try, catch, finally, and custom errors.",
+
         concepts: [
-          "export",
-          "import",
-          "Named exports",
-          "Default exports",
-          "Module organization",
+          {
+            title: "try",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "catch",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "finally",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "throw",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
         ],
-        code: `// math.js
-export function add(a, b) {
-    return a + b;
-}
 
-// app.js
-import { add } from "./math.js";
+        code: `try {
+  const result = 10 / 0;
 
-console.log(add(5, 3));`,
-        video: "https://www.youtube.com/embed/cRHQNNcYf6s",
+  if (!Number.isFinite(result)) {
+    throw new Error("Invalid calculation");
+  }
+} catch (error) {
+  console.error(error.message);
+} finally {
+  console.log("Finished");
+}`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
       },
     ],
   },
 
   {
     id: 4,
-    level: "PROJECTS",
-    title: "JavaScript Projects",
-    subtitle: "Build Real Applications",
+    level: "OBJECT-ORIENTED PROGRAMMING",
+    title: "JavaScript OOP",
+    subtitle: "Build Real-World Systems",
+    color: "purple",
+
     topics: [
       {
-        id: "js-project-calculator",
-        title: "Calculator",
+        id: "classes",
+        title: "Classes & Objects",
+        difficulty: "OOP",
+        duration: "40 min",
+
+        description:
+          "Learn how JavaScript classes and objects can be used to model real-world entities.",
+
+        concepts: [
+          {
+            title: "Classes",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Objects",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Properties",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Methods",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+        ],
+
+        code: `class Student {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  introduce() {
+    console.log(\`Hi, I'm \${this.name}\`);
+  }
+}
+
+const student = new Student("Alex", 20);
+
+student.introduce();`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
+      },
+
+      {
+        id: "constructors",
+        title: "Constructors",
+        difficulty: "OOP",
+        duration: "30 min",
+
+        description:
+          "Use constructors to initialize JavaScript class objects when they are created.",
+
+        concepts: [
+          {
+            title: "constructor",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "this keyword",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Instance properties",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+        ],
+
+        code: `class Student {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+const student = new Student("Alex");
+
+console.log(student.name);`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
+      },
+
+      {
+        id: "inheritance",
+        title: "Inheritance",
+        difficulty: "OOP",
+        duration: "40 min",
+
+        description:
+          "Create specialized classes from existing classes using JavaScript class inheritance.",
+
+        concepts: [
+          {
+            title: "extends",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "super",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Method overriding",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+        ],
+
+        code: `class Animal {
+  eat() {
+    console.log("Eating...");
+  }
+}
+
+class Dog extends Animal {
+  bark() {
+    console.log("Woof!");
+  }
+}
+
+const dog = new Dog();
+
+dog.eat();
+dog.bark();`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
+      },
+
+      {
+        id: "encapsulation",
+        title: "Encapsulation",
+        difficulty: "OOP",
+        duration: "30 min",
+
+        description:
+          "Protect and control access to object data using private fields and class methods.",
+
+        concepts: [
+          {
+            title: "Private fields",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Getters",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Setters",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+        ],
+
+        code: `class BankAccount {
+  #balance = 0;
+
+  deposit(amount) {
+    this.#balance += amount;
+  }
+
+  getBalance() {
+    return this.#balance;
+  }
+}
+
+const account = new BankAccount();
+
+account.deposit(500);
+
+console.log(account.getBalance());`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
+      },
+
+      {
+        id: "polymorphism",
+        title: "Polymorphism",
+        difficulty: "Advanced OOP",
+        duration: "40 min",
+
+        description:
+          "Understand how different JavaScript objects can implement the same method in different ways.",
+
+        concepts: [
+          {
+            title: "Method overriding",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Dynamic behavior",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Interfaces by convention",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+        ],
+
+        code: `class Animal {
+  sound() {
+    console.log("Animal sound");
+  }
+}
+
+class Dog extends Animal {
+  sound() {
+    console.log("Woof!");
+  }
+}
+
+const animal = new Dog();
+
+animal.sound();`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
+      },
+    ],
+  },
+
+  {
+    id: 5,
+    level: "PROJECTS",
+    title: "Build With JavaScript",
+    subtitle: "Put Everything Together",
+    color: "red",
+
+    topics: [
+      {
+        id: "number-game",
+        title: "Number Guessing Game",
         difficulty: "Beginner",
-        duration: "1 hour",
+        duration: "45 min",
+
         description:
-          "Build a calculator using HTML, CSS, and JavaScript.",
+          "Build a simple browser game using variables, conditions, loops, functions, and user input.",
+
         concepts: [
-          "DOM manipulation",
-          "Events",
-          "Functions",
-          "Operators",
+          {
+            title: "User input",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Random numbers",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Conditions",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Game logic",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
         ],
-        code: `function calculate(a, b, operator) {
-    if (operator === "+") {
-        return a + b;
-    }
 
-    if (operator === "-") {
-        return a - b;
-    }
+        code: `const secretNumber =
+  Math.floor(Math.random() * 10) + 1;
 
-    if (operator === "*") {
-        return a * b;
-    }
+const guess = Number(
+  prompt("Guess a number from 1 to 10:")
+);
 
-    if (operator === "/") {
-        return a / b;
-    }
+if (guess === secretNumber) {
+  console.log("Correct!");
+} else {
+  console.log(
+    \`Wrong! The number was \${secretNumber}\`
+  );
+}`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
+      },
+
+      {
+        id: "todo-app",
+        title: "Todo List Application",
+        difficulty: "Intermediate",
+        duration: "2 hrs",
+
+        description:
+          "Build a complete todo application using arrays, DOM manipulation, events, and local storage.",
+
+        concepts: [
+          {
+            title: "DOM manipulation",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Events",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Arrays",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Local Storage",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+        ],
+
+        code: `const todos = [];
+
+function addTodo(title) {
+  todos.push({
+    id: Date.now(),
+    title,
+    completed: false
+  });
 }
 
-console.log(calculate(10, 5, "+"));`,
-        video: "https://www.youtube.com/embed/I5kj-YsmWjM",
+addTodo("Learn JavaScript");
+
+console.log(todos);`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
       },
+
       {
-        id: "js-project-todo",
-        title: "To-Do List",
+        id: "weather-app",
+        title: "Weather Application",
         difficulty: "Intermediate",
-        duration: "2 hours",
+        duration: "2 hrs",
+
         description:
-          "Build a task management application using JavaScript.",
+          "Build a weather application that retrieves information from an API and displays it dynamically.",
+
         concepts: [
-          "DOM manipulation",
-          "Arrays",
-          "Objects",
-          "Events",
-          "Local storage",
+          {
+            title: "Fetch API",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Async/Await",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "JSON",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "DOM updates",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
         ],
-        code: `const tasks = [];
 
-function addTask(task) {
-    tasks.push(task);
-    console.log("Task added:", task);
-}
-
-addTask("Learn JavaScript");
-addTask("Build a project");
-
-console.log(tasks);`,
-        video: "https://www.youtube.com/embed/Ttf3CEsEwMQ",
-      },
-      {
-        id: "js-project-weather",
-        title: "Weather App",
-        difficulty: "Intermediate",
-        duration: "2 hours",
-        description:
-          "Build a weather application that gets information from an API.",
-        concepts: [
-          "Fetch API",
-          "Promises",
-          "async/await",
-          "JSON",
-          "DOM manipulation",
-        ],
         code: `async function getWeather(city) {
-    const response = await fetch(
-        \`https://api.example.com/weather?city=\${city}\`
-    );
+  const response = await fetch(
+    \`https://api.example.com/weather?city=\${city}\`
+  );
 
-    const data = await response.json();
+  const data = await response.json();
 
-    console.log(data);
+  console.log(data);
 }
 
 getWeather("Manila");`,
-        video: "https://www.youtube.com/embed/MIYQR-Ybrn4",
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
       },
+
       {
-        id: "js-project-quiz",
+        id: "quiz-app",
         title: "Quiz Application",
-        difficulty: "Intermediate",
-        duration: "2 hours",
+        difficulty: "Advanced",
+        duration: "3 hrs",
+
         description:
-          "Create an interactive quiz application with questions, answers, and scoring.",
+          "Build an interactive quiz application using objects, arrays, DOM manipulation, events, and application state.",
+
         concepts: [
-          "Arrays",
-          "Objects",
-          "Functions",
-          "Events",
-          "Score system",
+          {
+            title: "Questions array",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Score tracking",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "DOM manipulation",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Event handling",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
         ],
+
         code: `const questions = [
-    {
-        question: "What language runs in a browser?",
-        answer: "JavaScript"
-    }
+  {
+    question: "Which keyword creates a constant?",
+    answer: "const"
+  },
+  {
+    question: "Which method adds an item to an array?",
+    answer: "push"
+  }
 ];
 
 let score = 0;
 
-if (questions[0].answer === "JavaScript") {
-    score++;
+console.log(questions);`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
+      },
+
+      {
+        id: "dashboard",
+        title: "JavaScript Dashboard",
+        difficulty: "Advanced",
+        duration: "4 hrs",
+
+        description:
+          "Create a complete dashboard using APIs, asynchronous JavaScript, reusable functions, DOM manipulation, and modern JavaScript features.",
+
+        concepts: [
+          {
+            title: "API integration",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Async/Await",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Reusable components",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "Application state",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+          {
+            title: "DOM architecture",
+            video: "https://www.youtube.com/embed/9WIJQDcv43A",
+          },
+        ],
+
+        code: `async function loadDashboard() {
+  try {
+    const response = await fetch(
+      "https://api.example.com/dashboard"
+    );
+
+    const data = await response.json();
+
+    renderDashboard(data);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-console.log("Score:", score);`,
-        video: "https://www.youtube.com/embed/f4fB9Xg2n5A",
+function renderDashboard(data) {
+  console.log(data);
+}
+
+loadDashboard();`,
+
+        video: "https://www.youtube.com/embed/9WIJQDcv43A",
       },
     ],
   },
@@ -567,297 +1170,469 @@ console.log("Score:", score);`,
 
 function Javscript() {
   const [selectedTopic, setSelectedTopic] = useState(null);
-  const [completed, setCompleted] = useState([]);
+  const [videoVisible, setVideoVisible] = useState(false);
+  const [selectedConcept, setSelectedConcept] = useState(null);
 
-  const handleComplete = (topicId) => {
-    if (!completed.includes(topicId)) {
-      setCompleted([...completed, topicId]);
-    }
+  const openTopic = (topic) => {
+    setSelectedTopic(topic);
+    setVideoVisible(false);
+    setSelectedConcept(null);
   };
 
-  const totalTopics = roadmapData.reduce(
-    (total, stage) => total + stage.topics.length,
-    0
-  );
+  const closePanel = () => {
+    setSelectedTopic(null);
+    setVideoVisible(false);
+    setSelectedConcept(null);
+  };
 
-  const progress = Math.round(
-    (completed.length / totalTopics) * 100
-  );
+  const openConceptVideo = (concept) => {
+    setSelectedConcept(concept);
+  };
+
+  const closeConceptVideo = () => {
+    setSelectedConcept(null);
+  };
+
+  useEffect(() => {
+    document.body.style.overflow = selectedTopic ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [selectedTopic]);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape" && selectedTopic) {
+        closePanel();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedTopic]);
 
   return (
-    <div className="javascript-page">
+    <div className="java-roadmap-page">
 
-      {/* HEADER */}
-      <header className="javascript-header">
-        <div className="js-header-content">
-          <span className="js-terminal">
-            {"< / >"}
+      <header className="roadmap-header">
+
+        <div className="header-brand">
+
+          <div className="java-logo">
+            JS
+          </div>
+
+          <div className="header-title">
+            <h1>
+              JavaScript Learning Roadmap
+            </h1>
+
+            <p>
+              From Fundamentals to Advanced JavaScript & OOP
+            </p>
+          </div>
+
+        </div>
+
+        <div className="header-badge">
+
+          <span className="header-badge-icon">
+            JS
           </span>
 
-          <p className="js-label">
-            PROJECTBUILDERS<span>PH</span> / ROADMAP
-          </p>
+          <div>
+            <strong>
+              LEARN JAVASCRIPT
+            </strong>
 
-          <h1>
-            Java<span>Script</span> Roadmap
-          </h1>
-
-          <p className="js-description">
-            Master JavaScript from the fundamentals to building
-            real-world applications.
-          </p>
-
-          <div className="js-progress-wrapper">
-            <div className="js-progress-info">
-              <span>YOUR PROGRESS</span>
-              <strong>{progress}%</strong>
-            </div>
-
-            <div className="js-progress-bar">
-              <div
-                className="js-progress-fill"
-                style={{ width: `${progress}%` }}
-              ></div>
-            </div>
+            <small>
+              Learn • Build • Create
+            </small>
           </div>
+
         </div>
+
       </header>
 
-      {/* ROADMAP */}
-      <main className="javascript-container">
+      <div className="roadmap-layout">
 
-        <div className="roadmap-intro">
-          <div>
-            <p className="section-tag">// JAVASCRIPT_LEARNING_PATH</p>
-            <h2>JavaScript Roadmap</h2>
-          </div>
+        <main
+          className={`roadmap-content ${
+            selectedTopic ? "panel-open" : ""
+          }`}
+        >
 
-          <div className="topic-count">
-            {completed.length} / {totalTopics} Completed
-          </div>
-        </div>
+          <section className="hero-section">
 
-        {roadmapData.map((stage, stageIndex) => (
-          <section
-            className="roadmap-stage"
-            key={stage.id}
-          >
+            <div className="hero-copy">
 
-            <div className="stage-header">
+              <span className="eyebrow">
+                YOUR JAVASCRIPT JOURNEY
+              </span>
 
-              <div className="stage-number">
-                0{stageIndex + 1}
-              </div>
+              <h2>
+                Master JavaScript step by step.
+              </h2>
 
-              <div>
-                <span className="stage-level">
-                  {stage.level}
-                </span>
-
-                <h3>{stage.title}</h3>
-
-                <p>{stage.subtitle}</p>
-              </div>
+              <p>
+                Follow a structured path from programming
+                fundamentals to advanced JavaScript,
+                OOP, APIs, and real-world projects.
+              </p>
 
             </div>
 
-            <div className="topics-grid">
+            <div className="journey-stat">
+              <strong>
+                5
+              </strong>
 
-              {stage.topics.map((topic, index) => {
+              <span>
+                Learning Stages
+              </span>
+            </div>
 
-                const isCompleted =
-                  completed.includes(topic.id);
+          </section>
 
-                return (
-                  <article
-                    className={`topic-card ${
-                      isCompleted ? "completed" : ""
-                    }`}
-                    key={topic.id}
-                    onClick={() =>
-                      setSelectedTopic(topic)
-                    }
-                  >
+          <div className="roadmap">
 
-                    <div className="topic-number">
-                      {String(index + 1).padStart(2, "0")}
-                    </div>
+            <div className="road-line" />
 
-                    <div className="topic-card-content">
+            {roadmapData.map((stage) => (
 
-                      <div className="topic-top">
+              <section
+                key={stage.id}
+                className={`roadmap-stage ${stage.color}`}
+              >
 
-                        <span
-                          className={`difficulty ${topic.difficulty
-                            .toLowerCase()
-                            .replace(" ", "-")}`}
-                        >
+                <div className="stage-marker">
+                  <span>
+                    {stage.id}
+                  </span>
+                </div>
+
+                <div className="stage-heading">
+
+                  <span className="stage-level">
+                    {stage.level}
+                  </span>
+
+                  <h3>
+                    {stage.title}
+                  </h3>
+
+                  <p>
+                    {stage.subtitle}
+                  </p>
+
+                </div>
+
+                <div className="topic-grid">
+
+                  {stage.topics.map((topic) => (
+
+                    <button
+                      type="button"
+                      className="topic-card"
+                      key={topic.id}
+                      onClick={() => openTopic(topic)}
+                    >
+
+                      <div className="topic-icon">
+
+                        {stage.id === 1 && "JS"}
+                        {stage.id === 2 && "▣"}
+                        {stage.id === 3 && "⚡"}
+                        {stage.id === 4 && "◆"}
+                        {stage.id === 5 && "🚀"}
+
+                      </div>
+
+                      <div className="topic-card-content">
+
+                        <span>
                           {topic.difficulty}
                         </span>
 
-                        <span className="duration">
-                          {topic.duration}
-                        </span>
+                        <h4>
+                          {topic.title}
+                        </h4>
+
+                        <p>
+                          {topic.description}
+                        </p>
 
                       </div>
 
-                      <h4>{topic.title}</h4>
-
-                      <p>{topic.description}</p>
-
-                      <div className="topic-footer">
-
-                        <span>
-                          {topic.concepts.length} Concepts
-                        </span>
-
-                        <span className="open-topic">
-                          {isCompleted
-                            ? "✓ Completed"
-                            : "View Lesson →"}
-                        </span>
-
+                      <div className="topic-arrow">
+                        →
                       </div>
 
-                    </div>
-                  </article>
-                );
-              })}
+                    </button>
 
-            </div>
-          </section>
-        ))}
+                  ))}
 
-      </main>
+                </div>
 
-      {/* LESSON MODAL */}
-      {selectedTopic && (
-        <div
-          className="lesson-overlay"
-          onClick={() => setSelectedTopic(null)}
-        >
+              </section>
 
+            ))}
+
+          </div>
+
+        </main>
+
+        {selectedTopic && (
           <div
-            className="lesson-modal"
-            onClick={(e) => e.stopPropagation()}
+            className="panel-overlay"
+            onClick={closePanel}
+            aria-hidden="true"
+          />
+        )}
+
+        {selectedTopic && (
+
+          <aside
+            className="topic-panel"
+            aria-label="Lesson details"
           >
 
-            <button
-              className="close-lesson"
-              onClick={() => setSelectedTopic(null)}
-            >
-              ×
-            </button>
+            <div className="panel-top">
 
-            <div className="lesson-heading">
+              <button
+                type="button"
+                className="close-panel"
+                onClick={closePanel}
+                aria-label="Close lesson"
+              >
+                ×
+              </button>
 
-              <span className="modal-tag">
-                JAVASCRIPT LESSON
+              <span className="panel-label">
+                JAVASCRIPT LEARNING MODULE
               </span>
 
-              <h2>{selectedTopic.title}</h2>
+              <h2>
+                {selectedTopic.title}
+              </h2>
 
-              <div className="lesson-meta">
+              <div className="topic-meta">
+
                 <span>
-                  {selectedTopic.difficulty}
+                  📘 {selectedTopic.difficulty}
                 </span>
 
                 <span>
-                  {selectedTopic.duration}
+                  ⏱ {selectedTopic.duration}
                 </span>
+
               </div>
 
             </div>
 
-            <div className="lesson-body">
+            <div className="panel-body">
 
-              <div className="lesson-description">
-                <h3>// ABOUT_THIS_LESSON</h3>
+              <section className="explanation">
+
+                <h3>
+                  What is this?
+                </h3>
+
                 <p>
                   {selectedTopic.description}
                 </p>
-              </div>
 
-              <div className="lesson-section">
-                <h3>// WHAT_YOU_WILL_LEARN</h3>
+              </section>
+
+              <section className="concept-section">
+
+                <h3>
+                  What you'll learn
+                </h3>
 
                 <div className="concept-list">
+
                   {selectedTopic.concepts.map(
                     (concept, index) => (
-                      <div
-                        className="concept-item"
-                        key={index}
+
+                      <button
+                        type="button"
+                        className={`concept-item ${
+                          selectedConcept?.title === concept.title
+                            ? "selected"
+                            : ""
+                        }`}
+                        key={`${selectedTopic.id}-${concept.title}`}
+                        onClick={() =>
+                          openConceptVideo(concept)
+                        }
                       >
-                        <span>✓</span>
-                        {concept}
-                      </div>
+
+                        <span>
+                          {index + 1}
+                        </span>
+
+                        <p>
+                          {concept.title}
+                        </p>
+
+                        <strong className="concept-play">
+                          ▶
+                        </strong>
+
+                      </button>
+
                     )
                   )}
+
                 </div>
-              </div>
 
-              <div className="lesson-section">
-                <h3>// CODE_EXAMPLE</h3>
+                {selectedConcept?.video && (
 
-                <div className="code-window">
+                  <div className="concept-video">
 
-                  <div className="code-header">
-                    <div className="code-dots">
-                      <span></span>
-                      <span></span>
-                      <span></span>
+                    <div className="concept-video-header">
+
+                      <div>
+
+                        <span>
+                          MINI LESSON
+                        </span>
+
+                        <h4>
+                          {selectedConcept.title}
+                        </h4>
+
+                      </div>
+
+                      <button
+                        type="button"
+                        onClick={closeConceptVideo}
+                        aria-label="Close concept video"
+                      >
+                        ×
+                      </button>
+
                     </div>
 
-                    <span>javascript.js</span>
+                    <div className="concept-video-player">
+
+                      <iframe
+                        src={selectedConcept.video}
+                        title={`${selectedConcept.title} lesson`}
+                        allow="
+                          accelerometer;
+                          autoplay;
+                          clipboard-write;
+                          encrypted-media;
+                          gyroscope;
+                          picture-in-picture
+                        "
+                        allowFullScreen
+                      />
+
+                    </div>
+
                   </div>
 
-                  <pre>
-                    <code>
-                      {selectedTopic.code}
-                    </code>
-                  </pre>
+                )}
+
+              </section>
+
+              <section className="code-section">
+
+                <div className="section-title">
+
+                  <h3>
+                    Example
+                  </h3>
+
+                  <span>
+                    JAVASCRIPT
+                  </span>
 
                 </div>
-              </div>
 
-              <div className="lesson-section">
-                <h3>// VIDEO_LESSON</h3>
+                <pre>
+                  <code>
+                    {selectedTopic.code}
+                  </code>
+                </pre>
 
-                <div className="video-container">
-                  <iframe
-                    src={selectedTopic.video}
-                    title={selectedTopic.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
+              </section>
+
+              <section className="video-section">
+
+                <button
+                  type="button"
+                  className={`video-button ${
+                    videoVisible ? "active" : ""
+                  }`}
+                  onClick={() =>
+                    setVideoVisible(
+                      (previous) => !previous
+                    )
+                  }
+                >
+
+                  <span className="play-icon">
+                    {videoVisible ? "−" : "▶"}
+                  </span>
+
+                  <span>
+                    {videoVisible
+                      ? "Hide Lesson Video"
+                      : "Watch Lesson Video"}
+                  </span>
+
+                </button>
+
+                {videoVisible && selectedTopic.video && (
+
+                  <div className="video-container">
+
+                    <iframe
+                      src={selectedTopic.video}
+                      title={`${selectedTopic.title} lesson video`}
+                      allow="
+                        accelerometer;
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        gyroscope;
+                        picture-in-picture
+                      "
+                      allowFullScreen
+                    />
+
+                  </div>
+
+                )}
+
+              </section>
 
               <button
-                className={`complete-button ${
-                  completed.includes(selectedTopic.id)
-                    ? "already-completed"
-                    : ""
-                }`}
-                onClick={() =>
-                  handleComplete(selectedTopic.id)
-                }
+                type="button"
+                className="complete-button"
               >
-                {completed.includes(selectedTopic.id)
-                  ? "✓ LESSON COMPLETED"
-                  : "MARK AS COMPLETED"}
+                ✓ Mark as Completed
               </button>
 
             </div>
 
-          </div>
+          </aside>
 
-        </div>
-      )}
+        )}
+
+      </div>
 
     </div>
   );
 }
 
 export default Javscript;
+

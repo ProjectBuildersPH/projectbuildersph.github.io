@@ -20,12 +20,12 @@ const testimonials = [
 
   {
     id: 3,
-    name: "Programming Journey",
-    role: "Beginner Developer",
+    name: "Ar",
+    role: "Java OOP",
     title: "Building Confidence Through Practice",
-    video: require("../../assets/tutor.mp4"),
+    video: require("../../assets/ar.mp4"),
   },
-
+/*
   {
     id: 4,
     name: "Learner Story",
@@ -41,6 +41,8 @@ const testimonials = [
     title: "A Community That Helps You Build",
     video: require("../../assets/tutor.mp4"),
   },
+
+  */
 ];
 
 function Testimonials() {
