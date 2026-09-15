@@ -24,24 +24,8 @@ const roadmapData = [
 
         concepts: [
           {
-            title: "What is C#?",
-            video: "https://www.youtube.com/embed/GhQdlIFylQ8",
-          },
-          {
-            title: "History of C#",
-            video: "https://www.youtube.com/embed/GhQdlIFylQ8",
-          },
-          {
-            title: "Where C# is used",
-            video: "https://www.youtube.com/embed/GhQdlIFylQ8",
-          },
-          {
-            title: ".NET and C#",
-            video: "https://www.youtube.com/embed/GhQdlIFylQ8",
-          },
-          {
-            title: "Your first C# program",
-            video: "https://www.youtube.com/embed/GhQdlIFylQ8",
+            title: "Project Structure",
+            video: "https://www.youtube.com/embed/bodG64qFZVg",
           },
         ],
 
@@ -70,31 +54,31 @@ class Program
         concepts: [
           {
             title: "Variables",
-            video: "https://www.youtube.com/embed/GhQdlIFylQ8",
+            video: "https://www.youtube.com/embed/-Gre2Ad9pAA",
           },
           {
             title: "int",
-            video: "https://www.youtube.com/embed/GhQdlIFylQ8",
+            video: "https://www.youtube.com/embed/fLQXaZiqMZ4",
           },
           {
             title: "double",
-            video: "https://www.youtube.com/embed/GhQdlIFylQ8",
+            video: "https://www.youtube.com/embed/QftaSicaZCo",
           },
           {
             title: "char",
-            video: "https://www.youtube.com/embed/GhQdlIFylQ8",
+            video: "https://www.youtube.com/embed/DTvRTQ5jfW4",
           },
           {
             title: "bool",
-            video: "https://www.youtube.com/embed/GhQdlIFylQ8",
+            video: "https://www.youtube.com/embed/HHqrOE1f15Y",
           },
           {
             title: "string",
-            video: "https://www.youtube.com/embed/GhQdlIFylQ8",
+            video: "https://www.youtube.com/embed/2QM7Cfwhqwc",
           },
           {
             title: "Constants",
-            video: "https://www.youtube.com/embed/GhQdlIFylQ8",
+            video: "https://www.youtube.com/embed/TrlTFW16Gbw",
           },
         ],
 
@@ -119,23 +103,23 @@ string name = "Alex";`,
         concepts: [
           {
             title: "Console.WriteLine",
-            video: "https://www.youtube.com/embed/GhQdlIFylQ8",
+            video: "https://www.youtube.com/embed/BJBxVlY1R60",
           },
           {
             title: "Console.Write",
-            video: "https://www.youtube.com/embed/GhQdlIFylQ8",
+            video: "https://www.youtube.com/embed/y9Yz2xkGkI8",
           },
           {
             title: "Console.ReadLine",
-            video: "https://www.youtube.com/embed/GhQdlIFylQ8",
+            video: "https://www.youtube.com/embed/2o9jebRWtBE",
           },
           {
             title: "Parsing input",
-            video: "https://www.youtube.com/embed/GhQdlIFylQ8",
+            video: "https://www.youtube.com/embed/vTM3Drt-Tbg",
           },
           {
             title: "String interpolation",
-            video: "https://www.youtube.com/embed/GhQdlIFylQ8",
+            video: "https://www.youtube.com/embed/ieIaw7HltAE",
           },
         ],
 

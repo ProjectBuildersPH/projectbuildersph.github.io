@@ -1,0 +1,415 @@
+/* =========================================================
+   HR MANAGEMENT SYSTEM — JAVA
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.hr-management-page {
+  min-height: 100vh;
+
+  background: #f7f9f7;
+  color: #17231c;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 120px 20px 60px;
+}
+
+/* =========================================================
+   HORIZONTAL PROJECT CARD
+   ========================================================= */
+
+.hr-project-card {
+  width: 100%;
+  max-width: 1200px;
+
+  display: grid;
+  grid-template-columns: 45% 55%;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e8e3;
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(23, 35, 28, 0.08);
+}
+
+/* =========================================================
+   LEFT IMAGE SECTION
+   ========================================================= */
+
+.hr-image-section {
+  padding: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1f4f2;
+}
+
+.hr-image-slider {
+  position: relative;
+
+  width: 100%;
+  height: 480px;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  background: #e8eee9;
+}
+
+.hr-project-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  background: #f1f4f2;
+}
+
+/* =========================================================
+   SLIDER BUTTONS
+   ========================================================= */
+
+.slider-button {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(23, 35, 28, 0.78);
+
+  color: #ffffff;
+
+  font-size: 21px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.slider-button:hover {
+  background: #17231c;
+
+  transform: translateY(-50%) scale(1.08);
+}
+
+.previous-button {
+  left: 15px;
+}
+
+.next-button {
+  right: 15px;
+}
+
+/* =========================================================
+   IMAGE COUNTER
+   ========================================================= */
+
+.image-counter {
+  position: absolute;
+
+  bottom: 15px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  padding: 6px 13px;
+
+  background: rgba(23, 35, 28, 0.78);
+
+  color: #ffffff;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   RIGHT INFORMATION
+   ========================================================= */
+
+.hr-project-info {
+  padding: 35px 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.hr-project-title {
+  margin: 0 0 16px;
+
+  font-size: 30px;
+  line-height: 1.2;
+
+  color: #17231c;
+}
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.hr-project-description {
+  margin: 0 0 25px;
+
+  color: #5d6961;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+.hr-project-info h2 {
+  margin: 0 0 14px;
+
+  font-size: 18px;
+
+  color: #17231c;
+}
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.hr-feature-list {
+  list-style: none;
+
+  margin: 0 0 25px;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+}
+
+.hr-feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #344139;
+}
+
+.hr-feature-list li span {
+  color: #2f7d4b;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+
+.dashboard-info {
+  margin-bottom: 25px;
+}
+
+.dashboard-info p {
+  margin: 0 0 15px;
+
+  color: #69746d;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   DASHBOARD STATS
+   ========================================================= */
+
+.dashboard-stats {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 8px;
+}
+
+.stat-card {
+  padding: 12px 8px;
+
+  background: #f3f7f4;
+
+  border: 1px solid #e2e9e4;
+
+  border-radius: 8px;
+
+  text-align: center;
+}
+
+.stat-card strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 12px;
+
+  color: #17231c;
+}
+
+.stat-card span {
+  display: block;
+
+  font-size: 10px;
+
+  color: #718078;
+}
+
+/* =========================================================
+   BUY BUTTON
+   ========================================================= */
+
+.access-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+
+  padding: 13px 25px;
+
+  background: #5eee73;
+
+  color: #060505;
+
+  border-radius: 9px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.access-button:hover {
+  background: #26382c;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 18px rgba(23, 35, 28, 0.18);
+
+  color: white;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .hr-project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hr-image-section {
+    padding: 20px;
+  }
+
+  .hr-image-slider {
+    height: 400px;
+  }
+
+  .hr-project-info {
+    padding: 28px;
+  }
+
+  .hr-project-title {
+    font-size: 26px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .hr-management-page {
+    padding: 90px 12px 30px;
+  }
+
+  .hr-project-card {
+    border-radius: 15px;
+  }
+
+  .hr-image-section {
+    padding: 12px;
+  }
+
+  .hr-image-slider {
+    height: 280px;
+  }
+
+  .hr-project-info {
+    padding: 22px 18px;
+  }
+
+  .hr-project-title {
+    font-size: 22px;
+  }
+
+  .hr-project-description {
+    font-size: 14px;
+  }
+
+  .hr-feature-list {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .access-button {
+    width: 100%;
+  }
+}

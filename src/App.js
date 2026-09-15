@@ -15,11 +15,12 @@ import Subs from "./components/subs/Subscription";
 import Project from "./components/projectlits/projectlits";
 import CAreerPath from "./components/pathcareer/pathcareer";
 
-// Ecommerce Landing Page
+// Category Landing Page
 import Ecommerce from "./components/category/landingpage/ecommerce";
 import ShopEasy from "./components/category/landingpage/shopeasy/shopeasy";
 import Academ from "./components/category/school/academ";
 import EnrollmentSystem from "./components/category/school/enrollmentsystem/enrollmentsystem";
+import BusinessLandingPage from "./components/category/business/businesslandingpage";
 
 
 
@@ -93,7 +94,7 @@ function App() {
 
 
           {/* ========================================
-              ECOMMERCE PROJECTS
+              Category PROJECTS
           ======================================== */}
 
           <Route path="/ecommerce" element={<Ecommerce />} />
@@ -109,6 +110,8 @@ function App() {
           <Route path="/pathcareer" element={<CAreerPath />} />
           
           <Route path="/tshirt" element={<ShirtSelling />} />
+
+          <Route path="/business" element={<BusinessLandingPage/>} />
 
 
           {/* ========================================

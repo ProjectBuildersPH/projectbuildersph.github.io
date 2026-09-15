@@ -75,10 +75,10 @@ function Subscription() {
               </div>
 
               <ul>
-                <li>One-on-one tutoring</li>
-                <li>Programming assistance</li>
-                <li>Project guidance</li>
-                <li>Debugging assistance</li>
+                  <li>One-on-one tutoring via Google Meet</li> 
+                  <li>Request the topic you want to learn</li> 
+                  <li>Project guidance and assistance</li> 
+                  <li>Debugging assistance for your project</li>
               </ul>
 
               {/* BOOK A TUTOR */}
@@ -136,10 +136,12 @@ function Subscription() {
               </div>
 
               <ul>
-                <li>Focused tutorial</li>
-                <li>Project-based learning</li>
-                <li>Step-by-step lessons</li>
-                <li>Learning materials</li>
+
+                <li>Step-by-step video tutorials</li>
+                <li>Programming fundamentals and data types</li>
+                <li>From basic concepts to arrays</li>
+                <li>Challenges and practice exercises</li>
+
               </ul>
 
 {/* GET PACKAGE */}
@@ -195,10 +197,11 @@ function Subscription() {
               </div>
 
               <ul>
-                <li>Access to old tutorials</li>
-                <li>New videos as they are uploaded</li>
-                <li>Programming lessons</li>
-                <li>Project tutorials</li>
+                  <li>Step-by-step video tutorials</li>
+                  <li>Continuous access to videos from the basics to arrays</li>
+                  <li>Challenges and practice exercises</li>
+                  <li>Access to new videos as they are uploaded</li>
+
               </ul>
 
 {/* SUBSCRIBE */}

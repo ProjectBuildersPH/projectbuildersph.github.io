@@ -1,0 +1,88 @@
+/* =========================================================
+   BUSINESS LANDING PAGE
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.business-landing-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #f7f9f7;
+
+  color: #17231c;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+
+/* =========================================================
+   PROJECTS SECTION
+   ========================================================= */
+
+.business-projects-section {
+  width: 100%;
+
+  padding: 90px 20px 100px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   PROJECT WRAPPER
+   ========================================================= */
+
+.business-project-wrapper {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+
+/*
+   Remove the extra page spacing/background from
+   HRManagementSystemJava so it fits inside this page.
+*/
+
+.business-project-wrapper .hr-management-page {
+  min-height: auto;
+
+  padding: 0;
+
+  background: transparent;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .business-projects-section {
+    padding: 70px 15px 80px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .business-projects-section {
+    padding: 60px 10px 70px;
+  }
+
+}

@@ -24,22 +24,6 @@ const roadmapData = [
             title: "What is Python?",
             video: "https://www.youtube.com/embed/rfscVS0vtbw",
           },
-          {
-            title: "History of Python",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
-          },
-          {
-            title: "Where Python is used",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
-          },
-          {
-            title: "Installing Python",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
-          },
-          {
-            title: "Your first Python program",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
-          },
         ],
 
         code: `print("Hello, Python!")
@@ -61,27 +45,27 @@ print("Welcome to ProjectBuildersPH")`,
         concepts: [
           {
             title: "Variables",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/ME4GlkYbjnk",
           },
           {
             title: "Integers",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/npP2l3mpYOo",
           },
           {
             title: "Floats",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/6XKX_DHo-ds",
           },
           {
             title: "Strings",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/5eRaYQXfSzA",
           },
           {
             title: "Booleans",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/T8Bq-uRPcj8",
           },
           {
             title: "None",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/NfFlp-43BAs",
           },
         ],
 
@@ -110,23 +94,19 @@ print(student)`,
         concepts: [
           {
             title: "print()",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/ACet0u7_n3k",
           },
           {
             title: "input()",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
-          },
-          {
-            title: "User input",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/HD173ymBLWw",
           },
           {
             title: "Type conversion",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/tFn6Zp4eI8g",
           },
           {
             title: "Formatted output",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/QBPpuhAFA-8",
           },
         ],
 
@@ -151,23 +131,23 @@ print("You are", age, "years old")`,
         concepts: [
           {
             title: "Arithmetic operators",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/_B5PP21iQHA",
           },
           {
             title: "Assignment operators",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/31Q10d8UjJs",
           },
           {
             title: "Comparison operators",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/SDKWXJZWawk",
           },
           {
             title: "Logical operators",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/gwjTA-NxSIQ",
           },
           {
             title: "Membership operators",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/S2eGEm3vsCk",
           },
         ],
 
@@ -194,24 +174,21 @@ print(a > 5 and b < 10)`,
         concepts: [
           {
             title: "if",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/RrOwHJmdT-4",
           },
           {
             title: "else",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/CSYMsna2OuI",
           },
           {
             title: "elif",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/C5ocLwnIu64",
           },
           {
             title: "Nested conditions",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
+            video: "https://www.youtube.com/embed/8WOhqHjx77w",
           },
-          {
-            title: "Multiple conditions",
-            video: "https://www.youtube.com/embed/rfscVS0vtbw",
-          },
+
         ],
 
         code: `score = 85

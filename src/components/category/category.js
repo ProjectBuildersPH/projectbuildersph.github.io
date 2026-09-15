@@ -16,6 +16,13 @@ const categories = [
     link: "/ecommerce",
   },
   {
+    name: "Business",
+    count: 1,
+    icon: "💼",
+    link: "/business",    
+  },
+  /*
+  {
     name: "Sports",
     count: "NOT AVAILABLE YET",
     icon: "🏆",
@@ -60,11 +67,9 @@ const categories = [
     count: "NOT AVAILABLE YET",
     icon: "👤",
   },
-  {
-    name: "Business",
-    count: "NOT AVAILABLE YET",
-    icon: "💼",
-  },
+
+ */
+
 ];
 
 function Category() {

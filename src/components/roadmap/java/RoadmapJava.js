@@ -358,7 +358,7 @@ for (int i = 0; i < numbers.length; i++) {
           },
           {
             title: "Length",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/WxZ0sh5f_Xo",
           },
           {
             title: "Concatenation",
@@ -370,11 +370,11 @@ for (int i = 0; i < numbers.length; i++) {
           },
           {
             title: "Substring",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/LOpOUPcv_18",
           },
           {
             title: "equals",
-            video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+            video: "https://www.youtube.com/embed/DrLMdw7PaiI",
           },
         ],
 

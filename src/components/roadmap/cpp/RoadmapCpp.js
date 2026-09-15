@@ -507,7 +507,7 @@ cout << value;`,
           },
           {
             title: "Pointer arithmetic",
-            video: "https://www.youtube.com/embed/zuegQmMdy8M",
+            video: "https://www.youtube.com/embed/RnfAmMlUz4Y",
           },
         ],
 
@@ -533,7 +533,10 @@ cout << *ptr << endl;`,
 
         concepts: [
           {
-            title: "Stack vs Heap",
+            title: "Stack",
+            video: "https://www.youtube.com/embed/Lhj5_mO-ziQ",
+          },          {
+          title: "Heap",
             video: "https://www.youtube.com/embed/_8-ht2AKyH4",
           },
           {
