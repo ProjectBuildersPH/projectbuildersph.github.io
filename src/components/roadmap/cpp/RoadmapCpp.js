@@ -294,6 +294,7 @@ else {
             title: "continue",
             video: "https://www.youtube.com/embed/KYrTaRRe-ow",
           },
+
         ],
 
         code: `for (int i = 1; i <= 5; i++) {
@@ -302,8 +303,31 @@ else {
 
         video: "https://www.youtube.com/embed/Gl2P2xKk2gE",
       },
+
+
+            {
+        id: "problems",
+        title: "Loops, Conditional & Arithmetic",
+        difficulty: "Beginner",
+        duration: "30 min",
+
+        description:
+          "Learn how loops allow programs to repeat instructions efficiently.",
+
+        concepts: [
+          {
+            title: "Rotate Number Clockwise",
+            video: "https://www.youtube.com/embed/5hFPiTngXa8",
+          },
+
+        ],
+      },
+
     ],
   },
+
+
+  
 
   {
     id: 2,
