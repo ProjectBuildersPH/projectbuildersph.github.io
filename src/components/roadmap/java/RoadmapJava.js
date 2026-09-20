@@ -539,8 +539,54 @@ System.out.println(
 
         video: "https://www.youtube.com/embed/GoXwIVyNvX0",
       },
+
+      {
+        id: "Practice",
+        title: "Practice",
+        difficulty: "Intermediate",
+        duration: "35 min",
+
+        description:
+          "Store information using key-value pairs and learn how HashMap provides fast data lookup.",
+
+        concepts: [
+          {
+            title: "Find the Largest Number",
+            video: "https://www.youtube.com/embed/QSLE582RIOw",
+          },
+          {
+            title: "Finding Smallest Number",
+            video: "https://www.youtube.com/embed/XjMiQQMZ6CY",
+          },
+          {
+            title: "Count Even Number",
+            video: "https://www.youtube.com/embed/Kw8EUC80f-g",
+          },
+
+        ],
+
+        code: `import java.util.HashMap;
+
+HashMap<String, Double> discount =
+    new HashMap<>();
+
+discount.put("Student", 0.20);
+discount.put("Senior", 0.15);
+discount.put("Regular", 0.00);
+
+System.out.println(
+    discount.get("Student")
+);`,
+
+        video: "https://www.youtube.com/embed/GoXwIVyNvX0",
+      },
+      
+
     ],
   },
+
+
+  
 
   {
     id: 3,

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./portfolio.css";
 
 import revivePaint from "../../assets/revivepaint.png";
+import ShopEase from "../../assets/ShopEase.png";
 
 const projects = [
   {
@@ -25,32 +26,30 @@ const projects = [
       "https://revivepaint.co",
   },
 
-  /*
-  ========================================
-  ADD YOUR NEXT PROJECT HERE
-
   {
     number: "02",
-    name: "Next Project",
+    name: "ShopEase Online Store",
     category: "WEB DEVELOPMENT",
 
     description:
-      "Your project description here.",
+      "A responsive e-commerce website that allows users to browse products by category, search for items, manage their cart and wishlist, apply discount coupons, complete checkout, and receive order confirmation. The project includes separate category pages for clothing, shoes, electronics, and accessories with interactive JavaScript functionality and responsive design.",
 
     technologies: [
-      "React",
-      "JavaScript",
-      "CSS",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "LocalStorage",
+  "Responsive Web Design",
     ],
 
-    image: yourImage,
+    image: ShopEase,
 
     liveDemo:
-      "https://your-project.com/",
+      "https://projectbuildersecommerce.netlify.app/",
   },
 
-  ========================================
-  */
+
+ 
 ];
 
 function Portfolio() {

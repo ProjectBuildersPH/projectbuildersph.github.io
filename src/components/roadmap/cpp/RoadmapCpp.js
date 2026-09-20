@@ -561,23 +561,19 @@ cout << *ptr << endl;`,
             video: "https://www.youtube.com/embed/Lhj5_mO-ziQ",
           },          {
           title: "Heap",
-            video: "https://www.youtube.com/embed/_8-ht2AKyH4",
+            video: "https://www.youtube.com/embed/EMsKmPI0n0w",
           },
           {
             title: "new",
-            video: "https://www.youtube.com/embed/_8-ht2AKyH4",
+            video: "https://www.youtube.com/embed/naeloSxUwBU",
           },
           {
             title: "delete",
-            video: "https://www.youtube.com/embed/_8-ht2AKyH4",
+            video: "https://www.youtube.com/embed/SU632Azxz6Q",
           },
           {
             title: "Dynamic arrays",
-            video: "https://www.youtube.com/embed/_8-ht2AKyH4",
-          },
-          {
-            title: "Memory leaks",
-            video: "https://www.youtube.com/embed/_8-ht2AKyH4",
+            video: "https://www.youtube.com/embed/aOwENRz2Nag",
           },
         ],
 
@@ -614,11 +610,11 @@ delete number;`,
         concepts: [
           {
             title: "vector",
-            video: "https://www.youtube.com/embed/RZU-zLF9lD4",
+            video: "https://www.youtube.com/embed/Q4GHWglZvAs",
           },
           {
             title: "map",
-            video: "https://www.youtube.com/embed/RZU-zLF9lD4",
+            video: "https://www.youtube.com/embed/4a-RLyq300A",
           },
           {
             title: "set",

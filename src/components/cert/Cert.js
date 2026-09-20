@@ -15,6 +15,9 @@ import cert11 from "../../assets/cert/netasp.png";
 import cert12 from "../../assets/cert/razorpages.png";
 import cert13 from "../../assets/cert/sad.png";
 import cert14 from "../../assets/cert/SHARp.png";
+import cert15 from "../../assets/cert/1.jpg";
+import cert16 from "../../assets/cert/111.jpg";
+import cert17 from "../../assets/cert/1111.jpg";
 
 /* ========================================
    CERTIFICATE LIST
@@ -35,6 +38,9 @@ const certificates = [
   cert12,
   cert13,
   cert14,
+  cert15,
+  cert16,
+  cert17,
 ];
 
 /* ========================================
@@ -46,10 +52,14 @@ function Cert() {
   const [selectedCert, setSelectedCert] = useState(null);
 
   /* ========================================
-     TOTAL SLIDES
+     CERTIFICATES PER SLIDE
   ======================================== */
 
-  const totalSlides = Math.ceil(certificates.length / 2);
+  const certificatesPerSlide = 4;
+
+  const totalSlides = Math.ceil(
+    certificates.length / certificatesPerSlide
+  );
 
   /* ========================================
      AUTOMATIC SLIDE CHANGE
@@ -68,14 +78,15 @@ function Cert() {
   }, [totalSlides]);
 
   /* ========================================
-     CURRENT TWO CERTIFICATES
+     CURRENT FOUR CERTIFICATES
   ======================================== */
 
-  const startIndex = currentSlide * 2;
+  const startIndex =
+    currentSlide * certificatesPerSlide;
 
   const visibleCertificates = certificates.slice(
     startIndex,
-    startIndex + 2
+    startIndex + certificatesPerSlide
   );
 
   /* ========================================
@@ -90,12 +101,20 @@ function Cert() {
     };
 
     if (selectedCert) {
-      document.addEventListener("keydown", handleKeyDown);
+      document.addEventListener(
+        "keydown",
+        handleKeyDown
+      );
+
       document.body.style.overflow = "hidden";
     }
 
     return () => {
-      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener(
+        "keydown",
+        handleKeyDown
+      );
+
       document.body.style.overflow = "";
     };
   }, [selectedCert]);
@@ -128,8 +147,8 @@ function Cert() {
         </h2>
 
         <p>
-          Continuous learning is part of building better
-          skills, knowledge, and solutions.
+          Continuous learning is part of building
+          better skills, knowledge, and solutions.
         </p>
 
       </div>
@@ -148,7 +167,7 @@ function Cert() {
           return (
             <button
               className="cert-card"
-              key={cert}
+              key={`${cert}-${certificateNumber}`}
               type="button"
               onClick={() => setSelectedCert(cert)}
               aria-label={`View certificate ${certificateNumber}`}
@@ -170,7 +189,10 @@ function Cert() {
       ======================================== */}
 
       {totalSlides > 1 && (
-        <div className="cert-indicators">
+        <div
+          className="cert-indicators"
+          aria-label="Certificate slides"
+        >
 
           {Array.from(
             { length: totalSlides },
