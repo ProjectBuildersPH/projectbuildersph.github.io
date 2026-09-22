@@ -307,7 +307,7 @@ else {
 
             {
         id: "problems",
-        title: "Loops, Conditional & Arithmetic",
+        title: "Practice",
         difficulty: "Beginner",
         duration: "30 min",
 
@@ -318,6 +318,18 @@ else {
           {
             title: "Rotate Number Clockwise",
             video: "https://www.youtube.com/embed/5hFPiTngXa8",
+          },
+          {
+            title: "Remove Middle Number",
+            video: "https://www.youtube.com/embed/O5xBXqB41mg",
+          },
+          {
+            title: "Add First and Last Number",
+            video: "https://www.youtube.com/embed/vqgMzThDKfo",
+          },
+          {
+            title: "User Password Validation",
+            video: "https://www.youtube.com/embed/KfLaiN1C4y8",
           },
 
         ],
@@ -382,6 +394,32 @@ for (int i = 0; i < 5; i++) {
 }`,
 
         video: "https://www.youtube.com/embed/2D0bSp2bK2Q",
+      },
+
+      {
+        id: "problems",
+        title: "Practice",
+        difficulty: "Beginner",
+        duration: "30 min",
+
+        description:
+          "Learn how loops allow programs to repeat instructions efficiently.",
+
+        concepts: [
+          {
+            title: "Adding Indexes",
+            video: "https://www.youtube.com/embed/n3ghoYJZ7sk",
+          },
+          {
+            title: "Number Rotation",
+            video: "https://www.youtube.com/embed/EepnPhjM4_c",
+          },
+          {
+            title: "Swap Numbers",
+            video: "https://www.youtube.com/embed/i59TVYzJJJc",
+          },
+
+        ],
       },
 
       {
