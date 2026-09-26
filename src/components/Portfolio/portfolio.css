@@ -1,20 +1,16 @@
-/* ========================================
+ /* ========================================
    PORTFOLIO SECTION
 ======================================== */
 
 .portfolio-section {
   width: 100%;
-
-  padding: 90px 25px;
-
+  padding: 100px 25px;
   background: #f7f8f4;
 }
 
 .portfolio-container {
   width: 100%;
-
-  max-width: 1050px;
-
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -25,27 +21,20 @@
 
 .portfolio-header {
   display: flex;
-
   align-items: flex-end;
-
   justify-content: space-between;
-
-  gap: 30px;
-
-  margin-bottom: 40px;
+  gap: 40px;
+  margin-bottom: 45px;
 }
 
 .portfolio-label {
   display: block;
-
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 
   color: #79c936;
 
   font-size: 11px;
-
   font-weight: 900;
-
   letter-spacing: 2px;
 }
 
@@ -54,11 +43,9 @@
 
   color: #111111;
 
-  font-size: 52px;
-
-  line-height: 1;
-
-  letter-spacing: -3px;
+  font-size: 58px;
+  line-height: 0.95;
+  letter-spacing: -4px;
 
   font-weight: 900;
 }
@@ -70,72 +57,124 @@
 .portfolio-header p {
   max-width: 500px;
 
-  margin: 15px 0 0;
+  margin: 18px 0 0;
 
   color: #777777;
 
   font-size: 14px;
-
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 
 /* ========================================
-   COUNTER
+   HEADER NAVIGATION
 ======================================== */
 
-.portfolio-counter {
+.portfolio-header-navigation {
   display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
+.portfolio-header-navigation button {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #111111;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.portfolio-header-navigation button:hover {
+  background: #79c936;
+  border-color: #79c936;
+
+  transform: translateY(-3px);
+}
+
+.portfolio-page-count {
+  display: flex;
   align-items: baseline;
 
   gap: 4px;
 
-  white-space: nowrap;
+  min-width: 55px;
 }
 
-.portfolio-counter strong {
+.portfolio-page-count strong {
   color: #111111;
 
-  font-size: 38px;
-
+  font-size: 26px;
   font-weight: 900;
 
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 }
 
-.portfolio-counter span {
+.portfolio-page-count span {
   color: #79c936;
 
-  font-size: 14px;
-
+  font-size: 11px;
   font-weight: 800;
 }
 
 
 /* ========================================
-   SHOWCASE
+   PROJECT GRID
 ======================================== */
 
-.portfolio-showcase {
+.portfolio-grid {
   display: grid;
 
-  grid-template-columns:
-    1.35fr
-    0.65fr;
+  grid-template-columns: repeat(2, 1fr);
 
-  min-height: 450px;
+  gap: 25px;
+}
+
+
+/* ========================================
+   PROJECT CARD
+======================================== */
+
+.portfolio-card {
+  display: grid;
+
+  grid-template-columns: 45% 55%;
+
+  min-height: 360px;
 
   overflow: hidden;
+
+  border: 1px solid #e4e7e1;
 
   border-radius: 24px;
 
   background: #ffffff;
 
-  border: 1px solid #e5e8e2;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
 
   box-shadow:
-    0 25px 60px rgba(0, 0, 0, 0.08);
+    0 30px 70px rgba(0, 0, 0, 0.10);
 }
 
 
@@ -143,66 +182,88 @@
    IMAGE
 ======================================== */
 
-.portfolio-image-wrapper {
+.portfolio-card-image {
   position: relative;
 
-  padding: 14px;
+  width: 100%;
+  height: 100%;
+
+  min-height: 360px;
+
+  padding: 10px;
+
+  overflow: hidden;
 
   background: #111111;
 }
 
-.portfolio-image {
+.portfolio-card-image img {
   width: 100%;
-
-  height: 100%;
-
-  min-height: 420px;
-
-  overflow: hidden;
-
-  border-radius: 15px;
-
-  background: #222222;
-}
-
-.portfolio-image img {
-  width: 100%;
-
   height: 100%;
 
   display: block;
 
   object-fit: cover;
 
+  border-radius: 15px;
+
   transition: transform 0.5s ease;
 }
 
-.portfolio-showcase:hover
-.portfolio-image img {
-  transform: scale(1.02);
+.portfolio-card:hover
+.portfolio-card-image img {
+  transform: scale(1.04);
 }
 
 
 /* ========================================
-   IMAGE LABEL
+   PROJECT NUMBER
 ======================================== */
 
-.portfolio-image-label {
+.portfolio-card-number {
   position: absolute;
 
-  left: 30px;
+  top: 22px;
+  left: 22px;
 
-  bottom: 28px;
+  width: 40px;
+  height: 40px;
 
-  padding: 7px 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  border-radius: 20px;
+  border-radius: 50%;
 
   background: #79c936;
 
   color: #111111;
 
-  font-size: 9px;
+  font-size: 11px;
+
+  font-weight: 900;
+}
+
+
+/* ========================================
+   CATEGORY
+======================================== */
+
+.portfolio-card-category {
+  position: absolute;
+
+  left: 22px;
+  bottom: 22px;
+
+  padding: 7px 10px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: #111111;
+
+  font-size: 8px;
 
   font-weight: 900;
 
@@ -211,79 +272,99 @@
 
 
 /* ========================================
-   DETAILS
+   CARD CONTENT
 ======================================== */
 
-.portfolio-details {
+.portfolio-card-content {
   display: flex;
 
   flex-direction: column;
 
   justify-content: center;
 
-  padding: 45px 35px;
+  min-width: 0;
+
+  padding: 28px;
 }
 
 
 /* ========================================
-   META
+   CARD HEADING
 ======================================== */
 
-.portfolio-meta {
+.portfolio-card-heading {
   display: flex;
 
-  align-items: center;
+  align-items: flex-start;
 
-  gap: 9px;
+  justify-content: space-between;
 
-  margin-bottom: 15px;
+  gap: 12px;
 
-  color: #4c941b;
+  margin-bottom: 14px;
+}
 
-  font-size: 9px;
+.portfolio-card-small {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #79c936;
+
+  font-size: 8px;
 
   font-weight: 900;
 
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
-.portfolio-project-number {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  width: 30px;
-
-  height: 30px;
-
-  border-radius: 50%;
-
-  background: #eaf7df;
-
-  color: #5da822;
-
-  font-size: 10px;
-}
-
-
-/* ========================================
-   TITLE
-======================================== */
-
-.portfolio-details h3 {
+.portfolio-card-heading h3 {
   margin: 0;
 
   color: #111111;
 
-  font-size: 38px;
+  font-size: 25px;
 
-  line-height: 1;
+  line-height: 1.05;
 
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
 
   font-weight: 900;
+}
+
+
+/* ========================================
+   CARD ARROW
+======================================== */
+
+.portfolio-card-arrow {
+  flex-shrink: 0;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f0f6eb;
+
+  color: #111111;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  transition: 0.25s ease;
+}
+
+.portfolio-card-arrow:hover {
+  background: #79c936;
+
+  transform: rotate(45deg);
 }
 
 
@@ -291,14 +372,14 @@
    DESCRIPTION
 ======================================== */
 
-.portfolio-description {
-  margin: 18px 0;
+.portfolio-card-description {
+  margin: 0 0 17px;
 
   color: #737373;
 
-  font-size: 13px;
+  font-size: 11px;
 
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 
@@ -306,18 +387,18 @@
    TECHNOLOGIES
 ======================================== */
 
-.portfolio-tech {
+.portfolio-card-tech {
   display: flex;
 
   flex-wrap: wrap;
 
-  gap: 7px;
+  gap: 5px;
 
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-.portfolio-tech span {
-  padding: 6px 10px;
+.portfolio-card-tech span {
+  padding: 5px 8px;
 
   border-radius: 20px;
 
@@ -325,24 +406,18 @@
 
   color: #527440;
 
-  font-size: 9px;
+  font-size: 8px;
 
   font-weight: 800;
 }
 
 
 /* ========================================
-   ACTIONS
+   FOOTER
 ======================================== */
 
-.portfolio-actions {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 15px;
+.portfolio-card-footer {
+  margin-top: 5px;
 }
 
 
@@ -355,9 +430,9 @@
 
   align-items: center;
 
-  gap: 9px;
+  gap: 7px;
 
-  padding: 12px 18px;
+  padding: 10px 14px;
 
   border-radius: 25px;
 
@@ -367,7 +442,7 @@
 
   text-decoration: none;
 
-  font-size: 11px;
+  font-size: 9px;
 
   font-weight: 900;
 
@@ -383,89 +458,66 @@
 }
 
 .portfolio-live span {
-  font-size: 15px;
+  font-size: 13px;
 }
 
 
 /* ========================================
-   NAVIGATION
+   BOTTOM NAVIGATION
 ======================================== */
 
-.portfolio-navigation {
-  display: flex;
-
-  gap: 7px;
-}
-
-.portfolio-navigation button {
-  width: 38px;
-
-  height: 38px;
-
+.portfolio-bottom {
   display: flex;
 
   align-items: center;
 
-  justify-content: center;
-
-  border: 1px solid #dddddd;
-
-  border-radius: 50%;
-
-  background: #ffffff;
-
-  color: #111111;
-
-  font-size: 16px;
-
-  cursor: pointer;
-
-  transition: 0.25s ease;
-}
-
-.portfolio-navigation button:hover {
-  background: #79c936;
-
-  border-color: #79c936;
-
-  transform: translateY(-2px);
-}
-
-
-/* ========================================
-   INDICATORS
-======================================== */
-
-.portfolio-indicators {
-  display: flex;
-
-  justify-content: center;
-
-  gap: 8px;
+  justify-content: space-between;
 
   margin-top: 25px;
 }
 
-.portfolio-indicators button {
-  border: none;
-
-  padding: 5px 8px;
-
-  background: transparent;
-
-  color: #aaa;
+.portfolio-bottom > span {
+  color: #999999;
 
   font-size: 10px;
 
-  font-weight: 900;
+  font-weight: 700;
+}
+
+
+/* ========================================
+   PROGRESS
+======================================== */
+
+.portfolio-progress {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.portfolio-progress button {
+  width: 25px;
+  height: 4px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #d9ddd5;
 
   cursor: pointer;
 
   transition: 0.25s ease;
 }
 
-.portfolio-indicators button.active {
-  color: #79c936;
+.portfolio-progress button.active {
+  width: 45px;
+
+  background: #79c936;
 }
 
 
@@ -473,20 +525,68 @@
    TABLET
 ======================================== */
 
-@media (max-width: 850px) {
+@media (max-width: 1050px) {
 
-  .portfolio-showcase {
+  .portfolio-grid {
     grid-template-columns: 1fr;
   }
 
-  .portfolio-image {
-    min-height: 350px;
+  .portfolio-card {
+    grid-template-columns: 42% 58%;
   }
 
-  .portfolio-details {
-    padding: 35px;
+  .portfolio-card-image {
+    min-height: 330px;
   }
 
+  .portfolio-card-content {
+    padding: 30px;
+  }
+
+  .portfolio-card-heading h3 {
+    font-size: 30px;
+  }
+
+  .portfolio-card-description {
+    font-size: 12px;
+  }
+}
+
+
+/* ========================================
+   TABLET SMALL
+======================================== */
+
+@media (max-width: 750px) {
+
+  .portfolio-section {
+    padding: 80px 20px;
+  }
+
+  .portfolio-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .portfolio-header h2 {
+    font-size: 48px;
+  }
+
+  .portfolio-card {
+    grid-template-columns: 40% 60%;
+  }
+
+  .portfolio-card-image {
+    min-height: 300px;
+  }
+
+  .portfolio-card-content {
+    padding: 24px;
+  }
+
+  .portfolio-card-heading h3 {
+    font-size: 25px;
+  }
 }
 
 
@@ -501,39 +601,84 @@
   }
 
   .portfolio-header {
-    align-items: flex-start;
+    gap: 25px;
 
-    flex-direction: column;
-
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 
   .portfolio-header h2 {
     font-size: 40px;
+    letter-spacing: -2.5px;
   }
 
-  .portfolio-counter {
-    display: none;
+  .portfolio-header p {
+    font-size: 13px;
   }
 
-  .portfolio-showcase {
-    border-radius: 18px;
+  .portfolio-header-navigation {
+    width: 100%;
+
+    justify-content: space-between;
   }
 
-  .portfolio-image {
+  /*
+    On mobile, switch back to
+    image above content.
+  */
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .portfolio-card {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .portfolio-card-image {
+    height: 240px;
+
     min-height: 240px;
   }
 
-  .portfolio-details {
-    padding: 28px 22px;
+  .portfolio-card-content {
+    padding: 24px 20px;
   }
 
-  .portfolio-details h3 {
-    font-size: 32px;
+  .portfolio-card-heading h3 {
+    font-size: 27px;
   }
 
-  .portfolio-actions {
+  .portfolio-card-description {
+    font-size: 12px;
+  }
+
+  .portfolio-bottom {
     align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 400px) {
+
+  .portfolio-card-image {
+    height: 210px;
+
+    min-height: 210px;
   }
 
+  .portfolio-card-heading h3 {
+    font-size: 24px;
+  }
 }

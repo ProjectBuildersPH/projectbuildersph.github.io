@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import "./sellingproducts.css";
 import { useNavigate } from "react-router-dom";
 
@@ -16,6 +16,7 @@ const products = [
     level: "BEGINNER",
     popular: true,
   },
+
   {
     id: 2,
     title: "File Organizer",
@@ -30,7 +31,7 @@ const products = [
     popular: true,
   },
 
-    {
+  {
     id: 3,
     title: "OOP Bank System",
     category: "Java Console",
@@ -43,8 +44,6 @@ const products = [
     level: "Intermediate",
     popular: true,
   },
-
-  
 ];
 
 function SellingProducts() {
@@ -53,11 +52,39 @@ function SellingProducts() {
   const [search, setSearch] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
 
+  /*
+    Desktop/tablet = 2 cards
+    Mobile = 1 card
+  */
+  const [visibleProducts, setVisibleProducts] = useState(
+    window.innerWidth <= 700 ? 1 : 2
+  );
+
   const navigate = useNavigate();
 
-  const visibleProducts = 4;
+  /* ========================================
+     RESPONSIVE CAROUSEL
+  ======================================== */
 
-  // Filter products based on search
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth <= 700;
+
+      setVisibleProducts(mobile ? 1 : 2);
+      setCurrentIndex(0);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  /* ========================================
+     FILTER PRODUCTS
+  ======================================== */
+
   const filteredProducts = useMemo(() => {
     const query = search.trim().toLowerCase();
 
@@ -76,7 +103,10 @@ function SellingProducts() {
     });
   }, [search]);
 
-  // Autocomplete suggestions
+  /* ========================================
+     SEARCH SUGGESTIONS
+  ======================================== */
+
   const suggestions = useMemo(() => {
     const query = search.trim().toLowerCase();
 
@@ -91,30 +121,54 @@ function SellingProducts() {
       .slice(0, 5);
   }, [search]);
 
-  // Reset carousel when search changes
-  React.useEffect(() => {
+  /* ========================================
+     RESET CAROUSEL WHEN SEARCH CHANGES
+  ======================================== */
+
+  useEffect(() => {
     setCurrentIndex(0);
   }, [search]);
 
+  /* ========================================
+     MAX CAROUSEL INDEX
+  ======================================== */
+
+  const maxIndex = Math.max(
+    filteredProducts.length - visibleProducts,
+    0
+  );
+
+  /* ========================================
+     NEXT PRODUCTS
+  ======================================== */
+
   const nextProducts = () => {
-    if (filteredProducts.length <= visibleProducts) return;
+    if (maxIndex === 0) {
+      return;
+    }
 
     setCurrentIndex((prev) =>
-      prev + 1 >= filteredProducts.length - visibleProducts + 1
-        ? 0
-        : prev + 1
+      prev >= maxIndex ? 0 : prev + 1
     );
   };
+
+  /* ========================================
+     PREVIOUS PRODUCTS
+  ======================================== */
 
   const previousProducts = () => {
-    if (filteredProducts.length <= visibleProducts) return;
+    if (maxIndex === 0) {
+      return;
+    }
 
     setCurrentIndex((prev) =>
-      prev === 0
-        ? filteredProducts.length - visibleProducts
-        : prev - 1
+      prev <= 0 ? maxIndex : prev - 1
     );
   };
+
+  /* ========================================
+     SEARCH SUGGESTION
+  ======================================== */
 
   const handleSuggestionClick = (product) => {
     setSearch(product.title);
@@ -122,10 +176,37 @@ function SellingProducts() {
     setCurrentIndex(0);
   };
 
+  /* ========================================
+     CLEAR SEARCH
+  ======================================== */
+
   const clearSearch = () => {
     setSearch("");
     setShowSuggestions(false);
     setCurrentIndex(0);
+  };
+
+  /* ========================================
+     OPEN PRODUCT
+  ======================================== */
+
+  const handleProductClick = (product) => {
+    if (product.id === 1) {
+      navigate("/character-search");
+      return;
+    }
+
+    if (product.id === 2) {
+      navigate("/file-organizer");
+      return;
+    }
+
+    if (product.id === 3) {
+      navigate("/oop-bank");
+      return;
+    }
+
+    setSelectedProduct(product);
   };
 
   return (
@@ -135,26 +216,29 @@ function SellingProducts() {
 
         <section className="selling-section">
 
+          {/* ======================================
+              HEADER
+          ====================================== */}
+
           <div className="selling-heading">
 
-            <div>
+            <div className="selling-heading-text">
+
               <span className="selling-label">
-                TOP SALES 
+                TOP SALES
               </span>
-              {/* AUTOCOMPLETE 
-              <h2>
-                Top picks for
-                <strong> builders</strong>
-              </h2>
-              */}
 
               <h2>
-                Essential Training for
-                <strong> builders</strong>
+                Essential Training for{" "}
+                <strong>builders</strong>
               </h2>
+
             </div>
 
-            {/* SEARCH */}
+            {/* ======================================
+                SEARCH
+            ====================================== */}
+
             <div className="selling-search-wrapper">
 
               <div className="selling-search">
@@ -191,52 +275,65 @@ function SellingProducts() {
 
               </div>
 
-              {/* AUTOCOMPLETE */}
-              {showSuggestions && suggestions.length > 0 && (
+              {/* ======================================
+                  SEARCH SUGGESTIONS
+              ====================================== */}
 
-                <div className="search-suggestions">
+              {showSuggestions &&
+                suggestions.length > 0 && (
 
-                  {suggestions.map((product) => (
+                  <div className="search-suggestions">
 
-                    <button
-                      type="button"
-                      key={product.id}
-                      className="search-suggestion"
-                      onClick={() => handleSuggestionClick(product)}
-                    >
+                    {suggestions.map((product) => (
 
-                      <div className="suggestion-image">
-                        <img
-                          src={product.image}
-                          alt=""
-                        />
-                      </div>
+                      <button
+                        type="button"
+                        key={product.id}
+                        className="search-suggestion"
+                        onClick={() =>
+                          handleSuggestionClick(product)
+                        }
+                      >
 
-                      <div className="suggestion-info">
+                        <div className="suggestion-image">
 
-                        <strong>
-                          {product.title}
-                        </strong>
+                          <img
+                            src={product.image}
+                            alt=""
+                          />
 
-                        <span>
-                          {product.category} · {product.level}
+                        </div>
+
+                        <div className="suggestion-info">
+
+                          <strong>
+                            {product.title}
+                          </strong>
+
+                          <span>
+                            {product.category} ·{" "}
+                            {product.level}
+                          </span>
+
+                        </div>
+
+                        <span className="suggestion-arrow">
+                          →
                         </span>
 
-                      </div>
+                      </button>
 
-                      <span className="suggestion-arrow">
-                        →
-                      </span>
+                    ))}
 
-                    </button>
+                  </div>
 
-                  ))}
-
-                </div>
-
-              )}
+                )}
 
             </div>
+
+            {/* ======================================
+                CAROUSEL BUTTONS
+            ====================================== */}
 
             <div className="selling-arrows">
 
@@ -244,7 +341,7 @@ function SellingProducts() {
                 type="button"
                 onClick={previousProducts}
                 aria-label="Previous products"
-                disabled={filteredProducts.length <= visibleProducts}
+                disabled={maxIndex === 0}
               >
                 ‹
               </button>
@@ -253,7 +350,7 @@ function SellingProducts() {
                 type="button"
                 onClick={nextProducts}
                 aria-label="Next products"
-                disabled={filteredProducts.length <= visibleProducts}
+                disabled={maxIndex === 0}
               >
                 ›
               </button>
@@ -262,19 +359,31 @@ function SellingProducts() {
 
           </div>
 
-          {/* SEARCH RESULT COUNT */}
+          {/* ======================================
+              SEARCH RESULTS
+          ====================================== */}
 
           {search && (
             <div className="search-results-info">
+
               {filteredProducts.length}{" "}
+
               {filteredProducts.length === 1
                 ? "project"
                 : "projects"}{" "}
-              found for <strong>"{search}"</strong>
+
+              found for{" "}
+
+              <strong>
+                "{search}"
+              </strong>
+
             </div>
           )}
 
-          {/* CAROUSEL */}
+          {/* ======================================
+              CAROUSEL
+          ====================================== */}
 
           <div className="selling-carousel">
 
@@ -283,36 +392,21 @@ function SellingProducts() {
               <div
                 className="selling-track"
                 style={{
-  transform: `translateX(calc(-${currentIndex} * var(--slide-width)))`,
-}}
+                  transform: `translateX(calc(-${currentIndex} * var(--slide-width)))`,
+                }}
               >
 
                 {filteredProducts.map((product) => (
 
-<article
-  className="selling-card"
-  key={product.id}
-  onClick={() => {
-   
-    if (product.id === 1) {
-      navigate("/character-search");
-      return;
-    }
+                  <article
+                    className="selling-card"
+                    key={product.id}
+                    onClick={() =>
+                      handleProductClick(product)
+                    }
+                  >
 
-    if (product.id === 2) {
-    navigate("/file-organizer");
-    return;
-  }
-
-      if (product.id === 3) {
-    navigate("/oop-bank");
-    return;
-  }
-
-
-    setSelectedProduct(product);
-  }}
->
+                    {/* IMAGE */}
 
                     <div className="selling-image">
 
@@ -333,6 +427,8 @@ function SellingProducts() {
 
                     </div>
 
+                    {/* CARD BODY */}
+
                     <div className="selling-card-body">
 
                       <span className="selling-category">
@@ -344,12 +440,17 @@ function SellingProducts() {
                       </h3>
 
                       <p className="selling-creator">
-                        By: <strong>{product.creator}</strong>
+                        By:{" "}
+                        <strong>
+                          {product.creator}
+                        </strong>
                       </p>
 
                       <p className="selling-description">
                         {product.description}
                       </p>
+
+                      {/* FOOTER */}
 
                       <div className="selling-card-footer">
 
@@ -373,16 +474,23 @@ function SellingProducts() {
 
             ) : (
 
+              /* ==================================
+                 EMPTY STATE
+              ================================== */
+
               <div className="no-search-results">
 
-                <span>⌕</span>
+                <span>
+                  ⌕
+                </span>
 
                 <h3>
                   No projects found
                 </h3>
 
                 <p>
-                  Try searching for Python, React, PHP, Java, or C++.
+                  Try searching for Python, React,
+                  PHP, Java, or C++.
                 </p>
 
                 <button
@@ -402,7 +510,9 @@ function SellingProducts() {
 
       </div>
 
-      {/* MODAL */}
+      {/* ========================================
+          MODAL
+      ======================================== */}
 
       {selectedProduct && (
 
@@ -413,13 +523,17 @@ function SellingProducts() {
 
           <div
             className="selling-modal-content"
-            onClick={(event) => event.stopPropagation()}
+            onClick={(event) =>
+              event.stopPropagation()
+            }
           >
 
             <button
               type="button"
               className="selling-modal-close"
-              onClick={() => setSelectedProduct(null)}
+              onClick={() =>
+                setSelectedProduct(null)
+              }
               aria-label="Close"
             >
               ×
@@ -467,7 +581,9 @@ function SellingProducts() {
               <button
                 type="button"
                 className="modal-start-button"
-                onClick={() => setSelectedProduct(null)}
+                onClick={() =>
+                  setSelectedProduct(null)
+                }
               >
                 Start Building →
               </button>

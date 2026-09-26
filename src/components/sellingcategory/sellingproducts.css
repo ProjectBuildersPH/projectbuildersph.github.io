@@ -8,29 +8,44 @@
 
 .selling-page {
   width: 100%;
-  background: #f4f3ef;
+  margin: 0;
+  padding: 0;
+
+  background: #f7f8f4;
   color: #111;
+
   overflow: hidden;
 }
 
+
 /* ==========================================
-   FULL WIDTH CONTAINER
+   CONTAINER
 ========================================== */
 
 .selling-container {
   width: 100%;
   margin: 0;
-  padding: 0 16px; /* small left & right margin */
+  padding: 0 35px;
 }
+
+
+/* ==========================================
+   MAIN SECTION
+========================================== */
 
 .selling-section {
   width: 100%;
-  margin-top: 15px;
-  padding: 28px 24px;
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 8px 30px rgba(0,0,0,.04);
+  margin: 0;
+
+  padding: 20px 24px 70px;
+
+  background: #ffffff;
+
+  border-radius: 0;
+
+  box-shadow: none;
 }
+
 
 /* ==========================================
    HEADER
@@ -38,26 +53,45 @@
 
 .selling-heading {
   display: flex;
+
   align-items: flex-end;
+
   justify-content: space-between;
+
   gap: 24px;
+
   margin-bottom: 24px;
+}
+
+.selling-heading-text {
+  min-width: 0;
 }
 
 .selling-label {
   display: block;
-  margin-bottom: 6px;
+
+  margin-bottom: 7px;
+
   color: #4f7f58;
+
   font-size: 10px;
+
   font-weight: 900;
+
   letter-spacing: 2px;
 }
 
 .selling-heading h2 {
   margin: 0;
+
+  color: #111;
+
   font-size: 30px;
+
   font-weight: 800;
+
   line-height: 1.1;
+
   letter-spacing: -1px;
 }
 
@@ -65,43 +99,63 @@
   color: #4f7f58;
 }
 
+
 /* ==========================================
    SEARCH
 ========================================== */
 
 .selling-search-wrapper {
   position: relative;
+
   width: 280px;
+
   margin-left: auto;
 }
 
 .selling-search {
   display: flex;
+
   align-items: center;
+
   height: 44px;
+
   padding: 0 12px;
+
   background: #f8f9f7;
+
   border: 1px solid #d8ddd8;
+
   border-radius: 8px;
-  transition: .2s;
+
+  transition: 0.2s;
 }
 
 .selling-search:focus-within {
   border-color: #4f7f58;
-  box-shadow: 0 0 0 3px rgba(79,127,88,.1);
+
+  box-shadow:
+    0 0 0 3px rgba(79, 127, 88, 0.1);
 }
 
 .search-icon {
   margin-right: 8px;
+
   font-size: 18px;
+
   color: #777;
 }
 
 .selling-search input {
   flex: 1;
+
+  min-width: 0;
+
   border: none;
+
   outline: none;
+
   background: transparent;
+
   font-size: 12px;
 }
 
@@ -111,11 +165,19 @@
 
 .search-clear {
   width: 24px;
+
   height: 24px;
+
+  flex-shrink: 0;
+
   border: none;
+
   border-radius: 50%;
+
   background: #e5e8e4;
+
   color: #555;
+
   cursor: pointer;
 }
 
@@ -123,33 +185,53 @@
   background: #d5dad5;
 }
 
+
 /* ==========================================
    SEARCH SUGGESTIONS
 ========================================== */
 
 .search-suggestions {
   position: absolute;
+
   top: calc(100% + 7px);
+
   left: 0;
+
   right: 0;
+
   z-index: 100;
+
   background: #fff;
+
   border: 1px solid #e0e4df;
+
   border-radius: 10px;
+
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0,0,0,.12);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 .search-suggestion {
   display: flex;
+
   align-items: center;
+
   gap: 10px;
+
   width: 100%;
+
   padding: 10px;
+
   border: none;
+
   border-bottom: 1px solid #eee;
+
   background: #fff;
+
   text-align: left;
+
   cursor: pointer;
 }
 
@@ -163,40 +245,54 @@
 
 .suggestion-image {
   width: 38px;
+
   height: 38px;
-  border-radius: 6px;
-  overflow: hidden;
+
   flex-shrink: 0;
+
+  border-radius: 6px;
+
+  overflow: hidden;
 }
 
 .suggestion-image img {
   width: 100%;
+
   height: 100%;
+
   object-fit: cover;
 }
 
 .suggestion-info {
   flex: 1;
+
   min-width: 0;
 }
 
 .suggestion-info strong {
   display: block;
+
   font-size: 11px;
+
   white-space: nowrap;
+
   overflow: hidden;
+
   text-overflow: ellipsis;
 }
 
 .suggestion-info span {
   font-size: 9px;
+
   color: #888;
 }
 
 .suggestion-arrow {
   color: #4f7f58;
+
   font-size: 18px;
 }
+
 
 /* ==========================================
    SEARCH RESULTS
@@ -204,7 +300,9 @@
 
 .search-results-info {
   margin: -4px 0 18px;
+
   font-size: 11px;
+
   color: #888;
 }
 
@@ -212,36 +310,62 @@
   color: #4f7f58;
 }
 
+
 /* ==========================================
    NAVIGATION
 ========================================== */
 
 .selling-arrows {
   display: flex;
+
   gap: 8px;
 }
 
 .selling-arrows button {
   width: 44px;
+
   height: 44px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
   border: 1px solid #d2d6d2;
+
   border-radius: 50%;
+
   background: #fff;
+
+  color: #111;
+
   font-size: 27px;
+
+  line-height: 1;
+
   cursor: pointer;
-  transition: .2s;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .selling-arrows button:hover:not(:disabled) {
   background: #173d25;
+
   color: #fff;
+
   transform: scale(1.05);
 }
 
 .selling-arrows button:disabled {
-  opacity: .4;
+  opacity: 0.4;
+
   cursor: not-allowed;
 }
+
 
 /* ==========================================
    CAROUSEL
@@ -249,67 +373,107 @@
 
 .selling-carousel {
   width: 100%;
+
   overflow: hidden;
+
   --slide-width: 316px;
 }
 
 .selling-track {
   display: flex;
-  transition: transform .4s ease;
+
+  width: max-content;
+
+  transition:
+    transform 0.4s ease;
+
+  will-change: transform;
 }
 
 .selling-card {
-  flex: 0 0 300px;
-  width: 300px;
+  flex: 0 0 var(--slide-width);
+
+  width: var(--slide-width);
+
   padding: 0 8px;
+
   cursor: pointer;
 }
 
+
 /* ==========================================
-   PRODUCT CARD
+   PRODUCT IMAGE
 ========================================== */
 
 .selling-image {
   position: relative;
+
   height: 185px;
+
   border-radius: 10px;
+
   overflow: hidden;
+
   background: #ddd;
 }
 
 .selling-image img {
   width: 100%;
+
   height: 100%;
+
   object-fit: cover;
-  transition: transform .4s;
+
+  transition:
+    transform 0.4s ease;
 }
 
-.selling-card:hover img {
+.selling-card:hover .selling-image img {
   transform: scale(1.05);
 }
+
+
+/* ==========================================
+   BADGES
+========================================== */
 
 .popular-badge,
 .duration-badge {
   position: absolute;
+
   padding: 6px 8px;
+
   border-radius: 5px;
+
   font-size: 10px;
+
   font-weight: 700;
 }
 
 .popular-badge {
   top: 8px;
+
   left: 8px;
+
   background: #fff;
+
   color: #173d25;
 }
 
 .duration-badge {
   right: 8px;
+
   bottom: 8px;
-  background: rgba(20,30,25,.75);
+
+  background: rgba(20, 30, 25, 0.75);
+
   color: #fff;
 }
+
+
+/* ==========================================
+   CARD BODY
+========================================== */
 
 .selling-card-body {
   padding: 12px 2px 0;
@@ -317,21 +481,31 @@
 
 .selling-category {
   display: block;
+
   margin-bottom: 6px;
+
   font-size: 10px;
+
   color: #777;
 }
 
 .selling-card h3 {
   margin: 0;
+
   min-height: 46px;
+
+  color: #111;
+
   font-size: 18px;
+
   line-height: 1.3;
 }
 
 .selling-creator {
   margin-top: 7px;
+
   font-size: 11px;
+
   color: #777;
 }
 
@@ -342,35 +516,59 @@
 
 .selling-description {
   margin-top: 10px;
+
   min-height: 52px;
-  font-size: 11px;
-  line-height: 1.55;
+
   color: #737373;
+
+  font-size: 11px;
+
+  line-height: 1.55;
+
   display: -webkit-box;
+
   -webkit-line-clamp: 3;
+
   -webkit-box-orient: vertical;
+
   overflow: hidden;
 }
 
+
+/* ==========================================
+   CARD FOOTER
+========================================== */
+
 .selling-card-footer {
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
+
   margin-top: 12px;
+
   padding-top: 10px;
+
   border-top: 1px solid #ececec;
 }
 
 .selling-level {
   font-size: 9px;
+
   font-weight: 900;
+
   letter-spacing: 1px;
 }
 
 .selling-view {
+  color: #111;
+
   font-size: 10px;
+
   font-weight: 800;
 }
+
 
 /* ==========================================
    EMPTY STATE
@@ -378,13 +576,17 @@
 
 .no-search-results {
   min-height: 260px;
+
   display: grid;
+
   place-items: center;
+
   text-align: center;
 }
 
 .no-search-results > span {
   font-size: 36px;
+
   color: #4f7f58;
 }
 
@@ -394,20 +596,30 @@
 
 .no-search-results p {
   color: #888;
+
   font-size: 11px;
 }
 
 .no-search-results button {
   margin-top: 16px;
+
   padding: 10px 16px;
+
   border: none;
+
   border-radius: 6px;
+
   background: #173d25;
+
   color: #fff;
+
   font-size: 10px;
+
   font-weight: 800;
+
   cursor: pointer;
 }
+
 
 /* ==========================================
    MODAL
@@ -415,75 +627,113 @@
 
 .selling-modal {
   position: fixed;
+
   inset: 0;
+
   z-index: 9999;
+
   display: grid;
+
   place-items: center;
+
   padding: 20px;
-  background: rgba(0,0,0,.65);
+
+  background: rgba(0, 0, 0, 0.65);
+
   backdrop-filter: blur(5px);
 }
 
 .selling-modal-content {
   position: relative;
+
   width: 100%;
+
   max-width: 850px;
+
   max-height: 90vh;
+
   display: grid;
+
   grid-template-columns: 1.1fr 1fr;
+
   overflow: hidden;
+
   background: #fff;
+
   border-radius: 14px;
 }
 
 .modal-image img {
   width: 100%;
+
   height: 100%;
+
   object-fit: cover;
 }
 
 .modal-body {
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
+
   padding: 40px;
 }
 
 .modal-body h2 {
-  font-size: 34px;
-  line-height: 1.1;
   margin: 0;
+
+  font-size: 34px;
+
+  line-height: 1.1;
 }
 
 .modal-creator {
   margin: 10px 0 18px;
+
   color: #4f7f58;
+
   font-size: 12px;
 }
 
 .modal-meta {
   display: flex;
+
   gap: 8px;
+
   margin-top: 20px;
 }
 
 .modal-meta span {
   padding: 7px 10px;
+
   background: #eef4ed;
+
   border-radius: 5px;
+
   color: #4f7f58;
+
   font-size: 9px;
+
   font-weight: 900;
 }
 
 .modal-start-button {
   align-self: flex-start;
+
   margin-top: 22px;
+
   padding: 13px 20px;
+
   border: none;
+
   border-radius: 6px;
+
   background: #173d25;
+
   color: #fff;
+
   cursor: pointer;
 }
 
@@ -493,106 +743,169 @@
 
 .selling-modal-close {
   position: absolute;
+
   top: 14px;
+
   right: 14px;
+
   width: 38px;
+
   height: 38px;
+
   border: none;
+
   border-radius: 50%;
-  background: rgba(0,0,0,.75);
+
+  background: rgba(0, 0, 0, 0.75);
+
   color: #fff;
+
   font-size: 24px;
+
   cursor: pointer;
 }
 
+
 /* ==========================================
-   RESPONSIVE
+   TABLET
 ========================================== */
 
-@media (max-width:1000px){
+@media (max-width: 1000px) {
 
-  .selling-container{
-    padding:0 12px;
+  .selling-container {
+    padding: 0 20px;
   }
 
-  .selling-card{
-    flex-basis:280px;
-    width:280px;
+  .selling-section {
+    padding: 35px 20px 60px;
   }
 
-  .selling-carousel{
-    --slide-width:296px;
-  }
-}
-
-@media (max-width:700px){
-
-  .selling-container{
-    padding:0 8px;
-  }
-
-  .selling-section{
-    padding:20px 16px;
-  }
-
-  .selling-heading{
-    flex-direction:column;
-    align-items:stretch;
-  }
-
-  .selling-heading h2{
-    font-size:26px;
-  }
-
-  .selling-search-wrapper{
-    width:100%;
-  }
-
-  .selling-card{
-    flex-basis:260px;
-    width:260px;
-  }
-
-  .selling-carousel{
-    --slide-width:276px;
-  }
-
-  .selling-modal-content{
-    grid-template-columns:1fr;
-    overflow-y:auto;
-  }
-
-  .modal-image{
-    height:220px;
-  }
-
-  .modal-body{
-    padding:24px;
+  .selling-carousel {
+    --slide-width: 296px;
   }
 }
 
-@media (max-width:450px){
 
-  .selling-container{
-    padding:0 6px;
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+  .selling-container {
+    padding: 0 12px;
   }
 
-  .selling-card{
-    flex-basis:100%;
-    width:100%;
-    padding:0;
+  .selling-section {
+    padding: 30px 16px 50px;
   }
 
-  .selling-carousel{
-    --slide-width:100%;
+  .selling-heading {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 18px;
+  }
+
+  .selling-heading h2 {
+    font-size: 26px;
+  }
+
+  .selling-search-wrapper {
+    width: 100%;
+
+    margin-left: 0;
+  }
+
+  .selling-arrows {
+    justify-content: flex-end;
+  }
+
+  /*
+    One card fills the carousel
+    on mobile.
+  */
+
+  .selling-carousel {
+    --slide-width: 100%;
+  }
+
+  .selling-card {
+    flex: 0 0 var(--slide-width);
+
+    width: var(--slide-width);
+
+    padding: 0;
+  }
+
+  .selling-image {
+    height: 210px;
+  }
+
+  .selling-card h3 {
+    font-size: 20px;
+  }
+
+  .selling-description {
+    font-size: 12px;
+  }
+
+  .selling-modal-content {
+    grid-template-columns: 1fr;
+
+    overflow-y: auto;
+  }
+
+  .modal-image {
+    height: 220px;
+  }
+
+  .modal-body {
+    padding: 24px;
   }
 }
 
-@media (prefers-reduced-motion:reduce){
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 450px) {
+
+  .selling-container {
+    padding: 0 8px;
+  }
+
+  .selling-section {
+    padding: 28px 12px 45px;
+  }
+
+  .selling-image {
+    height: 200px;
+  }
+
+  .selling-card h3 {
+    font-size: 19px;
+  }
+
+  .selling-arrows button {
+    width: 40px;
+
+    height: 40px;
+  }
+}
+
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
 
   .selling-track,
   .selling-image img,
-  .selling-arrows button{
-    transition:none;
+  .selling-arrows button {
+    transition: none;
   }
 }

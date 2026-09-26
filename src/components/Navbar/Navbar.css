@@ -7,6 +7,7 @@
    Dark  : #111111
    Ivory : #F4F1E8
    Gray  : #D9D5C9
+
 ========================================================= */
 
 
@@ -16,11 +17,11 @@
 
 .navbar {
   position: fixed;
+
   top: 0;
   left: 0;
 
   width: 100%;
-  height: auto;
 
   z-index: 1000;
 
@@ -40,15 +41,30 @@
 ========================================================= */
 
 .navbar-container {
-  width: 90%;
-  max-width: 1250px;
+  /*
+    Use almost the entire screen width.
+
+    Previously:
+    max-width: 1250px;
+
+    This was creating large empty spaces on wide screens.
+
+    Now the logo and navigation can spread naturally
+    across the available width.
+  */
+
+  width: 96%;
+
+  max-width: 1900px;
 
   height: 82px;
 
   margin: 0 auto;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 }
 
@@ -59,6 +75,7 @@
 
 .navbar-logo {
   display: flex;
+
   align-items: center;
 
   flex-shrink: 0;
@@ -76,6 +93,7 @@
   display: block;
 
   width: 155px;
+
   height: auto;
 
   object-fit: contain;
@@ -88,9 +106,14 @@
 
 .navbar-menu {
   display: flex;
+
   align-items: center;
 
+  justify-content: flex-end;
+
   gap: 32px;
+
+  margin-left: auto;
 }
 
 
@@ -102,12 +125,15 @@
   position: relative;
 
   display: inline-flex;
+
   align-items: center;
 
   color: #111111;
 
   font-family: inherit;
+
   font-size: 15px;
+
   font-weight: 600;
 
   letter-spacing: 0.2px;
@@ -132,9 +158,11 @@
   position: absolute;
 
   left: 50%;
+
   bottom: -9px;
 
   width: 0;
+
   height: 3px;
 
   background: #9ACF4A;
@@ -170,6 +198,7 @@
   position: relative;
 
   display: flex;
+
   align-items: center;
 }
 
@@ -182,6 +211,7 @@
   position: relative;
 
   display: inline-flex;
+
   align-items: center;
 
   gap: 6px;
@@ -197,6 +227,7 @@
   font-family: inherit;
 
   font-size: 15px;
+
   font-weight: 600;
 
   letter-spacing: 0.2px;
@@ -227,9 +258,11 @@
   position: absolute;
 
   left: 50%;
+
   bottom: -9px;
 
   width: 0;
+
   height: 3px;
 
   background: #9ACF4A;
@@ -241,8 +274,11 @@
   transition: width 0.3s ease;
 }
 
-.navbar-dropdown:hover .navbar-dropdown-button::after,
-.navbar-dropdown.dropdown-active .navbar-dropdown-button::after {
+.navbar-dropdown:hover
+.navbar-dropdown-button::after,
+
+.navbar-dropdown.dropdown-active
+.navbar-dropdown-button::after {
   width: 70%;
 }
 
@@ -257,13 +293,16 @@
   color: #111111;
 
   font-size: 14px;
+
   line-height: 1;
 
   transition: transform 0.3s ease;
 }
 
 .navbar-dropdown:hover .dropdown-arrow,
-.navbar-dropdown.dropdown-active .dropdown-arrow {
+
+.navbar-dropdown.dropdown-active
+.dropdown-arrow {
   transform: rotate(180deg);
 }
 
@@ -276,6 +315,7 @@
   position: absolute;
 
   top: calc(100% + 18px);
+
   left: 50%;
 
   width: 235px;
@@ -290,9 +330,11 @@
 
   border-radius: 12px;
 
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.12);
 
   opacity: 0;
+
   visibility: hidden;
 
   transform:
@@ -318,7 +360,9 @@
   position: absolute;
 
   top: 0;
+
   left: 20px;
+
   right: 20px;
 
   height: 3px;
@@ -333,9 +377,13 @@
    SHOW DESKTOP DROPDOWN
 ========================================================= */
 
-.navbar-dropdown:hover .navbar-dropdown-menu,
-.navbar-dropdown.dropdown-active .navbar-dropdown-menu {
+.navbar-dropdown:hover
+.navbar-dropdown-menu,
+
+.navbar-dropdown.dropdown-active
+.navbar-dropdown-menu {
   opacity: 1;
+
   visibility: visible;
 
   transform:
@@ -350,6 +398,7 @@
 
 .navbar-dropdown-menu a {
   display: flex;
+
   align-items: center;
 
   gap: 12px;
@@ -365,7 +414,9 @@
   text-decoration: none;
 
   font-family: inherit;
+
   font-size: 14px;
+
   font-weight: 600;
 
   border-radius: 8px;
@@ -398,9 +449,11 @@
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
   width: 34px;
+
   height: 34px;
 
   min-width: 34px;
@@ -416,6 +469,7 @@
   font-family: inherit;
 
   font-size: 11px;
+
   font-weight: 800;
 
   line-height: 1;
@@ -430,7 +484,8 @@
    LANGUAGE ICON HOVER
 ========================================================= */
 
-.navbar-dropdown-menu a:hover .language-icon {
+.navbar-dropdown-menu a:hover
+.language-icon {
   background: #9ACF4A;
 
   color: #111111;
@@ -447,6 +502,10 @@
 
 .java-icon {
   font-size: 17px;
+}
+
+.javascript-icon {
+  font-size: 10px;
 }
 
 .python-icon {
@@ -470,6 +529,7 @@
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
   min-width: 105px;
@@ -489,11 +549,13 @@
   font-family: inherit;
 
   font-size: 14px !important;
+
   font-weight: 700 !important;
 
   text-decoration: none;
 
-  box-shadow: 0 5px 15px rgba(154, 207, 74, 0.18);
+  box-shadow:
+    0 5px 15px rgba(154, 207, 74, 0.18);
 
   transition:
     background 0.3s ease,
@@ -512,7 +574,8 @@
 
   transform: translateY(-2px);
 
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -524,6 +587,7 @@
   display: none;
 
   width: 44px;
+
   height: 44px;
 
   padding: 8px;
@@ -535,7 +599,9 @@
   cursor: pointer;
 
   flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
 
   gap: 5px;
@@ -558,6 +624,7 @@
   display: block;
 
   width: 25px;
+
   height: 3px;
 
   background: #111111;
@@ -575,17 +642,20 @@
    HAMBURGER → X
 ========================================================= */
 
-.navbar-toggle.active span:nth-child(1) {
+.navbar-toggle.active
+span:nth-child(1) {
   transform:
     translateY(8px)
     rotate(45deg);
 }
 
-.navbar-toggle.active span:nth-child(2) {
+.navbar-toggle.active
+span:nth-child(2) {
   opacity: 0;
 }
 
-.navbar-toggle.active span:nth-child(3) {
+.navbar-toggle.active
+span:nth-child(3) {
   transform:
     translateY(-8px)
     rotate(-45deg);
@@ -593,10 +663,37 @@
 
 
 /* =========================================================
-   TABLET
+   LARGE DESKTOP
 ========================================================= */
 
-@media (max-width: 1000px) {
+@media (min-width: 1400px) {
+
+  .navbar-container {
+    width: 96%;
+
+    max-width: 1900px;
+  }
+
+  .navbar-logo img {
+    width: 160px;
+  }
+
+  .navbar-menu {
+    gap: 36px;
+  }
+
+  .navbar-menu > a,
+  .navbar-dropdown-button {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 1100px) {
 
   .navbar-container {
     width: 92%;
@@ -631,8 +728,15 @@
     width: 100%;
   }
 
+
+  /* =======================================================
+     NAVBAR CONTAINER
+  ======================================================= */
+
   .navbar-container {
     width: 90%;
+
+    max-width: none;
 
     height: 72px;
   }
@@ -668,6 +772,7 @@
     position: absolute;
 
     top: 72px;
+
     left: 0;
 
     width: 100%;
@@ -677,18 +782,25 @@
     padding: 28px 5% 32px;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: stretch;
 
     gap: 6px;
 
+    margin-left: 0;
+
     background: rgba(244, 241, 232, 0.99);
 
-    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+    border-bottom:
+      1px solid rgba(17, 17, 17, 0.08);
 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    box-shadow:
+      0 10px 25px rgba(0, 0, 0, 0.08);
 
     opacity: 0;
+
     visibility: hidden;
 
     transform: translateY(-15px);
@@ -721,6 +833,7 @@
 
   .navbar-menu > a {
     display: flex;
+
     align-items: center;
 
     width: 100%;
@@ -732,6 +845,7 @@
     color: #111111;
 
     font-size: 16px;
+
     font-weight: 600;
 
     border-radius: 7px;
@@ -777,7 +891,9 @@
     position: relative;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     width: 100%;
@@ -797,6 +913,7 @@
     font-family: inherit;
 
     font-size: 16px;
+
     font-weight: 600;
 
     letter-spacing: normal;
@@ -844,28 +961,29 @@
 
     transform: rotate(0deg);
 
-    transition: transform 0.25s ease;
+    transition:
+      transform 0.25s ease;
   }
 
-  .navbar-dropdown.dropdown-active .dropdown-arrow {
+  .navbar-dropdown.dropdown-active
+  .dropdown-arrow {
     transform: rotate(180deg);
   }
 
 
   /* =======================================================
      MOBILE ROADMAP DROPDOWN
-     
-     IMPORTANT:
-     This overrides ALL desktop dropdown behavior.
   ======================================================= */
 
   .navbar-dropdown-menu {
     position: static !important;
 
     top: auto !important;
+
     left: auto !important;
 
     width: 100% !important;
+
     min-width: 0 !important;
 
     margin: 4px 0 0 0 !important;
@@ -874,7 +992,8 @@
 
     box-sizing: border-box;
 
-    background: rgba(217, 213, 201, 0.45) !important;
+    background:
+      rgba(217, 213, 201, 0.45) !important;
 
     border: none !important;
 
@@ -884,9 +1003,6 @@
 
     transform: none !important;
 
-    /*
-      Closed by default.
-    */
     display: none;
 
     opacity: 1 !important;
@@ -901,7 +1017,8 @@
      MOBILE ROADMAP DROPDOWN OPEN
   ======================================================= */
 
-  .navbar-dropdown.dropdown-active .navbar-dropdown-menu {
+  .navbar-dropdown.dropdown-active
+  .navbar-dropdown-menu {
     display: block !important;
 
     width: 100% !important;
@@ -928,6 +1045,7 @@
     position: relative;
 
     display: flex !important;
+
     align-items: center;
 
     gap: 12px;
@@ -977,7 +1095,8 @@
   ======================================================= */
 
   .navbar-dropdown-menu a:hover {
-    background: rgba(154, 207, 74, 0.2) !important;
+    background:
+      rgba(154, 207, 74, 0.2) !important;
 
     color: #111111 !important;
 
@@ -993,9 +1112,11 @@
     display: inline-flex !important;
 
     align-items: center;
+
     justify-content: center;
 
     width: 32px !important;
+
     height: 32px !important;
 
     min-width: 32px !important;
@@ -1022,7 +1143,8 @@
      MOBILE ICON HOVER
   ======================================================= */
 
-  .navbar-dropdown-menu a:hover .language-icon {
+  .navbar-dropdown-menu a:hover
+  .language-icon {
     background: #9ACF4A !important;
 
     color: #111111 !important;
@@ -1039,6 +1161,10 @@
 
   .navbar-dropdown-menu .java-icon {
     font-size: 17px;
+  }
+
+  .navbar-dropdown-menu .javascript-icon {
+    font-size: 10px;
   }
 
   .navbar-dropdown-menu .python-icon {
@@ -1108,6 +1234,7 @@
 
   .navbar-menu {
     padding-left: 4%;
+
     padding-right: 4%;
   }
 
@@ -1119,9 +1246,12 @@
     font-size: 14px;
   }
 
-  .navbar-dropdown-menu .language-icon {
+  .navbar-dropdown-menu
+  .language-icon {
     width: 30px !important;
+
     height: 30px !important;
+
     min-width: 30px !important;
   }
 }
@@ -1132,9 +1262,12 @@
 ========================================================= */
 
 .navbar-menu a:focus-visible,
+
 .navbar-dropdown-button:focus-visible,
+
 .navbar-toggle:focus-visible {
-  outline: 3px solid rgba(154, 207, 74, 0.6);
+  outline:
+    3px solid rgba(154, 207, 74, 0.6);
 
   outline-offset: 3px;
 }

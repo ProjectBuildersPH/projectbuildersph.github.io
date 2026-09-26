@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
@@ -42,6 +41,7 @@ const Navbar = () => {
           />
         </Link>
 
+
         {/* =====================================================
             NAVIGATION MENU
         ====================================================== */}
@@ -56,20 +56,24 @@ const Navbar = () => {
             Home
           </Link>
 
+
           {/* JOURNEY */}
           <Link to="/pathcareer" onClick={closeMenu}>
             Journey
           </Link>
+
 
           {/* PROJECTS */}
           <Link to="/projects" onClick={closeMenu}>
             Projects
           </Link>
 
-          {/* Shop Apparel */}
+
+          {/* APPAREL */}
           <Link to="/tshirt" onClick={closeMenu}>
             Apparel
           </Link>
+
 
           {/* =================================================
               ROADMAP DROPDOWN
@@ -97,9 +101,11 @@ const Navbar = () => {
               </span>
             </button>
 
+
             {/* ROADMAP ITEMS */}
             <div className="navbar-dropdown-menu">
 
+              {/* C++ */}
               <Link
                 to="/roadmap/cpp"
                 onClick={closeMenu}
@@ -111,6 +117,8 @@ const Navbar = () => {
                 <span>C++ Roadmap</span>
               </Link>
 
+
+              {/* JAVA */}
               <Link
                 to="/roadmapjava/java"
                 onClick={closeMenu}
@@ -122,17 +130,21 @@ const Navbar = () => {
                 <span>Java Roadmap</span>
               </Link>
 
+
+              {/* JAVASCRIPT */}
               <Link
                 to="/roadmapjs/javscript"
                 onClick={closeMenu}
               >
-                <span className="language-icon java-icon">
+                <span className="language-icon javascript-icon">
                   JS
                 </span>
 
                 <span>JavaScript Roadmap</span>
-              </Link>              
+              </Link>
 
+
+              {/* PYTHON */}
               <Link
                 to="/roadmappy/python"
                 onClick={closeMenu}
@@ -144,6 +156,8 @@ const Navbar = () => {
                 <span>Python Roadmap</span>
               </Link>
 
+
+              {/* C# */}
               <Link
                 to="/roadmapcsharp/csharp"
                 onClick={closeMenu}
@@ -155,6 +169,8 @@ const Navbar = () => {
                 <span>C# Roadmap</span>
               </Link>
 
+
+              {/* C */}
               <Link
                 to="/roadmapC/c"
                 onClick={closeMenu}
@@ -169,22 +185,12 @@ const Navbar = () => {
             </div>
           </div>
 
+
           {/* LEARN */}
           <Link to="/learn" onClick={closeMenu}>
             Learn
           </Link>
 
-          {/* COMMUNITY
-          <a
-            href="https://m.me/ch/AbaC8jEalxMV_TrB/"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={closeMenu}
-          >
-            Community
-          </a>
-
-           */}
 
           {/* CONTACT */}
           <a
@@ -198,6 +204,7 @@ const Navbar = () => {
           </a>
 
         </nav>
+
 
         {/* =====================================================
             MOBILE MENU BUTTON
@@ -222,4 +229,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

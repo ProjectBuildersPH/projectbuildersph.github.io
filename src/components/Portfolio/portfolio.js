@@ -9,88 +9,93 @@ const projects = [
     number: "01",
     name: "RevivePaint",
     category: "WEB DEVELOPMENT",
-
     description:
-      "A business website designed and developed according to the client's preferred colors, visual style, layout, and overall branding. ProjectBuildersPH focuses on bringing the client's own vision and preferences into the final design.",
-
-    technologies: [
-      "React",
-      "JavaScript",
-      "CSS",
-      "Responsive",
-    ],
-
+      "A business website designed and developed according to the client's preferred colors, visual style, layout, and overall branding.",
+    technologies: ["React", "JavaScript", "CSS", "Responsive"],
     image: revivePaint,
-
-    liveDemo:
-      "https://revivepaint.co",
+    liveDemo: "https://revivepaint.co",
   },
 
   {
     number: "02",
     name: "ShopEase Online Store",
     category: "WEB DEVELOPMENT",
-
     description:
-      "A responsive e-commerce website that allows users to browse products by category, search for items, manage their cart and wishlist, apply discount coupons, complete checkout, and receive order confirmation. The project includes separate category pages for clothing, shoes, electronics, and accessories with interactive JavaScript functionality and responsive design.",
-
+      "A responsive e-commerce website that allows users to browse products, search for items, manage their cart and wishlist, apply discount coupons, and complete checkout.",
     technologies: [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "LocalStorage",
-  "Responsive Web Design",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "LocalStorage",
+      "Responsive",
     ],
-
     image: ShopEase,
-
-    liveDemo:
-      "https://projectbuildersecommerce.netlify.app/",
+    liveDemo: "https://projectbuildersecommerce.netlify.app/",
   },
 
+  // ADD MORE PROJECTS HERE
+  // Example:
+  /*
+  {
+    number: "03",
+    name: "My Third Project",
+    category: "WEB DEVELOPMENT",
+    description:
+      "Description of the project goes here.",
+    technologies: ["React", "CSS", "JavaScript"],
+    image: thirdProject,
+    liveDemo: "https://example.com",
+  },
 
- 
+  {
+    number: "04",
+    name: "My Fourth Project",
+    category: "WEB DEVELOPMENT",
+    description:
+      "Description of the project goes here.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: fourthProject,
+    liveDemo: "https://example.com",
+  },
+  */
 ];
 
 function Portfolio() {
+  const [currentPage, setCurrentPage] = useState(0);
 
-  const [currentProject, setCurrentProject] = useState(0);
+  const projectsPerPage = 2;
 
-  const project = projects[currentProject];
+  const totalPages = Math.ceil(
+    projects.length / projectsPerPage
+  );
 
-  const nextProject = () => {
+  const startIndex = currentPage * projectsPerPage;
 
-    setCurrentProject((current) =>
-      current === projects.length - 1
-        ? 0
-        : current + 1
+  const visibleProjects = projects.slice(
+    startIndex,
+    startIndex + projectsPerPage
+  );
+
+  const nextPage = () => {
+    setCurrentPage((current) =>
+      current === totalPages - 1 ? 0 : current + 1
     );
-
   };
 
-  const previousProject = () => {
-
-    setCurrentProject((current) =>
-      current === 0
-        ? projects.length - 1
-        : current - 1
+  const previousPage = () => {
+    setCurrentPage((current) =>
+      current === 0 ? totalPages - 1 : current - 1
     );
-
   };
 
   return (
-    <section
-      className="portfolio-section"
-      id="projects"
-    >
-
+    <section className="portfolio-section" id="projects">
       <div className="portfolio-container">
 
         {/* HEADER */}
-
         <div className="portfolio-header">
 
-          <div>
+          <div className="portfolio-heading">
 
             <span className="portfolio-label">
               PROJECTBUILDERSPH • PROJECTS
@@ -108,159 +113,163 @@ function Portfolio() {
 
           </div>
 
+          {/* NAVIGATION */}
+          <div className="portfolio-header-navigation">
 
-          {/* PROJECT COUNTER */}
+            <button
+              onClick={previousPage}
+              aria-label="Previous projects"
+            >
+              ←
+            </button>
 
-          <div className="portfolio-counter">
+            <div className="portfolio-page-count">
+              <strong>
+                {String(currentPage + 1).padStart(2, "0")}
+              </strong>
 
-            <strong>
-              {project.number}
-            </strong>
+              <span>
+                / {String(totalPages).padStart(2, "0")}
+              </span>
+            </div>
 
-            <span>
-              / {String(projects.length).padStart(2, "0")}
-            </span>
+            <button
+              onClick={nextPage}
+              aria-label="Next projects"
+            >
+              →
+            </button>
 
           </div>
 
         </div>
 
+        {/* PROJECT GRID */}
+        <div className="portfolio-grid">
 
-        {/* PROJECT SHOWCASE */}
+          {visibleProjects.map((project) => (
+            <article
+              className="portfolio-card"
+              key={project.number}
+            >
 
-        <div className="portfolio-showcase">
+              {/* IMAGE */}
+              <div className="portfolio-card-image">
 
+                <img
+                  src={project.image}
+                  alt={project.name}
+                />
 
-          {/* LEFT — IMAGE */}
+                <div className="portfolio-card-number">
+                  {project.number}
+                </div>
 
-          <div className="portfolio-image-wrapper">
-
-            <div className="portfolio-image">
-
-              <img
-                src={project.image}
-                alt={project.name}
-              />
-
-            </div>
-
-            <div className="portfolio-image-label">
-              PROJECT {project.number}
-            </div>
-
-          </div>
-
-
-          {/* RIGHT — INFORMATION */}
-
-          <div className="portfolio-details">
-
-            <div className="portfolio-meta">
-
-              <span className="portfolio-project-number">
-                {project.number}
-              </span>
-
-              <span>
-                {project.category}
-              </span>
-
-            </div>
-
-
-            <h3>
-              {project.name}
-            </h3>
-
-
-            <p className="portfolio-description">
-              {project.description}
-            </p>
-
-
-            {/* TECHNOLOGIES */}
-
-            <div className="portfolio-tech">
-
-              {project.technologies.map(
-                (technology) => (
-
-                  <span key={technology}>
-                    {technology}
-                  </span>
-
-                )
-              )}
-
-            </div>
-
-
-            {/* ACTIONS */}
-
-            <div className="portfolio-actions">
-
-              <a
-                href={project.liveDemo}
-                target="_blank"
-                rel="noreferrer"
-                className="portfolio-live"
-              >
-                Live Demo
-                <span>↗</span>
-              </a>
-
-
-              <div className="portfolio-navigation">
-
-                <button
-                  onClick={previousProject}
-                  aria-label="Previous project"
-                >
-                  ←
-                </button>
-
-                <button
-                  onClick={nextProject}
-                  aria-label="Next project"
-                >
-                  →
-                </button>
+                <div className="portfolio-card-category">
+                  {project.category}
+                </div>
 
               </div>
 
-            </div>
+              {/* CONTENT */}
+              <div className="portfolio-card-content">
 
-          </div>
+                <div className="portfolio-card-heading">
 
-        </div>
+                  <div>
+                    <span className="portfolio-card-small">
+                      PROJECT {project.number}
+                    </span>
 
+                    <h3>{project.name}</h3>
+                  </div>
 
-        {/* PROJECT INDICATORS */}
+                  <a
+                    href={project.liveDemo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="portfolio-card-arrow"
+                    aria-label={`View ${project.name}`}
+                  >
+                    ↗
+                  </a>
 
-        <div className="portfolio-indicators">
+                </div>
 
-          {projects.map((_, index) => (
+                <p className="portfolio-card-description">
+                  {project.description}
+                </p>
 
-            <button
-              key={index}
-              onClick={() =>
-                setCurrentProject(index)
-              }
-              className={
-                currentProject === index
-                  ? "active"
-                  : ""
-              }
-            >
-              {String(index + 1).padStart(2, "0")}
-            </button>
+                {/* TECHNOLOGIES */}
+                <div className="portfolio-card-tech">
 
+                  {project.technologies.map(
+                    (technology) => (
+                      <span key={technology}>
+                        {technology}
+                      </span>
+                    )
+                  )}
+
+                </div>
+
+                {/* LIVE DEMO */}
+                <div className="portfolio-card-footer">
+
+                  <a
+                    href={project.liveDemo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="portfolio-live"
+                  >
+                    View Live Demo
+                    <span>↗</span>
+                  </a>
+
+                </div>
+
+              </div>
+
+            </article>
           ))}
 
         </div>
 
-      </div>
+        {/* BOTTOM NAVIGATION */}
+        <div className="portfolio-bottom">
 
+          <div className="portfolio-progress">
+
+            {Array.from({
+              length: totalPages,
+            }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentPage(index)}
+                className={
+                  currentPage === index ? "active" : ""
+                }
+                aria-label={`Go to project page ${
+                  index + 1
+                }`}
+              />
+            ))}
+
+          </div>
+
+          <span>
+            Showing{" "}
+            {startIndex + 1}–
+            {Math.min(
+              startIndex + projectsPerPage,
+              projects.length
+            )}{" "}
+            of {projects.length} projects
+          </span>
+
+        </div>
+
+      </div>
     </section>
   );
 }

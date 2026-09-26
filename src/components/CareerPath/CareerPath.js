@@ -2,6 +2,7 @@ import React from "react";
 import "./CareerPath.css";
 import bbaiImage from "../../assets/bbAI.png";
 import tutorVideo from "../../assets/tutor.mp4";
+import dhvsu from "../../assets/dhvsu.png";
 
 
 
@@ -13,7 +14,7 @@ const journey = [
     subtitle: "University Instructor",
     type: "LEARN",
     text: "Teaching programming and helping students understand technology.",
-    video: tutorVideo,
+    image: dhvsu,
   },
   {
     year: "2021",
